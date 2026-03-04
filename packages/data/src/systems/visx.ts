@@ -11,7 +11,7 @@ const visx: ComponentSystem = {
   styling: [],
   category: ["data-viz"],
   maturity: "stable",
-  components: [],
+  components: ["Arc", "Area", "AreaClosed", "AreaStack", "Axis", "Bar", "BarGroup", "BarStack", "BoxPlot", "Chord", "Circle", "Clip", "Curve", "Drag", "Glyph", "Gradient", "Grid", "Group", "HeatMap", "Hierarchy", "Legend", "Line", "LinePath", "Marker", "Network", "Pack", "Partition", "Pattern", "Pie", "Point", "Polygon", "Radar", "Sankey", "Scale", "Shape", "Sparkline", "Stack", "Text", "Threshold", "Tree", "Treemap", "Voronoi", "WordCloud", "Zoom"],
   tags: ["d3", "visualization", "charts", "low-level"],
   featured: false,
   sponsored: false,

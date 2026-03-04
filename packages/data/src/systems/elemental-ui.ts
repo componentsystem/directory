@@ -11,7 +11,7 @@ const elementalUi: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "deprecated",
-  components: [],
+  components: ["Alert", "Button", "Card", "Col", "Container", "Dropdown", "Form", "FormField", "FormInput", "FormSelect", "Glyph", "Modal", "Pagination", "Pill", "Row", "Spinner", "Table"],
   tags: [],
   featured: false,
   sponsored: false,

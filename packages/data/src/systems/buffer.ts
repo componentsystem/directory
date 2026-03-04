@@ -11,7 +11,7 @@ const buffer: ComponentSystem = {
   styling: ["css-in-js"],
   category: ["general", "design-system"],
   maturity: "active",
-  components: [],
+  components: ["Avatar", "Badge", "Button", "Card", "Checkbox", "Dialog", "Divider", "Dropdown", "Icon", "Input", "Link", "List", "Modal", "Notice", "Pagination", "Popover", "Radio", "Select", "Sidebar", "Switch", "Tab", "Table", "Tag", "Text", "Textarea", "Toast", "Tooltip"],
   tags: ["buffer", "social-media", "internal"],
   featured: false,
   sponsored: false,

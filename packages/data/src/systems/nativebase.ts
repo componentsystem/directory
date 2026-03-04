@@ -11,7 +11,7 @@ const nativebase: ComponentSystem = {
   styling: ["design-tokens"],
   category: ["general", "mobile"],
   maturity: "active",
-  components: [],
+  components: ["Actionsheet", "Alert", "AlertDialog", "Avatar", "Badge", "Box", "Breadcrumb", "Button", "Center", "Checkbox", "Code", "Column", "Container", "Divider", "Fab", "Flex", "FormControl", "HStack", "Heading", "Hidden", "Icon", "IconButton", "Image", "Input", "Kbd", "Link", "List", "Menu", "Modal", "Popover", "Pressable", "Progress", "Radio", "ScrollView", "Select", "Skeleton", "Slider", "Spinner", "Stack", "StatusBar", "Switch", "Tabs", "Text", "TextArea", "Toast", "Tooltip", "VStack", "ZStack"],
   tags: ["react-native", "mobile", "cross-platform"],
   featured: false,
   sponsored: false,

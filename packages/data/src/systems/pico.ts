@@ -11,7 +11,7 @@ const pico: ComponentSystem = {
   styling: ["vanilla-css"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Article", "Button", "Card", "Checkbox", "Dialog", "Dropdown", "Form", "Grid", "Group", "Loading", "Modal", "Nav", "Progress", "Radio", "Range", "Select", "Switch", "Table", "Tabs", "Textarea", "Tooltip", "Typography"],
   tags: ["minimal", "classless", "semantic-html", "lightweight"],
   featured: false,
   sponsored: false,

@@ -11,7 +11,7 @@ const zent: ComponentSystem = {
   styling: [],
   category: ["general", "enterprise"],
   maturity: "active",
-  components: [],
+  components: ["Affix", "Alert", "AutoComplete", "Avatar", "Badge", "BlockHeader", "Breadcrumb", "Button", "Card", "Cascader", "Checkbox", "ClampLines", "ColorPicker", "CopyButton", "DatePicker", "DateRangeQuickPicker", "Dialog", "Divider", "Drawer", "Form", "Grid", "Icon", "IMEComposition", "InfiniteScroller", "Input", "Layout", "Loading", "Menu", "Mention", "Notify", "NumberInput", "Pagination", "Placeholder", "Pop", "Popover", "Portal", "Preloader", "Progress", "Radio", "Rate", "SearchInput", "Select", "SKU", "Slider", "SortableTable", "Steps", "SplitButton", "Sweetalert", "Swiper", "Switch", "Table", "Tabs", "Tag", "Text", "TimePicker", "Timeline", "Transfer", "Tree", "Upload"],
   tags: ["youzan", "e-commerce", "enterprise"],
   featured: false,
   sponsored: false,

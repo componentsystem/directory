@@ -11,7 +11,7 @@ const gluestackUi: ComponentSystem = {
   styling: [],
   category: ["general", "mobile"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "ActionSheet", "Alert", "AlertDialog", "Avatar", "Badge", "Box", "Button", "Card", "Center", "Checkbox", "Divider", "Fab", "FormControl", "Grid", "Heading", "HStack", "Icon", "Image", "Input", "Link", "Menu", "Modal", "Popover", "Pressable", "Progress", "Radio", "Select", "Slider", "Spinner", "Switch", "Table", "Tabs", "Text", "Textarea", "Toast", "Tooltip", "VStack"],
   tags: [],
   featured: false,
   sponsored: false,

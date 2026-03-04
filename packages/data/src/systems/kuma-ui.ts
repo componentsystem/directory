@@ -11,7 +11,7 @@ const kumaUi: ComponentSystem = {
   styling: ["css-in-js"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Box", "Flex", "Grid", "Heading", "Text", "Button", "Link", "Image", "Select", "Input", "HStack", "VStack", "Spacer"],
   tags: ["zero-runtime", "build-time"],
   featured: false,
   sponsored: false,

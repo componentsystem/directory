@@ -11,7 +11,7 @@ const syntaxUi: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["AnimatedBeam", "AnimatedGradient", "AnimatedShinyText", "AnimatedTabs", "Aurora", "BackgroundLines", "BlurFade", "ConfettiButton", "DotPattern", "GridPattern", "HeroHighlight", "Marquee", "Meteors", "NumberTicker", "Particles", "RetroGrid", "Ripple", "ShimmerButton", "SparklesText", "TypingAnimation", "WavyText"],
   tags: ["landing-pages", "animations"],
   featured: false,
   sponsored: false,

@@ -11,7 +11,7 @@ const govukReact: ComponentSystem = {
   styling: [],
   category: ["general", "design-system"],
   maturity: "active",
-  components: [],
+  components: ["BackLink", "Breadcrumbs", "Button", "Checkbox", "DateInput", "Details", "ErrorMessage", "ErrorSummary", "Fieldset", "FileUpload", "Footer", "GlobalStyle", "GridCol", "GridRow", "Header", "Heading", "HintText", "InsetText", "Input", "Label", "LabelText", "LeadParagraph", "Link", "ListItem", "ListNavigation", "LoadingBox", "Main", "MultiChoice", "OrderedList", "Page", "Pagination", "Panel", "Paragraph", "PhaseBanner", "Radio", "RelatedItems", "SearchBox", "SectionBreak", "Select", "SkipLink", "Spinner", "SupportingParagraph", "Table", "Tabs", "Tag", "TextArea", "TopNav", "UnorderedList", "WarningText"],
   tags: [],
   featured: false,
   sponsored: false,

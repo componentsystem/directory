@@ -11,7 +11,7 @@ const agnosticUi: ComponentSystem = {
   styling: ["vanilla-css"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Alert", "Avatar", "Breadcrumb", "Button", "ButtonGroup", "Card", "ChoiceInput", "Close", "Dialog", "Disclose", "Divider", "Drawer", "EmptyState", "Header", "Icon", "Input", "Loader", "Menu", "Pagination", "Progress", "Select", "Spinner", "Switch", "Tab", "Table", "Tag", "Toast", "Tooltip"],
   tags: ["framework-agnostic", "accessible", "multi-framework"],
   featured: false,
   sponsored: false,

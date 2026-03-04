@@ -11,7 +11,7 @@ const fumadocs: ComponentSystem = {
   styling: [],
   category: ["documentation"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Banner", "Callout", "Card", "CodeBlock", "DocsLayout", "DocsPage", "FileTree", "Heading", "ImageZoom", "InlineTOC", "Link", "RollButton", "SearchDialog", "Steps", "Tab", "TypeTable"],
   tags: [],
   featured: false,
   sponsored: false,

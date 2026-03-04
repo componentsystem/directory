@@ -11,7 +11,7 @@ const primeng: ComponentSystem = {
   styling: ["design-tokens"],
   category: ["general", "enterprise"],
   maturity: "stable",
-  components: [],
+  components: ["AutoComplete", "Button", "Calendar", "Cascader", "Checkbox", "Chips", "ColorPicker", "Dropdown", "Editor", "FileUpload", "InputMask", "InputNumber", "InputSwitch", "InputText", "InputTextarea", "Knob", "ListBox", "MultiSelect", "Password", "RadioButton", "Rating", "SelectButton", "Slider", "SplitButton", "ToggleButton", "TreeSelect", "TriStateCheckbox", "Accordion", "Card", "DataView", "DeferredContent", "Fieldset", "Panel", "ScrollPanel", "Splitter", "TabView", "Toolbar", "Avatar", "Badge", "BlockUI", "Chip", "Inplace", "MegaMenu", "Menu", "Menubar", "Messages", "OrderList", "OrganizationChart", "Paginator", "PickList", "Steps", "TabMenu", "Tag", "Terminal", "TieredMenu", "Timeline", "Toast", "Tree", "TreeTable", "DataTable", "Dialog", "OverlayPanel", "Sidebar", "Tooltip", "ConfirmDialog", "ConfirmPopup", "ProgressBar", "ProgressSpinner", "Skeleton"],
   tags: ["primefaces", "enterprise", "comprehensive"],
   featured: false,
   sponsored: false,

@@ -11,7 +11,7 @@ const reactDataTable: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["DataTable"],
   tags: ["table", "data-table", "pagination", "sorting"],
   featured: false,
   sponsored: false,

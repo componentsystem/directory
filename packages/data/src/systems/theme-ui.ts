@@ -11,7 +11,7 @@ const themeUi: ComponentSystem = {
   styling: ["css-in-js", "design-tokens"],
   category: ["general", "primitives"],
   maturity: "stable",
-  components: [],
+  components: ["Box", "Flex", "Grid", "Button", "Text", "Heading", "Link", "Image", "Card", "Label", "Input", "Select", "Textarea", "Radio", "Checkbox", "Slider", "Field", "Progress", "Donut", "Spinner", "Avatar", "Badge", "Close", "Alert", "Divider", "Embed", "AspectRatio", "AspectImage", "Container", "NavLink", "Message", "IconButton", "MenuButton"],
   tags: ["theming", "design-tokens", "system-ui"],
   featured: false,
   sponsored: false,

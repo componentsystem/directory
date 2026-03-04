@@ -11,7 +11,7 @@ const ringUi: ComponentSystem = {
   styling: ["css-modules"],
   category: ["general", "enterprise", "design-system"],
   maturity: "stable",
-  components: [],
+  components: ["Alert", "Auth", "Avatar", "Badge", "Breadcrumb", "Button", "ButtonGroup", "Checkbox", "Code", "Confirm", "ContentLayout", "DataList", "DatePicker", "Dialog", "Dropdown", "Footer", "Grid", "Group", "Header", "Heading", "Icon", "Input", "Island", "Link", "List", "Loader", "LoaderInline", "LoaderScreen", "LoginDialog", "Markdown", "Message", "Pager", "Panel", "Popup", "PopupMenu", "ProgressBar", "QueryAssist", "Radio", "Select", "Sidebar", "Table", "Tabs", "Tag", "Tags", "Text", "Toggle", "Tooltip"],
   tags: ["jetbrains", "enterprise"],
   featured: false,
   sponsored: false,

@@ -11,7 +11,7 @@ const tailus: ComponentSystem = {
   styling: ["tailwind"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Alert", "Annonce", "Avatar", "Badge", "Button", "Calendar", "Card", "Checkbox", "Command", "Dialog", "Dropdown", "Feedback", "Form", "Input", "Label", "Menu", "Popover", "Progress", "Radio", "Select", "Separator", "Sheet", "Skeleton", "Slider", "Switch", "Table", "Tabs", "TextArea", "Toast", "Toggle", "ToggleGroup", "Tooltip"],
   tags: ["modern", "customizable"],
   featured: false,
   sponsored: false,

@@ -1,0 +1,47 @@
+import type { ComponentSystem } from "../schema";
+
+const wedges: ComponentSystem = {
+  slug: "wedges",
+  name: "Wedges",
+  url: "https://www.lemonsqueezy.com/wedges",
+  github: "https://github.com/lmsqueezy/wedges",
+  npm: "@lemonsqueezy/wedges",
+  description:
+    "An open-source React UI library from Lemon Squeezy built with Radix UI primitives and Tailwind CSS, fully typed and WAI-ARIA compliant with a Figma kit.",
+  frameworks: ["react"],
+  styling: ["tailwind"],
+  category: ["general", "design-system"],
+  maturity: "active",
+  components: [
+    "Alert",
+    "Avatar",
+    "AvatarGroup",
+    "Badge",
+    "Button",
+    "ButtonGroup",
+    "Checkbox",
+    "CheckboxGroup",
+    "DropdownMenu",
+    "Input",
+    "Label",
+    "Loading",
+    "Popover",
+    "RadioGroup",
+    "Select",
+    "Slider",
+    "Switch",
+    "SwitchGroup",
+    "Tabs",
+    "Tag",
+    "Textarea",
+    "Toggle",
+    "ToggleGroup",
+    "Tooltip",
+  ],
+  tags: ["radix", "accessible", "figma", "lemonsqueezy"],
+  featured: false,
+  sponsored: false,
+  company: "Lemon Squeezy",
+};
+
+export default wedges;

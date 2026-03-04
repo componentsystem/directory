@@ -1,0 +1,47 @@
+import type { ComponentSystem } from "../schema";
+
+const magicUi: ComponentSystem = {
+  slug: "magic-ui",
+  name: "Magic UI",
+  url: "https://magicui.design/",
+  github: "https://github.com/magicuidesign/magicui",
+  description:
+    "150+ free, open-source animated components and effects built with React, TypeScript, Tailwind CSS, and Framer Motion, designed as a companion to shadcn/ui.",
+  frameworks: ["react"],
+  styling: ["tailwind"],
+  category: ["animation"],
+  maturity: "active",
+  components: [
+    "Animated Beam",
+    "Animated Grid",
+    "Animated List",
+    "Animated Shiny Text",
+    "Animated Subscribe Button",
+    "Border Beam",
+    "Bento Grid",
+    "Blur Fade",
+    "Confetti",
+    "Cool Mode",
+    "Dock",
+    "File Tree",
+    "Globe",
+    "Hyper Text",
+    "Lens",
+    "Magic Card",
+    "Marquee",
+    "Meteors",
+    "Number Ticker",
+    "Orbiting Circles",
+    "Particles",
+    "Retro Grid",
+    "Ripple",
+    "Safari Mockup",
+    "Sparkles Text",
+    "Typing Animation",
+  ],
+  tags: ["animated", "effects", "landing-page", "shadcn-companion", "framer-motion"],
+  featured: false,
+  sponsored: false,
+};
+
+export default magicUi;

@@ -11,7 +11,7 @@ const openProps: ComponentSystem = {
   styling: ["design-tokens", "vanilla-css"],
   category: ["general", "primitives"],
   maturity: "active",
-  components: [],
+  components: ["CSS Custom Properties"],
   tags: ["css-custom-properties", "design-tokens", "framework-agnostic"],
   featured: false,
   sponsored: false,

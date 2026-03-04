@@ -13,6 +13,7 @@ import _arwes from "./systems/arwes";
 import _atlaskit from "./systems/atlaskit";
 import _attractions from "./systems/attractions";
 import _backpack from "./systems/backpack";
+import _base_ui from "./systems/base-ui";
 import _base_web from "./systems/base-web";
 import _belle from "./systems/belle";
 import _bits_ui from "./systems/bits-ui";
@@ -20,6 +21,7 @@ import _blueprint from "./systems/blueprint";
 import _bootstrap from "./systems/bootstrap";
 import _buffer from "./systems/buffer";
 import _buttercup from "./systems/buttercup";
+import _catalyst from "./systems/catalyst";
 import _carbon_components_svelte from "./systems/carbon-components-svelte";
 import _carbon_design_system from "./systems/carbon-design-system";
 import _cf_design from "./systems/cf-design";
@@ -33,8 +35,10 @@ import _element_plus from "./systems/element-plus";
 import _elemental_ui from "./systems/elemental-ui";
 import _evergreen from "./systems/evergreen";
 import _fast_design from "./systems/fast-design";
+import _float_ui from "./systems/float-ui";
 import _flowbite_svelte from "./systems/flowbite-svelte";
 import _flowbite from "./systems/flowbite";
+import _franken_ui from "./systems/franken-ui";
 import _fluent_ui from "./systems/fluent-ui";
 import _fomantic_ui from "./systems/fomantic-ui";
 import _framework7_react from "./systems/framework7-react";
@@ -61,6 +65,7 @@ import _kobalte from "./systems/kobalte";
 import _kuma_ui from "./systems/kuma-ui";
 import _lightning_design from "./systems/lightning-design";
 import _lit from "./systems/lit";
+import _magic_ui from "./systems/magic-ui";
 import _mantine from "./systems/mantine";
 import _mdbootstrap from "./systems/mdbootstrap";
 import _melt_ui from "./systems/melt-ui";
@@ -71,9 +76,11 @@ import _nativebase from "./systems/nativebase";
 import _nativewind from "./systems/nativewind";
 import _nextui from "./systems/nextui";
 import _ng_bootstrap from "./systems/ng-bootstrap";
+import _origin_ui from "./systems/origin-ui";
 import _onsen_ui from "./systems/onsen-ui";
 import _open_props from "./systems/open-props";
 import _orbit from "./systems/orbit";
+import _park_ui from "./systems/park-ui";
 import _patternfly from "./systems/patternfly";
 import _pico from "./systems/pico";
 import _polaris from "./systems/polaris";
@@ -83,6 +90,7 @@ import _primeng from "./systems/primeng";
 import _primereact from "./systems/primereact";
 import _quasar from "./systems/quasar";
 import _qwik_ui from "./systems/qwik-ui";
+import _radix_themes from "./systems/radix-themes";
 import _radix_ui from "./systems/radix-ui";
 import _reach_ui from "./systems/reach-ui";
 import _react_admin from "./systems/react-admin";
@@ -125,6 +133,7 @@ import _ui5 from "./systems/ui5";
 import _visx from "./systems/visx";
 import _vue_material from "./systems/vue-material";
 import _vuetify from "./systems/vuetify";
+import _wedges from "./systems/wedges";
 import _wired_elements from "./systems/wired-elements";
 import _zent from "./systems/zent";
 export const systems: ComponentSystem[] = [
@@ -142,6 +151,7 @@ export const systems: ComponentSystem[] = [
   _atlaskit,
   _attractions,
   _backpack,
+  _base_ui,
   _base_web,
   _belle,
   _bits_ui,
@@ -149,6 +159,7 @@ export const systems: ComponentSystem[] = [
   _bootstrap,
   _buffer,
   _buttercup,
+  _catalyst,
   _carbon_components_svelte,
   _carbon_design_system,
   _cf_design,
@@ -162,8 +173,10 @@ export const systems: ComponentSystem[] = [
   _elemental_ui,
   _evergreen,
   _fast_design,
+  _float_ui,
   _flowbite_svelte,
   _flowbite,
+  _franken_ui,
   _fluent_ui,
   _fomantic_ui,
   _framework7_react,
@@ -190,6 +203,7 @@ export const systems: ComponentSystem[] = [
   _kuma_ui,
   _lightning_design,
   _lit,
+  _magic_ui,
   _mantine,
   _mdbootstrap,
   _melt_ui,
@@ -200,9 +214,11 @@ export const systems: ComponentSystem[] = [
   _nativewind,
   _nextui,
   _ng_bootstrap,
+  _origin_ui,
   _onsen_ui,
   _open_props,
   _orbit,
+  _park_ui,
   _patternfly,
   _pico,
   _polaris,
@@ -212,6 +228,7 @@ export const systems: ComponentSystem[] = [
   _primereact,
   _quasar,
   _qwik_ui,
+  _radix_themes,
   _radix_ui,
   _reach_ui,
   _react_admin,
@@ -254,6 +271,7 @@ export const systems: ComponentSystem[] = [
   _visx,
   _vue_material,
   _vuetify,
+  _wedges,
   _wired_elements,
   _zent,
 ];

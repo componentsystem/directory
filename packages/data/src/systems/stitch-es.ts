@@ -11,7 +11,7 @@ const stitches: ComponentSystem = {
   styling: ["css-in-js"],
   category: ["primitives"],
   maturity: "deprecated",
-  components: [],
+  components: ["styled", "css", "globalCss", "keyframes", "theme", "createTheme"],
   tags: ["css-in-js", "variants", "theming", "ssr"],
   featured: false,
   sponsored: false,

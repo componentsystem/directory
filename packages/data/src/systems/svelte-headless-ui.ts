@@ -11,7 +11,7 @@ const svelteHeadlessUi: ComponentSystem = {
   styling: ["headless"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Combobox", "Dialog", "Disclosure", "Listbox", "Menu", "Popover", "RadioGroup", "Switch", "Tabs", "Transition"],
   tags: ["headless-ui", "accessible", "unstyled"],
   featured: false,
   sponsored: false,

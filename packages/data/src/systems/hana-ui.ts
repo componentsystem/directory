@@ -11,7 +11,7 @@ const hanaUi: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Button", "Checkbox", "DatePicker", "Dialog", "Divider", "Form", "Icon", "Image", "Input", "Menu", "Modal", "Notification", "Pagination", "Radio", "Select", "Sidebar", "Slider", "Switch", "Tab", "Table", "Tag", "TextArea", "TimePicker", "Toast", "Tooltip", "Upload"],
   tags: [],
   featured: false,
   sponsored: false,

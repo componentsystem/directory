@@ -11,7 +11,7 @@ const hackclubTheme: ComponentSystem = {
   styling: ["css-in-js"],
   category: ["design-system"],
   maturity: "active",
-  components: [],
+  components: ["Avatar", "Badge", "Banner", "Box", "Button", "Card", "Container", "Flex", "Grid", "Heading", "Icon", "Image", "Input", "Label", "Link", "Select", "Text", "Textarea", "Theme"],
   tags: ["theme-ui"],
   featured: false,
   sponsored: false,

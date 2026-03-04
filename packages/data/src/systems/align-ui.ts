@@ -11,7 +11,7 @@ const alignUi: ComponentSystem = {
   styling: ["tailwind"],
   category: ["general", "design-system"],
   maturity: "active",
-  components: [],
+  components: ["Avatar", "Badge", "Button", "Card", "Checkbox", "Dialog", "Divider", "Dropdown", "Input", "Label", "Pagination", "Popover", "Progress", "Radio", "Select", "Separator", "Skeleton", "Slider", "Switch", "Table", "Tabs", "Tag", "Textarea", "Toast", "Toggle", "Tooltip"],
   tags: ["tailwind", "modern", "design-system"],
   featured: false,
   sponsored: false,

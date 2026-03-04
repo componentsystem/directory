@@ -11,7 +11,7 @@ const lit: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "stable",
-  components: [],
+  components: ["LitElement", "html", "css", "ReactiveElement", "nothing", "noChange"],
   tags: ["web-standards", "lightweight"],
   featured: false,
   sponsored: false,

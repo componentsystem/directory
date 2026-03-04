@@ -11,7 +11,7 @@ const kahiUi: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Anchor", "AppBar", "Article", "Aside", "Badge", "Box", "Breadcrumb", "Button", "Card", "Check", "Code", "DataPadding", "DataTable", "Divider", "Dot", "Figure", "Footer", "Form", "Grid", "Group", "Heading", "Hero", "Kbd", "Mosaic", "Omni", "Overlay", "Pagination", "Popover", "ProgressBar", "Radio", "Scrollable", "Stack", "Switch", "Tab", "Text", "TextInput", "Tile", "Toast", "Transition"],
   tags: ["rapid-prototype"],
   featured: false,
   sponsored: false,

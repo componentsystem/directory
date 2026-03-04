@@ -11,7 +11,7 @@ const reactNativePaper: ComponentSystem = {
   styling: ["material"],
   category: ["general", "mobile"],
   maturity: "stable",
-  components: [],
+  components: ["Appbar", "Avatar", "Badge", "Banner", "BottomNavigation", "Button", "Card", "Checkbox", "Chip", "DataTable", "Dialog", "Divider", "Drawer", "FAB", "HelperText", "Icon", "IconButton", "List", "Menu", "Modal", "Portal", "ProgressBar", "RadioButton", "Searchbar", "SegmentedButtons", "Snackbar", "Surface", "Switch", "Text", "TextInput", "ToggleButton", "Tooltip", "TouchableRipple"],
   tags: ["react-native", "material-design", "mobile", "callstack"],
   featured: false,
   sponsored: false,

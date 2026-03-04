@@ -11,7 +11,7 @@ const agnosUi: ComponentSystem = {
   styling: ["headless", "bootstrap"],
   category: ["general", "primitives"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Alert", "Carousel", "Collapse", "Modal", "Pagination", "Progressbar", "Rating", "Select", "Slider", "Toast", "Tooltip"],
   tags: ["headless", "framework-agnostic", "accessible"],
   featured: false,
   sponsored: false,

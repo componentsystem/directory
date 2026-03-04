@@ -11,7 +11,7 @@ const elasticUi: ComponentSystem = {
   styling: [],
   category: ["general", "enterprise"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Avatar", "Badge", "BasicTable", "Beacon", "BottomBar", "Breadcrumbs", "Button", "ButtonEmpty", "ButtonGroup", "ButtonIcon", "Callout", "Card", "Checkbox", "Code", "CollapsibleNav", "ColorPicker", "Combo Box", "Comment", "ContextMenu", "Copy", "DataGrid", "DatePicker", "DescriptionList", "DragAndDrop", "EmptyPrompt", "ErrorBoundary", "Expression", "FacetButton", "FieldNumber", "FieldPassword", "FieldSearch", "FieldText", "FilePicker", "FilterGroup", "Flex", "Flyout", "FocusTrap", "Form", "FormRow", "GlobalToast", "Header", "Health", "Highlight", "HorizontalRule", "Icon", "Image", "InlineEdit", "InnerText", "Key Pad Menu", "Link", "ListGroup", "LoadingContent", "LoadingElastic", "LoadingSpinner", "Markdown", "Modal", "OutsideClick", "PageHeader", "Pagination", "Panel", "Popover", "Progress", "Provider", "Radio", "Range", "ResizableContainer", "SearchBar", "Select", "Selectable", "SideNav", "Skeleton", "Spacer", "Stat", "Steps", "SuperDatePicker", "SuperSelect", "Switch", "Tab", "Table", "Text", "TextArea", "Title", "Toast", "Toggle", "Tooltip", "Tour", "Tree View"],
   tags: [],
   featured: false,
   sponsored: false,

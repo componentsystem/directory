@@ -11,7 +11,7 @@ const restyle: ComponentSystem = {
   styling: ["design-tokens"],
   category: ["mobile", "primitives"],
   maturity: "active",
-  components: [],
+  components: ["Box", "Text", "ThemeProvider", "createRestyleComponent", "createVariant"],
   tags: ["react-native", "design-tokens", "theming", "typescript"],
   featured: false,
   sponsored: false,

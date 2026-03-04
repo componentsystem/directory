@@ -11,7 +11,7 @@ const fastDesign: ComponentSystem = {
   styling: [],
   category: ["design-system"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Anchor", "AnchoredRegion", "Avatar", "Badge", "Breadcrumb", "Button", "Card", "Checkbox", "Combobox", "DataGrid", "Dialog", "Disclosure", "Divider", "Flipper", "HorizontalScroll", "Listbox", "Menu", "NumberField", "Picker", "Progress", "ProgressRing", "Radio", "RadioGroup", "Search", "Select", "Skeleton", "Slider", "Switch", "Tab", "TextArea", "TextField", "Toolbar", "Tooltip", "Tree"],
   tags: [],
   featured: false,
   sponsored: false,

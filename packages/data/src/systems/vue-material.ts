@@ -11,7 +11,7 @@ const vueMaterial: ComponentSystem = {
   styling: ["material"],
   category: ["general"],
   maturity: "stable",
-  components: [],
+  components: ["App", "Avatar", "Autocomplete", "Badge", "BottomBar", "Button", "Card", "Checkbox", "Chips", "Content", "DatePicker", "Dialog", "Divider", "Drawer", "EmptyState", "Field", "Icon", "List", "Menu", "Progress", "Radio", "Ripple", "Snackbar", "SpeedDial", "Steppers", "Subheader", "Switch", "Table", "Tabs", "Toolbar", "Tooltip"],
   tags: ["material-design"],
   featured: false,
   sponsored: false,

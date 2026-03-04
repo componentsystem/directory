@@ -11,7 +11,7 @@ const carbonDesignSystem: ComponentSystem = {
   styling: ["vanilla-css", "design-tokens"],
   category: ["general", "enterprise", "design-system"],
   maturity: "stable",
-  components: [],
+  components: ["Accordion", "Breadcrumb", "Button", "Checkbox", "CodeSnippet", "ComboBox", "ComposedModal", "ContentSwitcher", "ContextMenu", "Copy", "DataTable", "DatePicker", "Dropdown", "FileUploader", "FilterableMultiSelect", "FluidForm", "Form", "Grid", "InlineLoading", "InlineNotification", "Link", "ListBox", "Loading", "Modal", "MultiSelect", "Notification", "NumberInput", "OverflowMenu", "Pagination", "ProgressIndicator", "RadioButton", "Search", "Select", "SideNav", "Skeleton", "Slider", "StructuredList", "Tab", "Tag", "TextArea", "TextInput", "Tile", "TimePicker", "ToastNotification", "Toggle", "Tooltip", "TreeView", "UIShell"],
   tags: ["ibm", "enterprise", "design-system", "accessible"],
   featured: false,
   sponsored: false,

@@ -11,7 +11,7 @@ const froalaDesign: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "deprecated",
-  components: [],
+  components: ["Blog", "Call to Action", "Contacts", "Contents", "Features", "Footers", "Forms", "Gallery", "Headers", "Maps", "Pricings", "Teams", "Testimonials"],
   tags: [],
   featured: false,
   sponsored: false,

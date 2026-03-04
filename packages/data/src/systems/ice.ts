@@ -11,7 +11,7 @@ const ice: ComponentSystem = {
   styling: [],
   category: ["general", "enterprise"],
   maturity: "active",
-  components: [],
+  components: ["Button", "Input", "Select", "Checkbox", "Radio", "DatePicker", "TimePicker", "Upload", "Table", "List", "Card", "Dialog", "Drawer", "Tooltip", "Notification", "Message", "Menu", "Nav", "Breadcrumb", "Pagination", "Tab", "Tag", "Badge", "Progress", "Loading", "Grid", "Layout", "Form", "Step", "Tree", "Transfer", "Cascader", "Switch", "Slider", "Rate", "Avatar", "Collapse", "Timeline", "Affix", "Anchor", "BackTop"],
   tags: ["progressive-apps", "framework"],
   featured: false,
   sponsored: false,

@@ -10,7 +10,7 @@ const kendoReact: ComponentSystem = {
   styling: [],
   category: ["general", "enterprise"],
   maturity: "stable",
-  components: [],
+  components: ["AutoComplete", "Button", "ButtonGroup", "Calendar", "Chart", "Checkbox", "ChipList", "ColorPicker", "ComboBox", "DateInput", "DatePicker", "DateRangePicker", "DateTimePicker", "Dialog", "Drawer", "DropDownButton", "DropDownList", "Editor", "ExcelExport", "FileSelect", "FloatingLabel", "Form", "Gantt", "Grid", "Input", "Label", "Layout", "ListBox", "ListView", "Loader", "Map", "MaskedTextInput", "Menu", "MultiColumnComboBox", "MultiSelect", "Notification", "NumericTextInput", "Pager", "Pivot", "Popup", "ProgressBar", "QRCode", "RadioButton", "RadioGroup", "RangeSlider", "Scheduler", "ScrollView", "Skeleton", "Slider", "SplitButton", "Splitter", "Stepper", "Switch", "TabStrip", "TextArea", "TimePicker", "ToggleButton", "Toolbar", "Tooltip", "TreeList", "TreeView", "Upload", "Window"],
   tags: ["commercial", "data-grid"],
   featured: false,
   sponsored: false,

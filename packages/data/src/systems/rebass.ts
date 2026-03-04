@@ -11,7 +11,7 @@ const rebass: ComponentSystem = {
   styling: ["styled-components"],
   category: ["primitives"],
   maturity: "deprecated",
-  components: [],
+  components: ["Box", "Flex", "Text", "Heading", "Button", "Link", "Image", "Card"],
   tags: ["styled-system", "primitives", "minimal"],
   featured: false,
   sponsored: false,

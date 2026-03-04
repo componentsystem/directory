@@ -11,7 +11,7 @@ const rnui: ComponentSystem = {
   styling: [],
   category: ["mobile", "general"],
   maturity: "active",
-  components: [],
+  components: ["ActionBar", "ActionSheet", "Avatar", "Badge", "Button", "Card", "Carousel", "Checkbox", "Chip", "ColorPicker", "DateTimePicker", "Dialog", "Drawer", "ExpandableSection", "Fader", "FloatingButton", "GridList", "GridView", "Hint", "Icon", "Image", "ListItem", "LoaderScreen", "Marquee", "MaskedInput", "Modal", "NumberInput", "Overlay", "PageControl", "Pagination", "Pannable", "Picker", "ProgressBar", "RadioButton", "RadioGroup", "ScrollBar", "SectionsWheelPicker", "SegmentedControl", "Skeleton", "Slider", "SortableGridList", "SortableList", "StackAggregator", "Stepper", "Switch", "TabController", "Text", "TextField", "Timeline", "Toast", "TouchableOpacity", "View", "Wizard"],
   tags: ["react-native", "wix"],
   featured: false,
   sponsored: false,

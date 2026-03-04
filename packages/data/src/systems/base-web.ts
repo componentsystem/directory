@@ -11,7 +11,7 @@ const baseWeb: ComponentSystem = {
   styling: ["css-in-js"],
   category: ["general", "enterprise", "design-system"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Avatar", "Badge", "Banner", "Breadcrumbs", "Button", "ButtonGroup", "Card", "Checkbox", "Combobox", "DataTable", "DatePicker", "Drawer", "FileUploader", "FlexGrid", "FloatingMarker", "FixedMarker", "FormControl", "Heading", "Icon", "Input", "Layer", "List", "Menu", "Modal", "Notification", "Pagination", "PaymentCard", "PhoneInput", "Pin Code", "Popover", "ProgressBar", "ProgressSteps", "Radio", "Rating", "Select", "Side Navigation", "Skeleton", "Slider", "Snackbar", "Spinner", "Table", "Tabs", "Tag", "Textarea", "TimePicker", "Toast", "Toggle", "Tooltip", "Tree View", "Typography"],
   tags: ["uber", "enterprise", "customizable"],
   featured: false,
   sponsored: false,

@@ -42,26 +42,26 @@ export default async function SystemPage({
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       {/* Breadcrumb */}
-      <nav className="mb-6 text-sm text-gray-500">
-        <Link href="/" className="hover:text-brand-600">
+      <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
+        <Link href="/" className="hover:text-brand-600 dark:hover:text-brand-400">
           Directory
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-gray-900">{system.name}</span>
+        <span className="text-gray-900 dark:text-gray-100">{system.name}</span>
       </nav>
 
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-start gap-4">
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-100 text-2xl font-bold text-gray-600">
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-100 text-2xl font-bold text-gray-600 dark:bg-gray-800 dark:text-gray-400">
             {system.name.charAt(0).toUpperCase()}
           </div>
           <div className="flex-1">
-            <h1 className="text-3xl font-bold text-gray-900">{system.name}</h1>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">{system.name}</h1>
             {system.company && (
-              <p className="mt-1 text-gray-500">by {system.company}</p>
+              <p className="mt-1 text-gray-500 dark:text-gray-400">by {system.company}</p>
             )}
-            <p className="mt-2 text-lg text-gray-600">{system.description}</p>
+            <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">{system.description}</p>
           </div>
         </div>
 
@@ -81,7 +81,7 @@ export default async function SystemPage({
               href={system.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800"
             >
               <GitHubIcon />
               GitHub
@@ -92,7 +92,7 @@ export default async function SystemPage({
               href={`https://www.npmjs.com/package/${system.npm}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800"
             >
               npm
             </a>
@@ -134,7 +134,7 @@ export default async function SystemPage({
 
         {system.license && (
           <DetailCard title="License">
-            <span className="text-sm text-gray-700">{system.license}</span>
+            <span className="text-sm text-gray-700 dark:text-gray-300">{system.license}</span>
           </DetailCard>
         )}
       </div>
@@ -142,14 +142,14 @@ export default async function SystemPage({
       {/* Components list */}
       {system.components.length > 0 && (
         <div className="mb-8">
-          <h2 className="mb-4 text-xl font-semibold text-gray-900">
+          <h2 className="mb-4 text-xl font-semibold text-gray-900 dark:text-gray-100">
             Components ({system.components.length})
           </h2>
           <div className="flex flex-wrap gap-2">
             {system.components.map((comp) => (
               <span
                 key={comp}
-                className="rounded-lg bg-gray-100 px-3 py-1.5 text-sm text-gray-700"
+                className="rounded-lg bg-gray-100 px-3 py-1.5 text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-300"
               >
                 {comp}
               </span>
@@ -161,12 +161,12 @@ export default async function SystemPage({
       {/* Tags */}
       {system.tags.length > 0 && (
         <div className="mb-8">
-          <h2 className="mb-4 text-xl font-semibold text-gray-900">Tags</h2>
+          <h2 className="mb-4 text-xl font-semibold text-gray-900 dark:text-gray-100">Tags</h2>
           <div className="flex flex-wrap gap-2">
             {system.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-brand-50 px-3 py-1 text-sm text-brand-700"
+                className="rounded-full bg-brand-50 px-3 py-1 text-sm text-brand-700 dark:bg-brand-900/30 dark:text-brand-300"
               >
                 {tag}
               </span>
@@ -178,7 +178,7 @@ export default async function SystemPage({
       {/* Alternatives */}
       {alternatives.length > 0 && (
         <div className="mb-12">
-          <h2 className="mb-4 text-xl font-semibold text-gray-900">
+          <h2 className="mb-4 text-xl font-semibold text-gray-900 dark:text-gray-100">
             Similar Libraries
           </h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -186,10 +186,10 @@ export default async function SystemPage({
               <Link
                 key={alt.slug}
                 href={`/${alt.slug}`}
-                className="rounded-lg border border-gray-200 p-4 transition-colors hover:border-brand-300 hover:bg-brand-50/50"
+                className="rounded-lg border border-gray-200 p-4 transition-colors hover:border-brand-300 hover:bg-brand-50/50 dark:border-gray-800 dark:hover:border-brand-700 dark:hover:bg-brand-900/20"
               >
-                <h3 className="font-medium text-gray-900">{alt.name}</h3>
-                <p className="mt-1 line-clamp-2 text-sm text-gray-500">
+                <h3 className="font-medium text-gray-900 dark:text-gray-100">{alt.name}</h3>
+                <p className="mt-1 line-clamp-2 text-sm text-gray-500 dark:text-gray-400">
                   {alt.description}
                 </p>
               </Link>
@@ -211,8 +211,8 @@ function DetailCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-lg border border-gray-200 p-4">
-      <h3 className="mb-2 text-sm font-medium text-gray-500">{title}</h3>
+    <div className="rounded-lg border border-gray-200 p-4 dark:border-gray-800">
+      <h3 className="mb-2 text-sm font-medium text-gray-500 dark:text-gray-400">{title}</h3>
       {children}
     </div>
   );
@@ -220,7 +220,7 @@ function DetailCard({
 
 function Tag({ label }: { label: string }) {
   return (
-    <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+    <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300">
       {label}
     </span>
   );
@@ -228,17 +228,17 @@ function Tag({ label }: { label: string }) {
 
 function MaturityBadge({ maturity }: { maturity: string }) {
   const colors: Record<string, string> = {
-    experimental: "bg-yellow-100 text-yellow-800",
-    active: "bg-green-100 text-green-800",
-    stable: "bg-blue-100 text-blue-800",
-    deprecated: "bg-red-100 text-red-800",
-    unmaintained: "bg-gray-100 text-gray-800",
+    experimental: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/40 dark:text-yellow-300",
+    active: "bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300",
+    stable: "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300",
+    deprecated: "bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300",
+    unmaintained: "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300",
   };
 
   return (
     <span
       className={`inline-flex rounded-full px-3 py-1 text-sm font-medium ${
-        colors[maturity] ?? "bg-gray-100 text-gray-800"
+        colors[maturity] ?? "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300"
       }`}
     >
       {maturity}

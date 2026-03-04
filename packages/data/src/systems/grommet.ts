@@ -11,7 +11,7 @@ const grommet: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Anchor", "Avatar", "Box", "Button", "Calendar", "Card", "Carousel", "Chart", "CheckBox", "Clock", "Collapsible", "DataChart", "DataTable", "DateInput", "Distribution", "Drop", "DropButton", "FileInput", "Footer", "Form", "FormField", "Grid", "Header", "Heading", "Image", "InfiniteScroll", "Layer", "List", "Main", "Markdown", "MaskedInput", "Menu", "Meter", "Nav", "Notification", "Page", "Pagination", "Paragraph", "RadioButtonGroup", "RangeInput", "RangeSelector", "Select", "Sidebar", "Skeleton", "Spinner", "Stack", "StarRating", "Tab", "Table", "Tag", "Text", "TextArea", "TextInput", "Tip", "ToggleGroup", "Toolbar", "Video", "WorldMap"],
   tags: [],
   featured: false,
   sponsored: false,

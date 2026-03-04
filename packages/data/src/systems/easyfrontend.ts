@@ -11,7 +11,7 @@ const easyfrontend: ComponentSystem = {
   styling: ["tailwind", "bootstrap"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Alert", "Avatar", "Banner", "Blog", "Breadcrumb", "Button", "Calendar", "Card", "Carousel", "Chart", "Checkbox", "Contact", "Counter", "CTA", "DatePicker", "Divider", "Dropdown", "FAQ", "Feature", "Footer", "Form", "Gallery", "Grid", "Header", "Hero", "Icon", "Input", "List", "Login", "Map", "Menu", "Modal", "Navbar", "Newsletter", "Notification", "Pagination", "Portfolio", "Pricing", "Progress", "Radio", "Rating", "Search", "Select", "Sidebar", "Skeleton", "Slider", "Spinner", "Stat", "Step", "Switch", "Tab", "Table", "Tag", "Team", "Testimonial", "TextArea", "Timeline", "Toast", "Toggle", "Tooltip"],
   tags: [],
   featured: false,
   sponsored: false,

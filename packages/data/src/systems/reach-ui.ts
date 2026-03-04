@@ -11,7 +11,7 @@ const reachUi: ComponentSystem = {
   styling: ["headless"],
   category: ["primitives"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Alert", "AlertDialog", "Checkbox", "Combobox", "Dialog", "Disclosure", "Listbox", "Menu", "Rect", "SkipNav", "Slider", "Tabs", "Tooltip", "VisuallyHidden", "WindowSize"],
   tags: ["accessible", "headless", "aria", "primitives"],
   featured: false,
   sponsored: false,

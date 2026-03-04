@@ -11,7 +11,7 @@ const rewindUi: ComponentSystem = {
   styling: ["tailwind"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Alert", "Badge", "Breadcrumb", "Button", "Card", "Checkbox", "Combobox", "Divider", "Drawer", "Dropdown", "FormControl", "Input", "InputGroup", "Modal", "Offcanvas", "Overlay", "Popover", "Progress", "Radio", "Ribbon", "Select", "Selector", "Sidebar", "Switch", "Table", "Tabs", "Text", "Textarea", "Toast", "Tooltip"],
   tags: ["tailwind", "variants", "customizable"],
   featured: false,
   sponsored: false,

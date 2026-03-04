@@ -9,17 +9,17 @@ export default function HomePage() {
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       {/* Hero */}
       <section className="mb-12 text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">
           The Definitive Directory of
           <br />
           <span className="text-brand-600">UI Component Systems</span>
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
           Discover, compare, and choose from {systems.length}+ frontend component
           systems, design systems, and UI libraries. Community-driven and open
           source.
         </p>
-        <div className="mt-6 flex items-center justify-center gap-4 text-sm text-gray-500">
+        <div className="mt-6 flex items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-1">
             <span className="inline-block h-2 w-2 rounded-full bg-green-500" />
             {systems.length} libraries listed
@@ -54,7 +54,7 @@ export default function HomePage() {
               {Array.from({ length: 9 }).map((_, i) => (
                 <div
                   key={i}
-                  className="h-48 animate-pulse rounded-xl bg-gray-100"
+                  className="h-48 animate-pulse rounded-xl bg-gray-100 dark:bg-gray-800"
                 />
               ))}
             </div>
@@ -70,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* SEO Content */}
-      <section className="prose prose-gray mx-auto max-w-3xl">
+      <section className="prose prose-gray dark:prose-invert mx-auto max-w-3xl">
         <h2>What is a Component System?</h2>
         <p>
           A component system (also known as a component library, UI library, or

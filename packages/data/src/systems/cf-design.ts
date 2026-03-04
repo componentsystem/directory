@@ -11,7 +11,7 @@ const cfDesign: ComponentSystem = {
   styling: ["css-in-js"],
   category: ["general", "design-system"],
   maturity: "active",
-  components: [],
+  components: ["Alert", "Avatar", "Badge", "Breadcrumb", "Button", "ButtonGroup", "Card", "Checkbox", "Code", "Dialog", "Divider", "Dropdown", "EmptyState", "Form", "Icon", "Input", "Label", "Link", "List", "Loading", "Menu", "Modal", "Nav", "Notification", "Pagination", "Popover", "Progress", "Radio", "Select", "Sidebar", "Skeleton", "Switch", "Tab", "Table", "Tag", "TextArea", "Toast", "Toggle", "Tooltip"],
   tags: ["cloudflare", "internal", "dashboard"],
   featured: false,
   sponsored: false,

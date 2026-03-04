@@ -11,7 +11,7 @@ const preline: ComponentSystem = {
   styling: ["tailwind"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Alert", "Breadcrumb", "Button", "Card", "Carousel", "Checkbox", "Clipboard", "Collapse", "Combobox", "Datatable", "Dropdown", "File Upload", "Input", "Input Number", "Listbox", "Menu", "Modal", "Navbar", "Offcanvas", "Overlay", "Pagination", "Pin Input", "Popover", "Progress", "Radio", "Range Slider", "Rating", "Search", "Select", "Sidebar", "Slider", "Stepper", "Strong Password", "Switch", "Table", "Tabs", "Textarea", "Timeline", "Toast", "Tooltip", "TreeView"],
   tags: ["tailwind", "commercial", "templates"],
   featured: false,
   sponsored: false,

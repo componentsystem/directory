@@ -11,7 +11,7 @@ const skeleton: ComponentSystem = {
   styling: ["tailwind"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "AppBar", "AppShell", "Autocomplete", "Avatar", "ConicGradient", "DataTable", "FileButton", "FileDropzone", "InputChip", "ListBox", "LightSwitch", "Paginator", "Popup", "ProgressBar", "ProgressRadial", "RadioGroup", "RangeSlider", "Ratings", "SlideToggle", "Stepper", "Tab", "Table", "Toast", "TreeView"],
   tags: ["theming", "dark-mode"],
   featured: false,
   sponsored: false,

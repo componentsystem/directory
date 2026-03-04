@@ -11,7 +11,7 @@ const semiDesign: ComponentSystem = {
   styling: [],
   category: ["general", "design-system"],
   maturity: "active",
-  components: [],
+  components: ["AutoComplete", "Button", "Cascader", "Checkbox", "Collapsible", "ColorPicker", "DatePicker", "Form", "Input", "InputNumber", "RadioGroup", "Rating", "Select", "Slider", "Switch", "TagInput", "TimePicker", "Transfer", "TreeSelect", "Upload", "Avatar", "Badge", "Calendar", "Card", "Carousel", "Collapse", "Descriptions", "Empty", "Image", "List", "Modal", "OverflowList", "Popover", "ScrollList", "Table", "Tabs", "Tag", "Timeline", "Tooltip", "Tree", "Anchor", "BackTop", "Breadcrumb", "Dropdown", "Layout", "LocaleProvider", "Navigation", "Pagination", "Popconfirm", "SideSheet", "Steps", "Alert", "Banner", "Notification", "Progress", "Skeleton", "Spin", "Toast", "Typography"],
   tags: ["bytedance", "douyin", "theming"],
   featured: false,
   sponsored: false,

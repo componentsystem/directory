@@ -11,7 +11,7 @@ const grailUi: ComponentSystem = {
   styling: ["headless"],
   category: ["primitives"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Checkbox", "ClickOutside", "Clipboard", "Collapsible", "DismissibleLayer", "FloatingUI", "FocusTrap", "Listbox", "Menu", "Modal", "Pagination", "Popover", "ProgressBar", "Radio", "Select", "Slider", "Switch", "Tabs", "Toast", "Toggle", "Tooltip"],
   tags: [],
   featured: false,
   sponsored: false,

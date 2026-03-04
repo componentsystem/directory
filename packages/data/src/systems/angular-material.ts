@@ -11,7 +11,7 @@ const angularMaterial: ComponentSystem = {
   styling: ["material"],
   category: ["general", "design-system"],
   maturity: "stable",
-  components: [],
+  components: ["Autocomplete", "Badge", "Bottom Sheet", "Button", "Button Toggle", "Card", "Checkbox", "Chips", "Core", "Datepicker", "Dialog", "Divider", "Expansion", "Form Field", "Grid List", "Icon", "Input", "List", "Menu", "Paginator", "Progress Bar", "Progress Spinner", "Radio", "Ripple", "Select", "Sidenav", "Slide Toggle", "Slider", "Snack Bar", "Sort", "Stepper", "Table", "Tabs", "Toolbar", "Tooltip", "Tree"],
   tags: ["material-design", "google", "official"],
   featured: false,
   sponsored: false,

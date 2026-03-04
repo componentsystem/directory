@@ -11,7 +11,7 @@ const reactNativeElements: ComponentSystem = {
   styling: ["design-tokens"],
   category: ["general", "mobile"],
   maturity: "active",
-  components: [],
+  components: ["Avatar", "Badge", "BottomSheet", "Button", "ButtonGroup", "Card", "CheckBox", "Chip", "Dialog", "Divider", "FAB", "Header", "Icon", "Image", "Input", "LinearProgress", "ListItem", "Overlay", "PricingCard", "Rating", "SearchBar", "Skeleton", "Slider", "SocialIcon", "SpeedDial", "Switch", "Tab", "Text", "Tile", "Tooltip"],
   tags: ["react-native", "mobile", "cross-platform"],
   featured: false,
   sponsored: false,

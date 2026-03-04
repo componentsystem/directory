@@ -10,7 +10,7 @@ const kendoUi: ComponentSystem = {
   styling: [],
   category: ["general", "enterprise"],
   maturity: "stable",
-  components: [],
+  components: ["AutoComplete", "BottomNavigation", "Breadcrumb", "Button", "ButtonGroup", "Calendar", "Chart", "Checkbox", "ChipList", "ColorPicker", "ComboBox", "ContextMenu", "DateInput", "DatePicker", "DateRangePicker", "DateTimePicker", "Dialog", "Drawer", "DropDownButton", "DropDownList", "Editor", "FileManager", "Filter", "FlatColorPicker", "FloatingActionButton", "Gantt", "Grid", "Input", "Loader", "Map", "MaskedTextInput", "Menu", "MultiColumnComboBox", "MultiSelect", "Notification", "NumericTextBox", "Pager", "PanelBar", "PDFViewer", "PivotGrid", "PopOver", "ProgressBar", "QRCode", "RadioButton", "RadioGroup", "RangeSlider", "Rating", "Scheduler", "ScrollView", "Skeleton", "Slider", "SplitButton", "Splitter", "Spreadsheet", "Stepper", "Switch", "TabStrip", "TextArea", "TextBox", "TileLayout", "TimePicker", "ToggleButton", "Toolbar", "Tooltip", "TreeList", "TreeView", "Upload", "Window", "Wizard"],
   tags: ["commercial", "data-grid"],
   featured: false,
   sponsored: false,

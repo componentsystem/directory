@@ -11,7 +11,7 @@ const carbonComponentsSvelte: ComponentSystem = {
   styling: ["vanilla-css", "design-tokens"],
   category: ["general", "enterprise", "design-system"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "AspectRatio", "Breadcrumb", "Breakpoint", "Button", "ButtonSet", "Checkbox", "ClickableTile", "CodeSnippet", "Column", "ComboBox", "ComposedModal", "Content", "ContentSwitcher", "ContextMenu", "Copy", "CopyButton", "DataTable", "DataTableSkeleton", "DatePicker", "Dropdown", "FileUploader", "FluidForm", "Form", "FormGroup", "Grid", "Header", "HeaderNav", "Icon", "InlineLoading", "InlineNotification", "Link", "ListBox", "ListItem", "Loading", "LocalStorage", "Modal", "MultiSelect", "NotificationPanel", "NumberInput", "OrderedList", "Pagination", "PasswordInput", "ProgressBar", "ProgressIndicator", "RadioButton", "RadioButtonGroup", "Row", "Search", "Select", "SideNav", "SideNavItems", "Skeleton", "Slider", "StructuredList", "Tab", "TabContent", "Tabs", "Tag", "TextArea", "TextInput", "Tile", "TimePicker", "ToastNotification", "Toggle", "Tooltip", "TreeView", "UnorderedList"],
   tags: ["ibm", "carbon", "enterprise", "accessible"],
   featured: false,
   sponsored: false,

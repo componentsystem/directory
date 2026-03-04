@@ -11,7 +11,7 @@ const patternfly: ComponentSystem = {
   styling: ["vanilla-css", "design-tokens"],
   category: ["general", "enterprise", "design-system"],
   maturity: "stable",
-  components: [],
+  components: ["Accordion", "ActionList", "Alert", "Avatar", "BackToTop", "Badge", "Banner", "Brand", "Breadcrumb", "Button", "Calendar", "Card", "Checkbox", "Chip", "ClipboardCopy", "CodeBlock", "CodeEditor", "DataList", "DatePicker", "DescriptionList", "Divider", "Drawer", "DualListSelector", "EmptyState", "ExpandableSection", "FileUpload", "Form", "Gallery", "Grid", "HelperText", "Hint", "Icon", "InputGroup", "JumpLinks", "Label", "List", "LoginPage", "MastHead", "Menu", "Modal", "Nav", "NotificationBadge", "NotificationDrawer", "NumberInput", "OverflowMenu", "Page", "Pagination", "Panel", "Popover", "Progress", "ProgressStepper", "Radio", "SearchInput", "Select", "Sidebar", "SimpleList", "Skeleton", "Slider", "Spinner", "Switch", "Tab", "Table", "Text", "TextArea", "TextInput", "Tile", "TimePicker", "ToggleGroup", "Toolbar", "Tooltip", "TreeView", "Wizard"],
   tags: ["enterprise", "red-hat", "patterns"],
   featured: false,
   sponsored: false,

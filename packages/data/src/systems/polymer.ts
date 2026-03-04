@@ -11,7 +11,7 @@ const polymer: ComponentSystem = {
   styling: ["vanilla-css"],
   category: ["general"],
   maturity: "deprecated",
-  components: [],
+  components: ["LitElement", "PolymerElement", "html", "css"],
   tags: ["google", "web-components", "legacy"],
   featured: false,
   sponsored: false,

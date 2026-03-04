@@ -11,7 +11,7 @@ const argonDesignReact: ComponentSystem = {
   styling: ["bootstrap"],
   category: ["general", "design-system"],
   maturity: "active",
-  components: [],
+  components: ["Badge", "Button", "Card", "Carousel", "Checkbox", "Datepicker", "Dropdown", "Footer", "Form", "Grid", "Header", "Hero", "Icon", "Input", "Modal", "Nav", "Navbar", "Pagination", "Progress", "Radio", "Select", "Slider", "Tab", "Table", "Tooltip", "Typography"],
   tags: ["creative-tim", "bootstrap", "templates"],
   featured: false,
   sponsored: false,

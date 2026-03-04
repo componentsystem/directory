@@ -11,7 +11,7 @@ const styledComponents: ComponentSystem = {
   styling: ["css-in-js"],
   category: ["primitives"],
   maturity: "stable",
-  components: [],
+  components: ["styled", "css", "keyframes", "createGlobalStyle", "ThemeProvider", "ServerStyleSheet"],
   tags: ["css-in-js", "tagged-templates", "styling"],
   featured: false,
   sponsored: false,

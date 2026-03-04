@@ -11,7 +11,7 @@ const shoelace: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Alert", "Animated Image", "Animation", "Avatar", "Badge", "Breadcrumb", "Button", "ButtonGroup", "Card", "Carousel", "Checkbox", "ColorPicker", "CopyButton", "Details", "Dialog", "Divider", "Drawer", "Dropdown", "FormatBytes", "FormatDate", "FormatNumber", "Icon", "IconButton", "ImageComparer", "Include", "Input", "Menu", "MenuItem", "MutationObserver", "Option", "Popup", "ProgressBar", "ProgressRing", "QRCode", "Radio", "RadioButton", "RadioGroup", "Range", "Rating", "RelativeTime", "ResizeObserver", "Select", "Skeleton", "Spinner", "SplitPanel", "Switch", "Tab", "TabGroup", "TabPanel", "Tag", "Textarea", "Tooltip", "Tree", "TreeItem", "VisuallyHidden"],
   tags: ["framework-agnostic", "accessible"],
   featured: false,
   sponsored: false,

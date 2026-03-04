@@ -11,7 +11,7 @@ const buttercup: ComponentSystem = {
   styling: ["css-in-js"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Breadcrumb", "Button", "Card", "Checkbox", "Code", "DataTable", "Dropdown", "Header", "Icon", "Input", "Label", "List", "Menu", "Modal", "Notification", "Pagination", "Progress", "Radio", "Select", "SideMenu", "Switch", "Tab", "Table", "Tag", "TextArea", "Toast", "Tooltip"],
   tags: ["buttercup", "password-manager"],
   featured: false,
   sponsored: false,

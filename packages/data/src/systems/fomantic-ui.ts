@@ -11,7 +11,7 @@ const fomanticUi: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Ad", "Breadcrumb", "Button", "Calendar", "Card", "Checkbox", "Comment", "Container", "Dimmer", "Divider", "Dropdown", "Embed", "Feed", "Flag", "Form", "Grid", "Header", "Icon", "Image", "Input", "Item", "Label", "List", "Loader", "Menu", "Message", "Modal", "Nag", "Placeholder", "Popup", "Progress", "Rail", "Rating", "Reveal", "Search", "Segment", "Shape", "Sidebar", "Slider", "Sticky", "Tab", "Table", "Toast", "Transition"],
   tags: [],
   featured: false,
   sponsored: false,

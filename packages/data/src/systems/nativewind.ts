@@ -11,7 +11,7 @@ const nativewind: ComponentSystem = {
   styling: ["tailwind"],
   category: ["general", "mobile"],
   maturity: "active",
-  components: [],
+  components: ["styled", "StyledComponent", "useColorScheme"],
   tags: ["react-native", "tailwind", "mobile", "styling"],
   featured: false,
   sponsored: false,

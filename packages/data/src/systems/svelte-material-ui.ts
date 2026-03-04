@@ -11,7 +11,7 @@ const svelteMaterialUi: ComponentSystem = {
   styling: ["material"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Autocomplete", "Badge", "Banner", "Button", "Card", "Checkbox", "Chips", "CircularProgress", "DataTable", "Dialog", "Drawer", "Fab", "IconButton", "ImageList", "LayoutGrid", "LinearProgress", "List", "Menu", "Paper", "Radio", "Segmented Button", "Select", "Slider", "Snackbar", "Switch", "Tab", "Textfield", "Tooltip", "TopAppBar", "Touch Target"],
   tags: ["material-design"],
   featured: false,
   sponsored: false,

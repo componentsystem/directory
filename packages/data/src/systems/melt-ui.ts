@@ -11,7 +11,7 @@ const meltUi: ComponentSystem = {
   styling: ["headless"],
   category: ["primitives"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Avatar", "Calendar", "Checkbox", "Collapsible", "Combobox", "Context Menu", "Date Field", "Date Picker", "Date Range Field", "Date Range Picker", "Dialog", "Dropdown Menu", "Label", "Link Preview", "Menubar", "Pagination", "Pin Input", "Popover", "Progress", "Radio Group", "Range Calendar", "Scroll Area", "Select", "Separator", "Slider", "Switch", "Tabs", "Tags Input", "Toggle", "Toggle Group", "Toolbar", "Tooltip", "Tree"],
   tags: ["accessible", "headless", "builders"],
   featured: false,
   sponsored: false,

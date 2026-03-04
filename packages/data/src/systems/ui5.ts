@@ -11,7 +11,7 @@ const ui5: ComponentSystem = {
   styling: [],
   category: ["enterprise"],
   maturity: "stable",
-  components: [],
+  components: ["Avatar", "Badge", "Bar", "Breadcrumbs", "BusyIndicator", "Button", "Calendar", "Card", "Carousel", "Checkbox", "ColorPicker", "ComboBox", "DatePicker", "DateRangePicker", "DateTimePicker", "Dialog", "FileUploader", "FlexibleColumnLayout", "Icon", "IllustratedMessage", "Input", "Label", "Link", "List", "Menu", "MessageStrip", "MultiComboBox", "MultiInput", "NotificationList", "Page", "Panel", "Popover", "ProductSwitch", "ProgressIndicator", "RadioButton", "RangeSlider", "RatingIndicator", "SegmentedButton", "Select", "ShellBar", "SideNavigation", "Slider", "SplitButton", "StepInput", "Switch", "Tab", "Table", "TextArea", "TimePicker", "Timeline", "Title", "Toast", "ToggleButton", "Token", "Toolbar", "Tree", "Upload", "ViewSettings", "Wizard"],
   tags: ["sap", "enterprise", "business"],
   featured: false,
   sponsored: false,

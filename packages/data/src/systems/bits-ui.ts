@@ -11,7 +11,7 @@ const bitsUi: ComponentSystem = {
   styling: ["headless"],
   category: ["primitives", "general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Alert Dialog", "Aspect Ratio", "Avatar", "Calendar", "Checkbox", "Collapsible", "Combobox", "Context Menu", "Date Field", "Date Picker", "Date Range Field", "Date Range Picker", "Dialog", "Dropdown Menu", "Label", "Link Preview", "Menubar", "Navigation Menu", "Pagination", "Pin Input", "Popover", "Progress", "Radio Group", "Range Calendar", "Scroll Area", "Select", "Separator", "Slider", "Switch", "Tabs", "Toggle", "Toggle Group", "Toolbar", "Tooltip"],
   tags: ["headless", "accessible", "primitives", "composable"],
   featured: false,
   sponsored: false,

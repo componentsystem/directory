@@ -11,7 +11,7 @@ const reactSelect: ComponentSystem = {
   styling: [],
   category: ["forms"],
   maturity: "stable",
-  components: [],
+  components: ["Select", "AsyncSelect", "CreatableSelect", "AsyncCreatableSelect"],
   tags: ["select", "dropdown", "form-control"],
   featured: false,
   sponsored: false,

@@ -11,7 +11,7 @@ const wiredElements: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "unmaintained",
-  components: [],
+  components: ["Button", "Calendar", "Card", "Checkbox", "Combo", "Dialog", "Divider", "Fab", "IconButton", "Image", "Input", "Item", "Link", "Listbox", "Progress", "RadioGroup", "Search", "Slider", "Spinner", "Tab", "Textarea", "Toggle", "Video"],
   tags: ["hand-drawn", "sketchy", "rough-js", "wireframe"],
   featured: false,
   sponsored: false,

@@ -11,7 +11,7 @@ const arwes: ComponentSystem = {
   styling: ["css-in-js"],
   category: ["general", "animation"],
   maturity: "active",
-  components: [],
+  components: ["Animator", "AnimatorGeneralProvider", "Bleeps", "BleepsProvider", "FrameBox", "FrameCorners", "FrameHeader", "FrameHexagon", "FrameLines", "FrameNefrex", "FrameOctagon", "FramePentagon", "FrameUnderline", "GridLines", "Illuminator", "MovingLines", "Puffs", "Text", "Visual", "Dots", "CodeBlock"],
   tags: ["sci-fi", "futuristic", "animated", "cyberpunk"],
   featured: false,
   sponsored: false,

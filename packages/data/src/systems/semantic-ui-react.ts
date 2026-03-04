@@ -11,7 +11,7 @@ const semanticUiReact: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "stable",
-  components: [],
+  components: ["Button", "Container", "Divider", "Flag", "Header", "Icon", "Image", "Input", "Label", "List", "Loader", "Placeholder", "Rail", "Reveal", "Segment", "Step", "Breadcrumb", "Form", "Grid", "Menu", "Message", "Table", "Advertisement", "Card", "Comment", "Feed", "Item", "Statistic", "Accordion", "Checkbox", "Dimmer", "Dropdown", "Embed", "Modal", "Popup", "Progress", "Rating", "Search", "Sidebar", "Sticky", "Tab", "Transition", "Confirm", "Pagination", "Portal", "Radio", "Select", "TextArea", "Visibility", "Ref"],
   tags: ["semantic-ui"],
   featured: false,
   sponsored: false,

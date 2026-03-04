@@ -11,7 +11,7 @@ const suid: ComponentSystem = {
   styling: ["material"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Alert", "AppBar", "Autocomplete", "Avatar", "Badge", "Box", "Breadcrumbs", "Button", "ButtonGroup", "Card", "Checkbox", "Chip", "Container", "CssBaseline", "Dialog", "Divider", "Drawer", "Fab", "FormControl", "Grid", "Icon", "IconButton", "Input", "LinearProgress", "Link", "List", "Menu", "Modal", "Pagination", "Paper", "Popover", "Radio", "Rating", "Select", "Skeleton", "Slider", "Snackbar", "SpeedDial", "Stack", "Switch", "Tab", "Table", "TextField", "ToggleButton", "Toolbar", "Tooltip", "Typography"],
   tags: ["material-ui", "mui-port", "material-design"],
   featured: false,
   sponsored: false,

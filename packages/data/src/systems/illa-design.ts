@@ -11,7 +11,7 @@ const illaDesign: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Alert", "Avatar", "Badge", "Breadcrumb", "Button", "Card", "Cascader", "Checkbox", "Collapse", "DatePicker", "Divider", "Drawer", "Dropdown", "Empty", "Form", "Grid", "Image", "Input", "InputNumber", "InputTag", "Link", "List", "Menu", "Message", "Modal", "Notification", "Pagination", "Popconfirm", "Popover", "Progress", "Radio", "Rate", "Result", "Select", "Skeleton", "Slider", "Space", "Spin", "Statistic", "Steps", "Switch", "Table", "Tabs", "Tag", "TimePicker", "Timeline", "Tooltip", "Transfer", "Tree", "TreeSelect", "Typography", "Upload"],
   tags: [],
   featured: false,
   sponsored: false,

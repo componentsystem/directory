@@ -11,7 +11,7 @@ const kobalte: ComponentSystem = {
   styling: ["headless"],
   category: ["primitives"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Alert", "Alert Dialog", "Breadcrumbs", "Button", "Checkbox", "Collapsible", "Combobox", "Context Menu", "Date Picker", "Dialog", "Dropdown Menu", "Hover Card", "Image", "Link", "Menubar", "Navigation Menu", "Number Field", "Pagination", "Popover", "Progress", "Radio Group", "Select", "Separator", "Skeleton", "Slider", "Switch", "Tabs", "Toast", "Toggle Button", "Toggle Group", "Tooltip"],
   tags: ["accessible", "headless"],
   featured: false,
   sponsored: false,

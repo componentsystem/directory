@@ -11,7 +11,7 @@ const framework7React: ComponentSystem = {
   styling: [],
   category: ["mobile"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "ActionSheet", "Appbar", "Area Chart", "Badge", "Block", "Breadcrumbs", "Button", "Calendar", "Card", "Checkbox", "Chip", "ColorPicker", "ContactsList", "Dialog", "Fab", "Gauge", "Grid", "Icon", "InfiniteScroll", "Input", "Link", "List", "LoginScreen", "Menu", "Messagebar", "Messages", "Navbar", "Notification", "Page", "Panel", "Picker", "Pie Chart", "Popover", "Popup", "Preloader", "Progressbar", "PullToRefresh", "Radio", "Range", "Searchbar", "SegmentedControl", "Sheet", "Skeleton", "Sortable", "Stepper", "Subnavbar", "Swiper", "Tab", "TextEditor", "Timeline", "Toast", "Toggle", "Toolbar", "Tooltip", "TreeView", "VirtualList"],
   tags: [],
   featured: false,
   sponsored: false,

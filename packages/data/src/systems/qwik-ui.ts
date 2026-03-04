@@ -11,7 +11,7 @@ const qwikUi: ComponentSystem = {
   styling: ["headless"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Avatar", "Badge", "Breadcrumb", "Button", "Card", "Carousel", "Checkbox", "Combobox", "Label", "Modal", "Pagination", "Popover", "Progress", "RadioGroup", "Select", "Separator", "Skeleton", "Slider", "Tabs", "Toast", "Toggle", "Tooltip"],
   tags: ["qwik", "resumable", "accessible"],
   featured: false,
   sponsored: false,

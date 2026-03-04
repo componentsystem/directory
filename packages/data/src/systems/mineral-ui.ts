@@ -11,7 +11,7 @@ const mineralUi: ComponentSystem = {
   styling: [],
   category: ["design-system"],
   maturity: "unmaintained",
-  components: [],
+  components: ["Avatar", "Box", "Button", "ButtonGroup", "Card", "Checkbox", "CheckboxGroup", "Dialog", "Dropdown", "Flex", "FlexItem", "FormField", "FormFieldDivider", "Grid", "GridItem", "Icon", "Link", "Menu", "MenuItem", "Pagination", "Popover", "Radio", "RadioGroup", "Select", "StartEnd", "StatusIndicator", "Tab", "Table", "Text", "TextArea", "TextInput", "ThemeProvider", "Tooltip", "Truncate"],
   tags: [],
   featured: false,
   sponsored: false,

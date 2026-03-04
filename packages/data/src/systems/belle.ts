@@ -11,7 +11,7 @@ const belle: ComponentSystem = {
   styling: ["css-in-js"],
   category: ["general"],
   maturity: "deprecated",
-  components: [],
+  components: ["Button", "Card", "Choice", "ComboBox", "DatePicker", "Option", "Placeholder", "Rating", "Select", "Separator", "Spinner", "TextInput", "Toggle", "Tooltip"],
   tags: ["mobile-friendly", "configurable"],
   featured: false,
   sponsored: false,

@@ -11,7 +11,7 @@ const rippleUi: ComponentSystem = {
   styling: ["tailwind"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Alert", "Avatar", "Badge", "Breadcrumb", "Button", "ButtonGroup", "Card", "Checkbox", "Divider", "Drawer", "Dropdown", "Input", "Modal", "Navbar", "Pagination", "Popover", "Progress", "Radio", "Range", "Select", "Sidebar", "Skeleton", "Spinner", "Stat", "Steps", "Switch", "Table", "Tabs", "TextArea", "Timeline", "Toast", "Toggle", "Tooltip"],
   tags: ["tailwind", "html", "utility-first"],
   featured: false,
   sponsored: false,

@@ -11,7 +11,7 @@ const reactBootstrap: ComponentSystem = {
   styling: ["bootstrap"],
   category: ["general"],
   maturity: "stable",
-  components: [],
+  components: ["Accordion", "Alert", "Badge", "Breadcrumb", "Button", "ButtonGroup", "Card", "Carousel", "CloseButton", "Col", "Container", "Dropdown", "Figure", "FloatingLabel", "Form", "Image", "InputGroup", "ListGroup", "Modal", "Nav", "Navbar", "Offcanvas", "Overlay", "Pagination", "Placeholder", "Popover", "ProgressBar", "Row", "Spinner", "Stack", "Tab", "Table", "Toast", "Tooltip"],
   tags: ["bootstrap", "popular"],
   featured: false,
   sponsored: false,

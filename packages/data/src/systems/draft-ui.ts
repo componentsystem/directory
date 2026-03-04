@@ -11,7 +11,7 @@ const draftUi: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Alert", "Badge", "Button", "Card", "Checkbox", "Dialog", "Divider", "Dropdown", "Input", "Label", "List", "Modal", "Pagination", "Progress", "Radio", "Select", "Separator", "Switch", "Tabs", "Toast", "Toggle", "Tooltip"],
   tags: [],
   featured: false,
   sponsored: false,

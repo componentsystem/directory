@@ -11,7 +11,7 @@ const backpack: ComponentSystem = {
   styling: ["design-tokens"],
   category: ["general", "design-system"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Autosuggest", "Badge", "BannerAlert", "BarChart", "Blockquote", "BottomSheet", "Breadcrumb", "Button", "Calendar", "Card", "Checkbox", "Chip", "Code", "DataTable", "DatePicker", "Description List", "Dialog", "Divider", "Drawer", "FieldSet", "FlareBar", "FloatingNotification", "FormValidation", "Graphic", "HorizontalNav", "Icon", "Image", "InfiniteScroll", "Input", "InteractiveMap", "Link", "List", "MobileScrollContainer", "NavigationBar", "NavigationStack", "Nudger", "Overlay", "PageIndicator", "Pagination", "Panel", "Popover", "Price", "Progress", "Radio", "Rating", "SearchModal", "SectionList", "Select", "Skeleton", "Slider", "Snackbar", "Spinner", "SplitInput", "StarRating", "Switch", "Tab", "Text", "Textarea", "Ticket", "Toast", "Tooltip"],
   tags: ["skyscanner", "design-system", "travel"],
   featured: false,
   sponsored: false,

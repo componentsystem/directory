@@ -11,7 +11,7 @@ const hybrids: ComponentSystem = {
   styling: [],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["define", "html", "css", "store", "router"],
   tags: ["functional", "declarative"],
   featured: false,
   sponsored: false,

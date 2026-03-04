@@ -11,7 +11,7 @@ const clarityDesign: ComponentSystem = {
   styling: ["vanilla-css", "design-tokens"],
   category: ["general", "enterprise", "design-system"],
   maturity: "stable",
-  components: [],
+  components: ["Accordion", "Alert", "Badge", "Breadcrumb", "Button", "ButtonGroup", "Card", "Checkbox", "Combobox", "Datagrid", "DataList", "Datepicker", "Dropdown", "FileInput", "Form", "Grid", "Header", "Icon", "Input", "Label", "List", "Login", "Modal", "Navigation", "Pagination", "Password", "Progress Bar", "Radio", "Range", "Select", "Sidebar", "Signpost", "Spinner", "Stack", "Stepper", "Switch", "Table", "Tabs", "Tag", "Textarea", "Timeline", "Toggle", "Tooltip", "Tree", "Vertical Nav", "Wizard"],
   tags: ["vmware", "enterprise", "design-system", "accessible"],
   featured: false,
   sponsored: false,

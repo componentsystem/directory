@@ -11,7 +11,7 @@ const attractions: ComponentSystem = {
   styling: ["vanilla-css"],
   category: ["general"],
   maturity: "active",
-  components: [],
+  components: ["Accordion", "Autocomplete", "Button", "Card", "Checkbox", "Chip", "DatePicker", "Dialog", "Divider", "Dot", "Dropdown", "FileInput", "FileTile", "Loading", "Pagination", "Popover", "RadioButton", "RadioChip", "Slider", "Snackbar", "Switch", "Tab", "Table", "Tag", "TextArea", "TextField", "TimePicker", "Tooltip"],
   tags: ["lightweight", "accessible"],
   featured: false,
   sponsored: false,
