@@ -1,0 +1,17 @@
+{
+  "name": "componentsystem-directory",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspace=packages/data && npm run build --workspace=apps/web",
+    "lint": "npm run lint --workspace=apps/web",
+    "validate": "npm run validate --workspace=packages/data"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

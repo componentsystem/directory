@@ -1,0 +1,109 @@
+name: Validate Data
+
+on:
+  pull_request:
+    paths:
+      - "packages/data/src/**"
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    name: Validate Component Systems Data
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate schemas
+        run: npm run validate --workspace=packages/data
+
+      - name: Check for duplicate slugs
+        run: |
+          cd packages/data/src/systems
+          slugs=$(grep -h "slug:" *.ts | sed 's/.*slug: *"\(.*\)".*/\1/' | sort)
+          dupes=$(echo "$slugs" | uniq -d)
+          if [ -n "$dupes" ]; then
+            echo "Duplicate slugs found:"
+            echo "$dupes"
+            exit 1
+          fi
+          echo "No duplicate slugs found."
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+  label-pr:
+    name: Label PR by Framework
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect frameworks in changed files
+        id: detect
+        run: |
+          changed=$(git diff --name-only origin/main...HEAD -- 'packages/data/src/systems/*.ts' || true)
+          labels=""
+          for file in $changed; do
+            if [ -f "$file" ]; then
+              if grep -q '"react"' "$file"; then labels="$labels,react"; fi
+              if grep -q '"vue"' "$file"; then labels="$labels,vue"; fi
+              if grep -q '"svelte"' "$file"; then labels="$labels,svelte"; fi
+              if grep -q '"angular"' "$file"; then labels="$labels,angular"; fi
+              if grep -q '"solid"' "$file"; then labels="$labels,solid"; fi
+              if grep -q '"web-components"' "$file"; then labels="$labels,web-components"; fi
+            fi
+          done
+          labels=$(echo "$labels" | sed 's/^,//' | sort -u | tr '\n' ',' | sed 's/,$//')
+          echo "labels=$labels" >> $GITHUB_OUTPUT
+
+      - name: Apply labels
+        if: steps.detect.outputs.labels != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = '${{ steps.detect.outputs.labels }}'.split(',').filter(Boolean);
+            if (labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: labels,
+              });
+            }

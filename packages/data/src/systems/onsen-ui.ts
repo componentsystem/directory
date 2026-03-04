@@ -1,0 +1,20 @@
+import type { ComponentSystem } from "../schema";
+
+const onsenUi: ComponentSystem = {
+  slug: "onsen-ui",
+  name: "OnsenUI",
+  url: "https://onsen.io/",
+  github: "https://github.com/OnsenUI/OnsenUI/",
+  description:
+    "A mobile-focused UI framework providing native-feeling components for Angular, React, and Vue, designed specifically for hybrid and progressive web apps.",
+  frameworks: ["angular", "react", "vue"],
+  styling: ["vanilla-css"],
+  category: ["general", "mobile"],
+  maturity: "active",
+  components: [],
+  tags: ["mobile", "hybrid", "pwa", "cross-framework"],
+  featured: false,
+  sponsored: false,
+};
+
+export default onsenUi;

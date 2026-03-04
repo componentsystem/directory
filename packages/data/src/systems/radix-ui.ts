@@ -1,0 +1,20 @@
+import type { ComponentSystem } from "../schema";
+
+const radixUi: ComponentSystem = {
+  slug: "radix-ui",
+  name: "Radix UI",
+  url: "https://www.radix-ui.com/",
+  github: "https://github.com/radix-ui/themes",
+  description:
+    "An open-source React component library offering unstyled, accessible primitives and a polished themes layer for building high-quality design systems.",
+  frameworks: ["react"],
+  styling: ["headless", "design-tokens"],
+  category: ["primitives", "general"],
+  maturity: "stable",
+  components: [],
+  tags: ["headless", "accessible", "primitives", "themes"],
+  featured: false,
+  sponsored: false,
+};
+
+export default radixUi;
