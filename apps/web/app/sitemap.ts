@@ -2,11 +2,14 @@ import { systems } from "@componentsystem/data";
 import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://componentsystem.directory";
+const LAST_MODIFIED = new Date("2026-06-02");
+
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const systemPages = systems.map((system) => ({
     url: `${BASE_URL}/${system.slug}`,
-    lastModified: new Date(),
+    lastModified: LAST_MODIFIED,
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
@@ -21,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/ai`, priority: 0.8 },
   ].map((page) => ({
     ...page,
-    lastModified: new Date(),
+    lastModified: LAST_MODIFIED,
     changeFrequency: "weekly" as const,
   }));
 

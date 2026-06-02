@@ -10,52 +10,22 @@ interface Message {
 export function AiChat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!input.trim() || isLoading) return;
+    if (!input.trim()) return;
 
     const userMessage = input.trim();
     setInput("");
-    setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
-    setIsLoading(true);
-
-    try {
-      const res = await fetch("/api/ai", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage }),
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        setMessages((prev) => [
-          ...prev,
-          { role: "assistant", content: data.response },
-        ]);
-      } else {
-        setMessages((prev) => [
-          ...prev,
-          {
-            role: "assistant",
-            content:
-              "The AI feature requires a Claude API key to be configured. Check back soon!",
-          },
-        ]);
-      }
-    } catch {
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          content:
-            "The AI feature is coming soon. In the meantime, use our search and filter tools to find the perfect component library!",
-        },
-      ]);
-    } finally {
-      setIsLoading(false);
-    }
+    setMessages((prev) => [
+      ...prev,
+      { role: "user", content: userMessage },
+      {
+        role: "assistant",
+        content:
+          "AI recommendations are disabled in the static version for now. Use the directory search, filters, and comparison tools to narrow down component systems.",
+      },
+    ]);
   }
 
   return (
@@ -93,17 +63,6 @@ export function AiChat() {
                 </div>
               </div>
             ))}
-            {isLoading && (
-              <div className="flex justify-start">
-                <div className="rounded-2xl bg-gray-100 px-4 py-3">
-                  <div className="flex gap-1">
-                    <div className="h-2 w-2 animate-bounce rounded-full bg-gray-400" />
-                    <div className="h-2 w-2 animate-bounce rounded-full bg-gray-400 [animation-delay:0.2s]" />
-                    <div className="h-2 w-2 animate-bounce rounded-full bg-gray-400 [animation-delay:0.4s]" />
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
         )}
       </div>
@@ -120,7 +79,7 @@ export function AiChat() {
           />
           <button
             type="submit"
-            disabled={isLoading || !input.trim()}
+            disabled={!input.trim()}
             className="rounded-lg bg-brand-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-700 disabled:opacity-50"
           >
             Send

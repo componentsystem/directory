@@ -4,29 +4,13 @@ import { useState } from "react";
 
 export function NewsletterSignup({ variant = "brand" }: { variant?: "brand" | "dark" }) {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "success">("idle");
   const isDark = variant === "dark";
 
-  async function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setStatus("loading");
-
-    try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-
-      if (res.ok) {
-        setStatus("success");
-        setEmail("");
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
+    setStatus("success");
+    setEmail("");
   }
 
   return (
@@ -53,7 +37,7 @@ export function NewsletterSignup({ variant = "brand" }: { variant?: "brand" | "d
               : "mt-6 rounded-lg bg-white/10 p-4 text-brand-100"
           }
         >
-          Thanks for subscribing! Check your inbox to confirm.
+          Newsletter signup is coming soon. Thanks for your interest.
         </div>
       ) : (
         <form
@@ -74,22 +58,15 @@ export function NewsletterSignup({ variant = "brand" }: { variant?: "brand" | "d
           />
           <button
             type="submit"
-            disabled={status === "loading"}
             className={
               isDark
                 ? "h-11 whitespace-nowrap rounded-md bg-lime-300 px-5 text-sm font-semibold text-gray-950 transition hover:bg-lime-200 disabled:opacity-50"
                 : "whitespace-nowrap rounded-lg bg-white px-6 py-3 text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-50 disabled:opacity-50"
             }
           >
-            {status === "loading" ? "Subscribing..." : "Subscribe"}
+            Subscribe
           </button>
         </form>
-      )}
-
-      {status === "error" && (
-        <p className={isDark ? "mt-3 text-sm text-red-300" : "mt-3 text-sm text-red-200"}>
-          Something went wrong. Please try again.
-        </p>
       )}
     </section>
   );
