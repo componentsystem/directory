@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { systems } from "@componentsystem/data";
+import type { Framework } from "@componentsystem/data/schema";
 import type { Metadata } from "next";
+import { CompareBuilder } from "@/components/compare-builder";
+import { SystemLogo } from "@/components/system-logo";
+import { compareHref } from "@/lib/compare-url";
 
 export const metadata: Metadata = {
   title: "Compare Component Libraries — componentsystem.directory",
@@ -9,66 +13,97 @@ export const metadata: Metadata = {
 };
 
 const popularComparisons = [
-  { a: "shadcn-ui", b: "mantine" },
-  { a: "shadcn-ui", b: "radix-ui" },
-  { a: "mui", b: "ant-design" },
-  { a: "radix-ui", b: "headless-ui" },
-  { a: "chakra-ui", b: "mantine" },
-  { a: "mui", b: "chakra-ui" },
-  { a: "nextui", b: "shadcn-ui" },
-  { a: "daisy-ui", b: "flowbite" },
-  { a: "vuetify", b: "element-plus" },
-  { a: "primereact", b: "ant-design" },
-  { a: "skeleton", b: "shadcn-svelte" },
-  { a: "bits-ui", b: "melt-ui" },
+  {
+    title: "React design system staples",
+    description: "Polished React libraries with broad component coverage.",
+    slugs: ["shadcn-ui", "mantine", "mui", "chakra-ui"],
+  },
+  {
+    title: "Headless and primitive stack",
+    description: "Composable foundations for custom design systems.",
+    slugs: ["radix-ui", "headless-ui", "react-aria", "ariakit"],
+  },
+  {
+    title: "Enterprise React suites",
+    description: "Large component sets for internal tools and admin apps.",
+    slugs: ["ant-design", "mui", "primereact", "fluent-ui"],
+  },
+  {
+    title: "Tailwind-friendly choices",
+    description: "Libraries that pair naturally with utility-first styling.",
+    slugs: ["shadcn-ui", "daisy-ui", "flowbite", "preline"],
+  },
+  {
+    title: "Vue ecosystem",
+    description: "Popular Vue component libraries and design systems.",
+    slugs: ["vuetify", "element-plus", "quasar", "vue-material"],
+  },
+  {
+    title: "Svelte ecosystem",
+    description: "Svelte-first libraries for applications and primitives.",
+    slugs: ["shadcn-svelte", "skeleton", "bits-ui", "melt-ui"],
+  },
+];
+
+const frameworkComparisons: { fw: Framework; label: string }[] = [
+  { fw: "react", label: "React Libraries" },
+  { fw: "vue", label: "Vue Libraries" },
+  { fw: "svelte", label: "Svelte Libraries" },
+  { fw: "angular", label: "Angular Libraries" },
+  { fw: "solid", label: "Solid Libraries" },
+  { fw: "web-components", label: "Web Component Libraries" },
 ];
 
 export default function ComparePage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <section className="mb-12 text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-950 dark:text-gray-100">
           Compare Component Libraries
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-          Side-by-side comparisons to help you choose the right component system
-          for your project.
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
+          Select libraries from the directory, keep them in your compare basket,
+          and inspect features across two or more systems.
         </p>
       </section>
 
+      <CompareBuilder systems={systems} presets={popularComparisons} />
+
       <section className="mb-12">
-        <h2 className="mb-6 text-2xl font-semibold text-gray-900">
+        <h2 className="mb-6 text-2xl font-semibold text-gray-950 dark:text-gray-100">
           Popular Comparisons
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {popularComparisons.map(({ a, b }) => {
-            const systemA = systems.find((s) => s.slug === a);
-            const systemB = systems.find((s) => s.slug === b);
-            if (!systemA || !systemB) return null;
+          {popularComparisons.map((preset) => {
+            const selected = preset.slugs
+              .map((slug) => systems.find((system) => system.slug === slug))
+              .filter((system) => Boolean(system));
 
             return (
               <Link
-                key={`${a}-${b}`}
-                href={`/compare/${a}-vs-${b}`}
-                className="group flex items-center justify-between rounded-xl border border-gray-200 p-5 transition-all hover:border-brand-300 hover:shadow-md"
+                key={preset.title}
+                href={compareHref(preset.slugs)}
+                className="group rounded-lg border border-gray-200 bg-white p-5 transition-all hover:border-brand-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-brand-700"
               >
-                <div className="text-center">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 font-bold text-gray-600 group-hover:bg-brand-50 group-hover:text-brand-600">
-                    {systemA.name.charAt(0)}
-                  </div>
-                  <p className="mt-2 text-sm font-medium text-gray-900">
-                    {systemA.name}
-                  </p>
+                <div className="flex -space-x-2">
+                  {selected.map((system) => (
+                    <div
+                      key={system!.slug}
+                      className="flex h-10 w-10 items-center justify-center rounded-md border border-white bg-gray-100 text-sm font-bold text-gray-700 group-hover:bg-brand-50 group-hover:text-brand-700 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-200 dark:group-hover:bg-brand-900/40 dark:group-hover:text-brand-300"
+                    >
+                      <SystemLogo name={system!.name} logo={system!.logo} />
+                    </div>
+                  ))}
                 </div>
-                <span className="text-lg font-bold text-gray-300">vs</span>
-                <div className="text-center">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 font-bold text-gray-600 group-hover:bg-brand-50 group-hover:text-brand-600">
-                    {systemB.name.charAt(0)}
-                  </div>
-                  <p className="mt-2 text-sm font-medium text-gray-900">
-                    {systemB.name}
-                  </p>
-                </div>
+                <h3 className="mt-4 font-semibold text-gray-950 dark:text-gray-100">
+                  {preset.title}
+                </h3>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                  {preset.description}
+                </p>
+                <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-brand-600 dark:text-brand-400">
+                  Compare {selected.length} libraries
+                </p>
               </Link>
             );
           })}
@@ -76,29 +111,22 @@ export default function ComparePage() {
       </section>
 
       <section>
-        <h2 className="mb-6 text-2xl font-semibold text-gray-900">
+        <h2 className="mb-6 text-2xl font-semibold text-gray-950 dark:text-gray-100">
           Compare by Framework
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { fw: "react", label: "React Libraries" },
-            { fw: "vue", label: "Vue Libraries" },
-            { fw: "svelte", label: "Svelte Libraries" },
-            { fw: "angular", label: "Angular Libraries" },
-            { fw: "solid", label: "Solid Libraries" },
-            { fw: "web-components", label: "Web Component Libraries" },
-          ].map(({ fw, label }) => {
+          {frameworkComparisons.map(({ fw, label }) => {
             const count = systems.filter((s) =>
-              s.frameworks.includes(fw as any)
+              s.frameworks.includes(fw)
             ).length;
             return (
               <Link
                 key={fw}
                 href={`/?framework=${fw}`}
-                className="rounded-xl border border-gray-200 p-5 transition-all hover:border-brand-300 hover:shadow-md"
+                className="rounded-lg border border-gray-200 bg-white p-5 transition-all hover:border-brand-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-brand-700"
               >
-                <h3 className="font-semibold text-gray-900">{label}</h3>
-                <p className="mt-1 text-sm text-gray-500">
+                <h3 className="font-semibold text-gray-950 dark:text-gray-100">{label}</h3>
+                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                   {count} libraries to compare
                 </p>
               </Link>

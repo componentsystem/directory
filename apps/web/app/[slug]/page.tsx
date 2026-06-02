@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { systems } from "@componentsystem/data";
-import type { ComponentSystem } from "@componentsystem/data/schema";
 import { NewsletterSignup } from "@/components/newsletter-signup";
+import { ComponentGrid } from "@/components/component-grid";
+import { SystemLogo } from "@/components/system-logo";
 
 export function generateStaticParams() {
   return systems.map((system) => ({ slug: system.slug }));
@@ -54,7 +55,7 @@ export default async function SystemPage({
       <div className="mb-8">
         <div className="flex items-start gap-4">
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-100 text-2xl font-bold text-gray-600 dark:bg-gray-800 dark:text-gray-400">
-            {system.name.charAt(0).toUpperCase()}
+            <SystemLogo name={system.name} logo={system.logo} />
           </div>
           <div className="flex-1">
             <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">{system.name}</h1>
@@ -132,6 +133,10 @@ export default async function SystemPage({
           <MaturityBadge maturity={system.maturity} />
         </DetailCard>
 
+        <DetailCard title="Version">
+          <span className="text-sm text-gray-700 dark:text-gray-300">{system.latestVersion}</span>
+        </DetailCard>
+
         {system.license && (
           <DetailCard title="License">
             <span className="text-sm text-gray-700 dark:text-gray-300">{system.license}</span>
@@ -139,23 +144,13 @@ export default async function SystemPage({
         )}
       </div>
 
-      {/* Components list */}
+      {/* Components grid */}
       {system.components.length > 0 && (
-        <div className="mb-8">
-          <h2 className="mb-4 text-xl font-semibold text-gray-900 dark:text-gray-100">
-            Components ({system.components.length})
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {system.components.map((comp) => (
-              <span
-                key={comp}
-                className="rounded-lg bg-gray-100 px-3 py-1.5 text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-300"
-              >
-                {comp}
-              </span>
-            ))}
-          </div>
-        </div>
+        <ComponentGrid
+          components={system.components}
+          systemSlug={system.slug}
+          systemUrl={system.url}
+        />
       )}
 
       {/* Tags */}

@@ -1,0 +1,1018 @@
+[
+  {
+    "slug": "aceternity-ui",
+    "name": "Aceternity UI",
+    "file": "/logos/component-systems/aceternity-ui.png",
+    "sourceType": "site-icon",
+    "source": "https://ui.aceternity.com/apple-icon.png?2deb28af3ac52d4d"
+  },
+  {
+    "slug": "agnos-ui",
+    "name": "AgnosUI",
+    "file": "/logos/component-systems/agnos-ui.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/6802338?s=128&v=4"
+  },
+  {
+    "slug": "agnostic-ui",
+    "name": "AgnosticUI",
+    "file": "/logos/component-systems/agnostic-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/70919102?s=128&v=4"
+  },
+  {
+    "slug": "align-ui",
+    "name": "AlignUI",
+    "file": "/logos/component-systems/align-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/168414505?s=128&v=4"
+  },
+  {
+    "slug": "angular-material",
+    "name": "Angular Material",
+    "file": "/logos/component-systems/angular-material.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:angular",
+    "matchedTitle": "Angular"
+  },
+  {
+    "slug": "ant-design",
+    "name": "Ant Design",
+    "file": "/logos/component-systems/ant-design.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:antdesign",
+    "matchedTitle": "Ant Design"
+  },
+  {
+    "slug": "arco-design",
+    "name": "Arco Design",
+    "file": "/logos/component-systems/arco-design.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:bytedance",
+    "matchedTitle": "ByteDance"
+  },
+  {
+    "slug": "argon-design-react",
+    "name": "Argon Design React",
+    "file": "/logos/component-systems/argon-design-react.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/20172349?s=128&v=4"
+  },
+  {
+    "slug": "ariakit",
+    "name": "Ariakit",
+    "file": "/logos/component-systems/ariakit.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:ariakit",
+    "matchedTitle": "Ariakit"
+  },
+  {
+    "slug": "ark-ui",
+    "name": "Ark UI",
+    "file": "/logos/component-systems/ark-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/54212428?s=128&v=4"
+  },
+  {
+    "slug": "arwes",
+    "name": "ARWES",
+    "file": "/logos/component-systems/arwes.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/39378222?s=128&v=4"
+  },
+  {
+    "slug": "atlaskit",
+    "name": "Atlaskit",
+    "file": "/logos/component-systems/atlaskit.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:atlassian",
+    "matchedTitle": "Atlassian"
+  },
+  {
+    "slug": "attractions",
+    "name": "Attractions",
+    "file": "/logos/component-systems/attractions.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/15035286?s=128&v=4"
+  },
+  {
+    "slug": "backpack",
+    "name": "Backpack",
+    "file": "/logos/component-systems/backpack.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/522811?s=128&v=4"
+  },
+  {
+    "slug": "base-ui",
+    "name": "Base UI",
+    "file": "/logos/component-systems/base-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:mui",
+    "matchedTitle": "MUI"
+  },
+  {
+    "slug": "base-web",
+    "name": "Base Web",
+    "file": "/logos/component-systems/base-web.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:uber",
+    "matchedTitle": "Uber"
+  },
+  {
+    "slug": "belle",
+    "name": "Belle",
+    "file": "/logos/component-systems/belle.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/223045?s=128&v=4"
+  },
+  {
+    "slug": "bits-ui",
+    "name": "Bits UI",
+    "file": "/logos/component-systems/bits-ui.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/64506580?s=128&v=4"
+  },
+  {
+    "slug": "blueprint",
+    "name": "Blueprint",
+    "file": "/logos/component-systems/blueprint.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:blueprint",
+    "matchedTitle": "Blueprint"
+  },
+  {
+    "slug": "bootstrap",
+    "name": "Bootstrap",
+    "file": "/logos/component-systems/bootstrap.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:bootstrap",
+    "matchedTitle": "Bootstrap"
+  },
+  {
+    "slug": "buffer",
+    "name": "Buffer",
+    "file": "/logos/component-systems/buffer.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:buffer",
+    "matchedTitle": "Buffer"
+  },
+  {
+    "slug": "buttercup",
+    "name": "Buttercup",
+    "file": "/logos/component-systems/buttercup.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/16577796?s=128&v=4"
+  },
+  {
+    "slug": "carbon-components-svelte",
+    "name": "Carbon Components Svelte",
+    "file": "/logos/component-systems/carbon-components-svelte.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/25179978?s=128&v=4"
+  },
+  {
+    "slug": "carbon-design-system",
+    "name": "Carbon Design System",
+    "file": "/logos/component-systems/carbon-design-system.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/25179978?s=128&v=4"
+  },
+  {
+    "slug": "catalyst",
+    "name": "Catalyst",
+    "file": "/logos/component-systems/catalyst.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:tailwindcss",
+    "matchedTitle": "Tailwind CSS"
+  },
+  {
+    "slug": "cf-design",
+    "name": "cf-design",
+    "file": "/logos/component-systems/cf-design.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:cloudflare",
+    "matchedTitle": "Cloudflare"
+  },
+  {
+    "slug": "chakra-ui",
+    "name": "Chakra UI",
+    "file": "/logos/component-systems/chakra-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:chakraui",
+    "matchedTitle": "Chakra UI"
+  },
+  {
+    "slug": "clarity-design",
+    "name": "Clarity Design",
+    "file": "/logos/component-systems/clarity-design.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:vmware",
+    "matchedTitle": "VMware"
+  },
+  {
+    "slug": "daisy-ui",
+    "name": "DaisyUI",
+    "file": "/logos/component-systems/daisy-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:daisyui",
+    "matchedTitle": "daisyUI"
+  },
+  {
+    "slug": "draft-ui",
+    "name": "Draft UI",
+    "file": "/logos/component-systems/draft-ui.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/20825047?s=128&v=4"
+  },
+  {
+    "slug": "easyfrontend",
+    "name": "Easyfrontend",
+    "file": "/logos/component-systems/easyfrontend.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/111482439?s=128&v=4"
+  },
+  {
+    "slug": "elastic-ui",
+    "name": "Elastic UI Framework",
+    "file": "/logos/component-systems/elastic-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:elastic",
+    "matchedTitle": "Elastic"
+  },
+  {
+    "slug": "element-plus",
+    "name": "Element Plus",
+    "file": "/logos/component-systems/element-plus.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/68583457?s=128&v=4"
+  },
+  {
+    "slug": "elemental-ui",
+    "name": "Elemental UI",
+    "file": "/logos/component-systems/elemental-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/11880721?s=128&v=4"
+  },
+  {
+    "slug": "evergreen",
+    "name": "Evergreen",
+    "file": "/logos/component-systems/evergreen.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/819518?s=128&v=4"
+  },
+  {
+    "slug": "fast-design",
+    "name": "FAST Design",
+    "file": "/logos/component-systems/fast-design.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/6154722?s=128&v=4"
+  },
+  {
+    "slug": "float-ui",
+    "name": "Float UI",
+    "file": "/logos/component-systems/float-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/101860329?s=128&v=4"
+  },
+  {
+    "slug": "flowbite",
+    "name": "Flowbite",
+    "file": "/logos/component-systems/flowbite.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/52166837?s=128&v=4"
+  },
+  {
+    "slug": "flowbite-svelte",
+    "name": "Flowbite Svelte",
+    "file": "/logos/component-systems/flowbite-svelte.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/52166837?s=128&v=4"
+  },
+  {
+    "slug": "fluent-ui",
+    "name": "Fluent UI",
+    "file": "/logos/component-systems/fluent-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/6154722?s=128&v=4"
+  },
+  {
+    "slug": "fomantic-ui",
+    "name": "Fomantic-UI",
+    "file": "/logos/component-systems/fomantic-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/41948752?s=128&v=4"
+  },
+  {
+    "slug": "framework7-react",
+    "name": "Framework7 React",
+    "file": "/logos/component-systems/framework7-react.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:framework7",
+    "matchedTitle": "Framework7"
+  },
+  {
+    "slug": "franken-ui",
+    "name": "Franken UI",
+    "file": "/logos/component-systems/franken-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/172096255?s=128&v=4"
+  },
+  {
+    "slug": "froala-design",
+    "name": "Froala Design Blocks",
+    "file": "/logos/component-systems/froala-design.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/7966884?s=128&v=4"
+  },
+  {
+    "slug": "fumadocs",
+    "name": "Fumadocs",
+    "file": "/logos/component-systems/fumadocs.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/76240755?s=128&v=4"
+  },
+  {
+    "slug": "garden",
+    "name": "Garden",
+    "file": "/logos/component-systems/garden.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:zendesk",
+    "matchedTitle": "Zendesk"
+  },
+  {
+    "slug": "gestalt",
+    "name": "Gestalt",
+    "file": "/logos/component-systems/gestalt.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:pinterest",
+    "matchedTitle": "Pinterest"
+  },
+  {
+    "slug": "gluestack-ui",
+    "name": "Gluestack UI",
+    "file": "/logos/component-systems/gluestack-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/120183344?s=128&v=4"
+  },
+  {
+    "slug": "govuk-react",
+    "name": "GovUK React",
+    "file": "/logos/component-systems/govuk-react.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/45261984?s=128&v=4"
+  },
+  {
+    "slug": "grail-ui",
+    "name": "Grail UI",
+    "file": "/logos/component-systems/grail-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/106253289?s=128&v=4"
+  },
+  {
+    "slug": "grommet",
+    "name": "Grommet",
+    "file": "/logos/component-systems/grommet.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/14203820?s=128&v=4"
+  },
+  {
+    "slug": "hackclub-design",
+    "name": "Hack Club Design System",
+    "file": "/logos/component-systems/hackclub-design.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:hackclub",
+    "matchedTitle": "Hack Club"
+  },
+  {
+    "slug": "hackclub-theme",
+    "name": "Hack Club Theme",
+    "file": "/logos/component-systems/hackclub-theme.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:hackclub",
+    "matchedTitle": "Hack Club"
+  },
+  {
+    "slug": "hana-ui",
+    "name": "Hana UI",
+    "file": "/logos/component-systems/hana-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/33807115?s=128&v=4"
+  },
+  {
+    "slug": "headless-ui",
+    "name": "Headless UI",
+    "file": "/logos/component-systems/headless-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:tailwindcss",
+    "matchedTitle": "Tailwind CSS"
+  },
+  {
+    "slug": "hybrids",
+    "name": "Hybrids",
+    "file": "/logos/component-systems/hybrids.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/22907385?s=128&v=4"
+  },
+  {
+    "slug": "ice",
+    "name": "ICE",
+    "file": "/logos/component-systems/ice.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:alibabacloud",
+    "matchedTitle": "Alibaba Cloud"
+  },
+  {
+    "slug": "illa-design",
+    "name": "ILLA Design",
+    "file": "/logos/component-systems/illa-design.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/93245159?s=128&v=4"
+  },
+  {
+    "slug": "instructure-ui",
+    "name": "Instructure UI",
+    "file": "/logos/component-systems/instructure-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:instructure",
+    "matchedTitle": "Instructure"
+  },
+  {
+    "slug": "kahi-ui",
+    "name": "Kahi UI",
+    "file": "/logos/component-systems/kahi-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/31122674?s=128&v=4"
+  },
+  {
+    "slug": "kendo-react",
+    "name": "Kendo React",
+    "file": "/logos/component-systems/kendo-react.ico",
+    "sourceType": "site-icon",
+    "source": "https://www.telerik.com/favicon.ico?v=rebv1"
+  },
+  {
+    "slug": "kendo-ui",
+    "name": "Kendo UI",
+    "file": "/logos/component-systems/kendo-ui.ico",
+    "sourceType": "site-icon",
+    "source": "https://www.telerik.com/favicon.ico?v=rebv1"
+  },
+  {
+    "slug": "kobalte",
+    "name": "Kobalte",
+    "file": "/logos/component-systems/kobalte.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/124704559?s=128&v=4"
+  },
+  {
+    "slug": "kuma-ui",
+    "name": "Kuma UI",
+    "file": "/logos/component-systems/kuma-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:kuma",
+    "matchedTitle": "Kuma"
+  },
+  {
+    "slug": "lightning-design",
+    "name": "Lightning Design System",
+    "file": "/logos/component-systems/lightning-design.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:lightning",
+    "matchedTitle": "Lightning"
+  },
+  {
+    "slug": "lit",
+    "name": "Lit",
+    "file": "/logos/component-systems/lit.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:lit",
+    "matchedTitle": "Lit"
+  },
+  {
+    "slug": "magic-ui",
+    "name": "Magic UI",
+    "file": "/logos/component-systems/magic-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:magic",
+    "matchedTitle": "Magic"
+  },
+  {
+    "slug": "mantine",
+    "name": "Mantine",
+    "file": "/logos/component-systems/mantine.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:mantine",
+    "matchedTitle": "Mantine"
+  },
+  {
+    "slug": "mdbootstrap",
+    "name": "MDBootstrap",
+    "file": "/logos/component-systems/mdbootstrap.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:bootstrap",
+    "matchedTitle": "Bootstrap"
+  },
+  {
+    "slug": "melt-ui",
+    "name": "Melt UI",
+    "file": "/logos/component-systems/melt-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/134972826?s=128&v=4"
+  },
+  {
+    "slug": "mineral-ui",
+    "name": "Mineral UI",
+    "file": "/logos/component-systems/mineral-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/27220460?s=128&v=4"
+  },
+  {
+    "slug": "mongodb-design",
+    "name": "MongoDB Design",
+    "file": "/logos/component-systems/mongodb-design.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:mongodb",
+    "matchedTitle": "MongoDB"
+  },
+  {
+    "slug": "mui",
+    "name": "MUI (Material UI)",
+    "file": "/logos/component-systems/mui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/33663932?s=128&v=4"
+  },
+  {
+    "slug": "nativebase",
+    "name": "NativeBase",
+    "file": "/logos/component-systems/nativebase.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/18482943?s=128&v=4"
+  },
+  {
+    "slug": "nativewind",
+    "name": "NativeWind",
+    "file": "/logos/component-systems/nativewind.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/3946701?s=128&v=4"
+  },
+  {
+    "slug": "nextui",
+    "name": "NextUI",
+    "file": "/logos/component-systems/nextui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/190121916?s=128&v=4"
+  },
+  {
+    "slug": "ng-bootstrap",
+    "name": "NG Bootstrap",
+    "file": "/logos/component-systems/ng-bootstrap.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:bootstrap",
+    "matchedTitle": "Bootstrap"
+  },
+  {
+    "slug": "onsen-ui",
+    "name": "OnsenUI",
+    "file": "/logos/component-systems/onsen-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/5972822?s=128&v=4"
+  },
+  {
+    "slug": "open-props",
+    "name": "Open Props",
+    "file": "/logos/component-systems/open-props.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/1134620?s=128&v=4"
+  },
+  {
+    "slug": "orbit",
+    "name": "Orbit",
+    "file": "/logos/component-systems/orbit.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/25227300?s=128&v=4"
+  },
+  {
+    "slug": "origin-ui",
+    "name": "Origin UI",
+    "file": "/logos/component-systems/origin-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:origin",
+    "matchedTitle": "Origin"
+  },
+  {
+    "slug": "park-ui",
+    "name": "Park UI",
+    "file": "/logos/component-systems/park-ui.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/1846056?s=128&v=4"
+  },
+  {
+    "slug": "patternfly",
+    "name": "PatternFly",
+    "file": "/logos/component-systems/patternfly.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/6391110?s=128&v=4"
+  },
+  {
+    "slug": "pico",
+    "name": "Pico CSS",
+    "file": "/logos/component-systems/pico.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/57780293?s=128&v=4"
+  },
+  {
+    "slug": "polaris",
+    "name": "Polaris",
+    "file": "/logos/component-systems/polaris.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:shopify",
+    "matchedTitle": "Shopify"
+  },
+  {
+    "slug": "polymer",
+    "name": "Polymer",
+    "file": "/logos/component-systems/polymer.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/2159051?s=128&v=4"
+  },
+  {
+    "slug": "preline",
+    "name": "Preline",
+    "file": "/logos/component-systems/preline.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/38157020?s=128&v=4"
+  },
+  {
+    "slug": "primeng",
+    "name": "PrimeNG",
+    "file": "/logos/component-systems/primeng.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:primeng",
+    "matchedTitle": "PrimeNG"
+  },
+  {
+    "slug": "primereact",
+    "name": "PrimeReact",
+    "file": "/logos/component-systems/primereact.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:primereact",
+    "matchedTitle": "PrimeReact"
+  },
+  {
+    "slug": "quasar",
+    "name": "Quasar",
+    "file": "/logos/component-systems/quasar.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:quasar",
+    "matchedTitle": "Quasar"
+  },
+  {
+    "slug": "qwik-ui",
+    "name": "Qwik UI",
+    "file": "/logos/component-systems/qwik-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:qwik",
+    "matchedTitle": "Qwik"
+  },
+  {
+    "slug": "radix-themes",
+    "name": "Radix Themes",
+    "file": "/logos/component-systems/radix-themes.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:radixui",
+    "matchedTitle": "Radix UI"
+  },
+  {
+    "slug": "radix-ui",
+    "name": "Radix UI",
+    "file": "/logos/component-systems/radix-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:radixui",
+    "matchedTitle": "Radix UI"
+  },
+  {
+    "slug": "reach-ui",
+    "name": "Reach UI",
+    "file": "/logos/component-systems/reach-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/38740568?s=128&v=4"
+  },
+  {
+    "slug": "react-admin",
+    "name": "React Admin",
+    "file": "/logos/component-systems/react-admin.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/3116319?s=128&v=4"
+  },
+  {
+    "slug": "react-aria",
+    "name": "React Aria",
+    "file": "/logos/component-systems/react-aria.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/476009?s=128&v=4"
+  },
+  {
+    "slug": "react-bootstrap",
+    "name": "React Bootstrap",
+    "file": "/logos/component-systems/react-bootstrap.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:reactbootstrap",
+    "matchedTitle": "React Bootstrap"
+  },
+  {
+    "slug": "react-data-table",
+    "name": "React Data Table",
+    "file": "/logos/component-systems/react-data-table.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/1385932?s=128&v=4"
+  },
+  {
+    "slug": "react-native-elements",
+    "name": "React Native Elements",
+    "file": "/logos/component-systems/react-native-elements.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/49050851?s=128&v=4"
+  },
+  {
+    "slug": "react-native-paper",
+    "name": "React Native Paper",
+    "file": "/logos/component-systems/react-native-paper.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/42239399?s=128&v=4"
+  },
+  {
+    "slug": "react-select",
+    "name": "React Select",
+    "file": "/logos/component-systems/react-select.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/872310?s=128&v=4"
+  },
+  {
+    "slug": "react95",
+    "name": "React 95",
+    "file": "/logos/component-systems/react95.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/38158713?s=128&v=4"
+  },
+  {
+    "slug": "reactstrap",
+    "name": "reactstrap",
+    "file": "/logos/component-systems/reactstrap.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:bootstrap",
+    "matchedTitle": "Bootstrap"
+  },
+  {
+    "slug": "rebass",
+    "name": "Rebass",
+    "file": "/logos/component-systems/rebass.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/41265750?s=128&v=4"
+  },
+  {
+    "slug": "restyle",
+    "name": "Restyle",
+    "file": "/logos/component-systems/restyle.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:shopify",
+    "matchedTitle": "Shopify"
+  },
+  {
+    "slug": "rewind-ui",
+    "name": "Rewind UI",
+    "file": "/logos/component-systems/rewind-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/116879185?s=128&v=4"
+  },
+  {
+    "slug": "ring-ui",
+    "name": "Ring UI",
+    "file": "/logos/component-systems/ring-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:jetbrains",
+    "matchedTitle": "JetBrains"
+  },
+  {
+    "slug": "ripple-ui",
+    "name": "Ripple UI",
+    "file": "/logos/component-systems/ripple-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:ripple",
+    "matchedTitle": "Ripple"
+  },
+  {
+    "slug": "rnui",
+    "name": "React Native UI Lib",
+    "file": "/logos/component-systems/rnui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:wix",
+    "matchedTitle": "Wix"
+  },
+  {
+    "slug": "rsuite",
+    "name": "RSuite",
+    "file": "/logos/component-systems/rsuite.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/19635045?s=128&v=4"
+  },
+  {
+    "slug": "semantic-ui-react",
+    "name": "Semantic UI React",
+    "file": "/logos/component-systems/semantic-ui-react.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:semanticuireact",
+    "matchedTitle": "Semantic UI React"
+  },
+  {
+    "slug": "semi-design",
+    "name": "Semi Design",
+    "file": "/logos/component-systems/semi-design.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:bytedance",
+    "matchedTitle": "ByteDance"
+  },
+  {
+    "slug": "shadcn-svelte",
+    "name": "shadcn-svelte",
+    "file": "/logos/component-systems/shadcn-svelte.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/64506580?s=128&v=4"
+  },
+  {
+    "slug": "shadcn-ui",
+    "name": "shadcn/ui",
+    "file": "/logos/component-systems/shadcn-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:shadcnui",
+    "matchedTitle": "shadcn/ui"
+  },
+  {
+    "slug": "shoelace",
+    "name": "Shoelace",
+    "file": "/logos/component-systems/shoelace.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/68111783?s=128&v=4"
+  },
+  {
+    "slug": "skeleton",
+    "name": "Skeleton",
+    "file": "/logos/component-systems/skeleton.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:skeleton",
+    "matchedTitle": "Skeleton"
+  },
+  {
+    "slug": "solid-bootstrap",
+    "name": "Solid Bootstrap",
+    "file": "/logos/component-systems/solid-bootstrap.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:bootstrap",
+    "matchedTitle": "Bootstrap"
+  },
+  {
+    "slug": "stitch-es",
+    "name": "Stitches",
+    "file": "/logos/component-systems/stitch-es.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/106618147?s=128&v=4"
+  },
+  {
+    "slug": "styled-components",
+    "name": "Styled Components",
+    "file": "/logos/component-systems/styled-components.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:styledcomponents",
+    "matchedTitle": "styled-components"
+  },
+  {
+    "slug": "suid",
+    "name": "SUID",
+    "file": "/logos/component-systems/suid.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/25853205?s=128&v=4"
+  },
+  {
+    "slug": "svelte-headless-ui",
+    "name": "Svelte Headless UI",
+    "file": "/logos/component-systems/svelte-headless-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/3475509?s=128&v=4"
+  },
+  {
+    "slug": "svelte-material-ui",
+    "name": "Svelte Material UI",
+    "file": "/logos/component-systems/svelte-material-ui.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:materialdesign",
+    "matchedTitle": "Material Design"
+  },
+  {
+    "slug": "svelte-ui",
+    "name": "SvelteUI",
+    "file": "/logos/component-systems/svelte-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/103777970?s=128&v=4"
+  },
+  {
+    "slug": "svelte-ux",
+    "name": "Svelte UX",
+    "file": "/logos/component-systems/svelte-ux.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/177476?s=128&v=4"
+  },
+  {
+    "slug": "sveltestrap",
+    "name": "Sveltestrap",
+    "file": "/logos/component-systems/sveltestrap.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/152808666?s=128&v=4"
+  },
+  {
+    "slug": "syntax-ui",
+    "name": "Syntax UI",
+    "file": "/logos/component-systems/syntax-ui.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/12985873?s=128&v=4"
+  },
+  {
+    "slug": "tailus",
+    "name": "Tailus",
+    "file": "/logos/component-systems/tailus.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/94113125?s=128&v=4"
+  },
+  {
+    "slug": "tamagui",
+    "name": "Tamagui",
+    "file": "/logos/component-systems/tamagui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/94025540?s=128&v=4"
+  },
+  {
+    "slug": "theme-ui",
+    "name": "Theme UI",
+    "file": "/logos/component-systems/theme-ui.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/48816045?s=128&v=4"
+  },
+  {
+    "slug": "tremor",
+    "name": "Tremor",
+    "file": "/logos/component-systems/tremor.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/97241560?s=128&v=4"
+  },
+  {
+    "slug": "ui5",
+    "name": "UI5",
+    "file": "/logos/component-systems/ui5.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:sap",
+    "matchedTitle": "SAP"
+  },
+  {
+    "slug": "visx",
+    "name": "Visx",
+    "file": "/logos/component-systems/visx.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:airbnb",
+    "matchedTitle": "Airbnb"
+  },
+  {
+    "slug": "vue-material",
+    "name": "Vue Material",
+    "file": "/logos/component-systems/vue-material.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/23659108?s=128&v=4"
+  },
+  {
+    "slug": "vuetify",
+    "name": "Vuetify",
+    "file": "/logos/component-systems/vuetify.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:vuetify",
+    "matchedTitle": "Vuetify"
+  },
+  {
+    "slug": "wedges",
+    "name": "Wedges",
+    "file": "/logos/component-systems/wedges.svg",
+    "sourceType": "simple-icons",
+    "source": "simple-icons:lemonsqueezy",
+    "matchedTitle": "Lemon Squeezy"
+  },
+  {
+    "slug": "wired-elements",
+    "name": "Wired Elements",
+    "file": "/logos/component-systems/wired-elements.png",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/67037082?s=128&v=4"
+  },
+  {
+    "slug": "zent",
+    "name": "Zent",
+    "file": "/logos/component-systems/zent.jpg",
+    "sourceType": "github-avatar",
+    "source": "https://avatars.githubusercontent.com/u/11404085?s=128&v=4"
+  }
+]

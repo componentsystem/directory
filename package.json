@@ -9,9 +9,13 @@
     "dev": "npm run dev --workspace=apps/web",
     "build": "npm run build --workspace=packages/data && npm run build --workspace=apps/web",
     "lint": "npm run lint --workspace=apps/web",
-    "validate": "npm run validate --workspace=packages/data"
+    "validate": "npm run validate --workspace=packages/data",
+    "generate:logos": "npm run build --workspace=packages/data && node packages/data/scripts/generate-logos.mjs --download-missing && npm run build --workspace=packages/data"
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "simple-icons": "^16.22.0"
   }
 }

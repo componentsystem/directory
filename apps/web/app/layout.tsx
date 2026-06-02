@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { systems } from "@componentsystem/data";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { CompareTray } from "@/components/compare-basket";
 
 export const metadata: Metadata = {
   title: "componentsystem.directory — The Definitive Directory of UI Component Systems",
@@ -46,6 +48,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <CompareTray systems={systems} />
         </div>
       </body>
     </html>

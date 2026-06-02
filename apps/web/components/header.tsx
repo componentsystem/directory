@@ -3,12 +3,10 @@ import { ThemeToggle } from "./theme-toggle";
 
 const navItems = [
   { label: "Directory", href: "/" },
+  { label: "Templates", href: "/templates" },
   { label: "Compare", href: "/compare" },
-  { label: "News", href: "/news" },
   { label: "Jobs", href: "/jobs" },
-  { label: "Prompts", href: "/prompts" },
   { label: "Showcases", href: "/showcases" },
-  { label: "Events", href: "/events" },
 ];
 
 export function Header() {

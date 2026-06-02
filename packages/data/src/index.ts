@@ -1,4 +1,5 @@
-import type { ComponentSystem } from "./schema";
+import type { ComponentDefinition, ComponentSystem, ComponentSystemSource, Template } from "./schema";
+export { templates } from "./templates";
 import _aceternity_ui from "./systems/aceternity-ui";
 import _agnos_ui from "./systems/agnos-ui";
 import _agnostic_ui from "./systems/agnostic-ui";
@@ -136,7 +137,7 @@ import _vuetify from "./systems/vuetify";
 import _wedges from "./systems/wedges";
 import _wired_elements from "./systems/wired-elements";
 import _zent from "./systems/zent";
-export const systems: ComponentSystem[] = [
+const baseSystems: ComponentSystemSource[] = [
   _aceternity_ui,
   _agnos_ui,
   _agnostic_ui,
@@ -275,5 +276,19 @@ export const systems: ComponentSystem[] = [
   _wired_elements,
   _zent,
 ];
-export type { ComponentSystem, Framework, StylingApproach, Category, Maturity } from "./schema";
-export { ComponentSystemSchema } from "./schema";
+
+export const systems: ComponentSystem[] = baseSystems;
+
+export type {
+  ComponentDefinition,
+  ComponentSystem,
+  ComponentSystemSource,
+  Template,
+  Framework,
+  StylingApproach,
+  Category,
+  Maturity,
+  TemplateCategory,
+  TemplatePriceType,
+} from "./schema";
+export { ComponentDefinitionSchema, ComponentSystemSchema, TemplateSchema } from "./schema";

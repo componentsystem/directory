@@ -19,6 +19,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/templates" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
+                  Templates
+                </Link>
+              </li>
+              <li>
                 <Link href="/react-component-libraries" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
                   React Libraries
                 </Link>
@@ -40,11 +45,6 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Community</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="/news" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
-                  News
-                </Link>
-              </li>
-              <li>
                 <Link href="/jobs" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
                   Jobs
                 </Link>
@@ -54,22 +54,12 @@ export function Footer() {
                   Showcases
                 </Link>
               </li>
-              <li>
-                <Link href="/events" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
-                  Events
-                </Link>
-              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Resources</h3>
             <ul className="mt-4 space-y-2">
-              <li>
-                <Link href="/prompts" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
-                  AI Prompts
-                </Link>
-              </li>
               <li>
                 <Link href="/newsletter" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
                   Newsletter

@@ -1,5 +1,9 @@
-import Link from "next/link";
+"use client";
+
+import { useRouter } from "next/navigation";
 import type { ComponentSystem } from "@componentsystem/data/schema";
+import { CompareButton } from "./compare-basket";
+import { SystemLogo } from "./system-logo";
 
 const frameworkColors: Record<string, string> = {
   react: "bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300",
@@ -22,43 +26,126 @@ const stylingColors: Record<string, string> = {
   material: "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800",
 };
 
-export function SystemCard({ system }: { system: ComponentSystem }) {
+export type SystemCardView = "card" | "list" | "mini";
+
+export function SystemCard({
+  system,
+  systems,
+  view = "card",
+}: {
+  system: ComponentSystem;
+  systems: ComponentSystem[];
+  view?: SystemCardView;
+}) {
+  const router = useRouter();
+  const detailsHref = `/${system.slug}`;
+  const isList = view === "list";
+  const isMini = view === "mini";
+  const statusLabel = system.sponsored ? "Sponsored" : system.featured ? "Featured" : "";
+  const description = system.description.length > 150
+    ? `${system.description.slice(0, 147).trim()}...`
+    : system.description;
+
   return (
-    <Link
-      href={`/${system.slug}`}
-      className="group relative flex flex-col rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all hover:border-brand-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-brand-700"
+    <article
+      role="link"
+      tabIndex={0}
+      aria-label={`View details for ${system.name}`}
+      onClick={() => router.push(detailsHref)}
+      onKeyDown={(event) => {
+        if (event.currentTarget !== event.target) return;
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          router.push(detailsHref);
+        }
+      }}
+      className={`group relative flex cursor-pointer rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:border-brand-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-brand-700 ${
+        isList
+          ? "items-start gap-4 p-4"
+          : isMini
+            ? "min-h-[118px] items-start gap-3 p-4 sm:flex-row sm:items-center"
+            : "flex-col p-5"
+      }`}
     >
-      {system.sponsored && (
+      {system.sponsored && !isList && !isMini && (
         <span className="absolute right-3 top-3 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
           Sponsored
         </span>
       )}
-      {system.featured && !system.sponsored && (
+      {system.featured && !system.sponsored && !isList && !isMini && (
         <span className="absolute right-3 top-3 rounded-full bg-brand-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-brand-700 dark:bg-brand-900/40 dark:text-brand-300">
           Featured
         </span>
       )}
 
-      <div className="mb-3 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-lg font-bold text-gray-600 group-hover:bg-brand-50 group-hover:text-brand-600 dark:bg-gray-800 dark:text-gray-400 dark:group-hover:bg-brand-900/40 dark:group-hover:text-brand-400">
-          {system.name.charAt(0).toUpperCase()}
+      <div
+        className={`flex items-center gap-3 ${
+          isList ? "min-w-0 flex-1" : isMini ? "min-w-0 flex-1" : "mb-3"
+        }`}
+      >
+        <div
+          className={`flex shrink-0 items-center justify-center rounded-lg bg-gray-100 text-lg font-bold text-gray-600 group-hover:bg-brand-50 group-hover:text-brand-600 dark:bg-gray-800 dark:text-gray-400 dark:group-hover:bg-brand-900/40 dark:group-hover:text-brand-400 ${
+            isMini ? "h-9 w-9" : "h-10 w-10"
+          }`}
+        >
+          <SystemLogo name={system.name} logo={system.logo} />
         </div>
-        <div>
-          <h3 className="font-semibold text-gray-900 group-hover:text-brand-600 dark:text-gray-100 dark:group-hover:text-brand-400">
-            {system.name}
-          </h3>
-          {system.company && (
+        <div className="min-w-0">
+          <span
+          className={`block truncate font-semibold text-gray-900 transition-colors group-hover:text-brand-600 dark:text-gray-100 dark:group-hover:text-brand-400 ${
+            isMini ? "text-sm" : ""
+          }`}
+        >
+            <span>{system.name}</span>
+            {statusLabel && (isList || isMini) && (
+              <span
+                className={`ml-2 inline-flex translate-y-[-1px] rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${
+                  system.sponsored
+                    ? "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300"
+                    : "bg-brand-100 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300"
+                }`}
+              >
+                {statusLabel}
+              </span>
+            )}
+          </span>
+          {system.company && !isMini && (
             <p className="text-xs text-gray-500 dark:text-gray-400">by {system.company}</p>
+          )}
+          {(isList || isMini) && (
+            <p
+              className={`mt-1 text-sm leading-5 text-gray-600 dark:text-gray-400 ${
+                isMini ? "line-clamp-2" : "line-clamp-2 max-w-3xl"
+              }`}
+            >
+              {description}
+            </p>
           )}
         </div>
       </div>
 
-      <p className="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-        {system.description}
-      </p>
+      {!isMini && !isList && (
+        <p
+          className="mb-4 min-w-0 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+        >
+          {description}
+        </p>
+      )}
 
-      <div className="space-y-2">
-        <div className="flex flex-wrap gap-1">
+      <div
+        className={`${
+          isList
+            ? "flex w-full shrink-0 flex-col gap-3 sm:w-[360px]"
+            : isMini
+              ? "flex w-full shrink-0 flex-col gap-3 sm:w-[320px]"
+              : "space-y-2"
+        }`}
+      >
+        <div
+          className={`flex flex-wrap gap-1 ${
+            isList || isMini ? "justify-start sm:justify-end" : ""
+          }`}
+        >
           {system.frameworks.map((fw) => (
             <span
               key={fw}
@@ -69,29 +156,29 @@ export function SystemCard({ system }: { system: ComponentSystem }) {
               {fw}
             </span>
           ))}
+          {system.styling.map((s) => (
+            <span
+              key={s}
+              className={`rounded-full border px-2 py-0.5 text-[11px] font-medium ${
+                stylingColors[s] ?? "bg-gray-50 text-gray-600 border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700"
+              }`}
+            >
+              {s}
+            </span>
+          ))}
         </div>
 
-        {system.styling.length > 0 && (
-          <div className="flex flex-wrap gap-1">
-            {system.styling.map((s) => (
-              <span
-                key={s}
-                className={`rounded-full border px-2 py-0.5 text-[11px] font-medium ${
-                  stylingColors[s] ?? "bg-gray-50 text-gray-600 border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700"
-                }`}
-              >
-                {s}
-              </span>
-            ))}
-          </div>
-        )}
-
-        {system.components.length > 0 && (
-          <p className="text-xs text-gray-400 dark:text-gray-500">
-            {system.components.length} components
-          </p>
-        )}
+        <div
+          className={`flex items-center gap-3 ${
+            isList || isMini ? "justify-between sm:justify-end" : "justify-between pt-2"
+          }`}
+        >
+          <span className="text-xs font-semibold text-brand-600 transition-colors group-hover:text-brand-700 dark:text-brand-400 dark:group-hover:text-brand-300">
+            View details
+          </span>
+          <CompareButton system={system} systems={systems} />
+        </div>
       </div>
-    </Link>
+    </article>
   );
 }

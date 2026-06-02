@@ -15,7 +15,6 @@ A comprehensive directory of 125+ frontend component systems — searchable, fil
 - **Compare**: Side-by-side comparison pages for popular library matchups
 - **AI Finder**: AI-powered library recommendations based on your project needs
 - **Prompts**: Curated AI prompts for using component libraries with Cursor, Claude, and Copilot
-- **News**: Aggregated frontend component news
 - **Jobs**: Frontend & design system job board
 - **Newsletter**: Weekly component digest
 
