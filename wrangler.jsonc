@@ -1,0 +1,5 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "componentsystem-directory",
+  "pages_build_output_dir": "apps/web/out"
+}
