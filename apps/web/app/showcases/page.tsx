@@ -226,27 +226,24 @@ function hostFromUrl(url: string) {
 
 export default function ShowcasesPage() {
   return (
-    <div className="bg-white text-gray-950 dark:bg-gray-950 dark:text-gray-100">
-      <section className="relative isolate overflow-hidden border-b border-gray-200 bg-gray-950 text-white dark:border-gray-800">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_22%_18%,rgba(132,255,180,0.16),transparent_28%),radial-gradient(circle_at_82%_12%,rgba(99,102,241,0.2),transparent_30%),linear-gradient(135deg,#05070d_0%,#0b1020_48%,#111827_100%)]" />
-        <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-gray-950 to-transparent" />
-
+    <div className="theme-page">
+      <section className="relative isolate overflow-hidden border-b border-[color:var(--border)]">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,0.86fr)_minmax(520px,1.14fr)] lg:items-center">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-lime-200 shadow-sm backdrop-blur">
-                <span className="h-1.5 w-1.5 rounded-full bg-lime-300" />
+              <div className="theme-chip inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] shadow-sm backdrop-blur">
+                <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--accent)]" />
                 Production Inspiration
               </div>
-              <h1 className="mt-6 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">
+              <h1 className="mt-6 max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">
                 Interfaces worth studying.
               </h1>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-gray-300 sm:text-lg">
+              <p className="theme-muted mt-5 max-w-2xl text-base leading-7 sm:text-lg">
                 Real product, marketing, marketplace, and developer sites where component systems
                 shape the interface quality, interaction model, and delivery speed.
               </p>
 
-              <div className="mt-8 grid max-w-xl grid-cols-3 overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] shadow-[0_24px_80px_rgba(0,0,0,0.28)] backdrop-blur">
+              <div className="theme-card mt-8 grid max-w-xl grid-cols-3 overflow-hidden rounded-lg backdrop-blur">
                 <StatCard label="Showcases" value={showcases.length} />
                 <StatCard label="Sources" value={sourceCount} />
                 <StatCard label="Systems" value={systemCount} />
@@ -257,7 +254,7 @@ export default function ShowcasesPage() {
                   (system) => (
                     <span
                       key={system}
-                      className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs font-medium text-gray-300"
+                      className="theme-chip rounded-full px-3 py-1 text-xs font-medium"
                     >
                       {system}
                     </span>
@@ -267,19 +264,18 @@ export default function ShowcasesPage() {
             </div>
 
             <div className="group relative block">
-              <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-lime-300/20 via-brand-500/10 to-cyan-300/20 blur-2xl transition group-hover:opacity-80" />
-              <div className="relative overflow-hidden rounded-xl border border-white/15 bg-gray-900 shadow-2xl shadow-black/50 transition duration-500 group-hover:-translate-y-1 group-hover:border-lime-300/40">
-                <div className="flex items-center justify-between border-b border-white/10 bg-white/95 px-4 py-3 text-gray-950">
+              <div className="relative overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-strong)] shadow-2xl transition duration-500 group-hover:-translate-y-1 group-hover:border-[color:var(--border-strong)]">
+                <div className="flex items-center justify-between border-b border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3">
                   <div className="flex items-center gap-2">
                     <span className="h-3 w-3 rounded-full bg-red-400" />
                     <span className="h-3 w-3 rounded-full bg-amber-300" />
-                    <span className="h-3 w-3 rounded-full bg-lime-400" />
+                    <span className="h-3 w-3 rounded-full bg-[color:var(--accent)]" />
                   </div>
-                  <span className="rounded-full bg-gray-950 px-3 py-1 text-xs font-semibold text-white">
+                  <span className="theme-chip-active rounded-full px-3 py-1 text-xs font-semibold">
                     Featured
                   </span>
                 </div>
-                <div className="relative aspect-[16/10] overflow-hidden bg-gray-800">
+                <div className="relative aspect-[16/10] overflow-hidden bg-[color:var(--surface-muted)]">
                   <Image
                     src={screenshotUrl(featuredShowcase.url)}
                     alt={`${featuredShowcase.name} website screenshot`}
@@ -290,15 +286,15 @@ export default function ShowcasesPage() {
                     priority
                   />
                 </div>
-                <div className="grid gap-5 border-t border-white/10 bg-gray-950/95 p-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+                <div className="grid gap-5 border-t border-[color:var(--border)] bg-[color:var(--surface-strong)] p-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500">
+                    <p className="theme-kicker">
                       {featuredShowcase.category}
                     </p>
-                    <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white">
+                    <h2 className="mt-2 text-3xl font-semibold tracking-tight">
                       {featuredShowcase.name}
                     </h2>
-                    <p className="mt-3 max-w-2xl text-sm leading-6 text-gray-400">
+                    <p className="theme-muted mt-3 max-w-2xl text-sm leading-6">
                       {featuredShowcase.highlight ?? featuredShowcase.description}
                     </p>
                     <TechnologyChips technologies={featuredShowcase.technologies} />
@@ -307,7 +303,7 @@ export default function ShowcasesPage() {
                     href={featuredShowcase.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-full border border-white/10 px-3 py-1 text-xs font-medium text-gray-300 transition hover:border-lime-300/50 hover:text-lime-200"
+                    className="theme-button-secondary rounded-full px-3 py-1 text-xs font-medium"
                   >
                     {hostFromUrl(featuredShowcase.url)}
                   </a>
@@ -321,16 +317,16 @@ export default function ShowcasesPage() {
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-gray-950 dark:text-white">
+            <h2 className="text-2xl font-semibold tracking-tight">
               Curated Showcases
             </h2>
-            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            <p className="theme-muted mt-2 text-sm">
               Verified from component-system showcases and technographic indexes.
             </p>
           </div>
           <a
             href="mailto:hello@componentsystem.directory?subject=Showcase%20submission"
-            className="inline-flex h-10 items-center justify-center rounded-md border border-gray-300 px-4 text-sm font-semibold text-gray-700 transition hover:border-brand-300 hover:text-brand-700 dark:border-gray-700 dark:text-gray-300 dark:hover:border-brand-700 dark:hover:text-brand-300"
+            className="theme-button-secondary inline-flex h-10 items-center justify-center rounded-md px-4 text-sm font-semibold"
           >
             Submit a showcase
           </a>
@@ -348,9 +344,9 @@ export default function ShowcasesPage() {
 
 function ShowcaseCard({ showcase }: { showcase: Showcase }) {
   return (
-    <article className="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900 dark:hover:border-brand-700">
+    <article className="theme-card-flat theme-card-hover group overflow-hidden rounded-lg transition hover:-translate-y-0.5">
       <a href={showcase.url} target="_blank" rel="noopener noreferrer" className="block">
-        <div className="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
+        <div className="relative aspect-[16/10] overflow-hidden bg-[color:var(--surface-muted)]">
           <Image
             src={screenshotUrl(showcase.url)}
             alt={`${showcase.name} website screenshot`}
@@ -364,20 +360,20 @@ function ShowcaseCard({ showcase }: { showcase: Showcase }) {
       <div className="p-5">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">
+            <p className="theme-kicker">
               {showcase.category}
             </p>
-            <h3 className="mt-2 text-lg font-bold text-gray-950 dark:text-white">
+            <h3 className="mt-2 text-lg font-semibold group-hover:text-[color:var(--accent)]">
               <a href={showcase.url} target="_blank" rel="noopener noreferrer">
                 {showcase.name}
               </a>
             </h3>
           </div>
-          <span className="shrink-0 rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 dark:bg-gray-800 dark:text-gray-300">
+          <span className="theme-chip shrink-0 rounded-full px-2.5 py-1 text-xs font-medium">
             {hostFromUrl(showcase.url)}
           </span>
         </div>
-        <p className="mt-3 line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-400">
+        <p className="theme-muted mt-3 line-clamp-3 text-sm leading-6">
           {showcase.description}
         </p>
         <TechnologyChips technologies={showcase.technologies} />
@@ -385,7 +381,7 @@ function ShowcaseCard({ showcase }: { showcase: Showcase }) {
           href={showcase.sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex text-xs font-semibold text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300"
+          className="theme-link mt-4 inline-flex text-xs font-semibold"
         >
           Verified via {showcase.sourceName}
         </a>
@@ -401,7 +397,7 @@ function TechnologyChips({ technologies }: { technologies: ComponentTechnology[]
         <a
           key={technology.href}
           href={technology.href}
-          className="rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700 transition hover:border-brand-300 hover:bg-brand-100 dark:border-brand-800 dark:bg-brand-900/30 dark:text-brand-300 dark:hover:border-brand-700"
+          className="theme-chip rounded-full px-3 py-1 text-xs font-semibold transition hover:border-[color:var(--border-strong)] hover:text-[color:var(--accent)]"
         >
           {technology.name}
         </a>
@@ -412,9 +408,9 @@ function TechnologyChips({ technologies }: { technologies: ComponentTechnology[]
 
 function StatCard({ label, value }: { label: string; value: number }) {
   return (
-    <div className="border-r border-white/10 p-4 last:border-r-0">
-      <div className="text-2xl font-semibold text-white">{value}</div>
-      <div className="mt-1 text-xs font-medium uppercase tracking-[0.12em] text-gray-500">
+    <div className="border-r border-[color:var(--border)] p-4 last:border-r-0">
+      <div className="text-2xl font-semibold">{value}</div>
+      <div className="theme-muted mt-1 text-xs font-medium uppercase tracking-[0.12em]">
         {label}
       </div>
     </div>

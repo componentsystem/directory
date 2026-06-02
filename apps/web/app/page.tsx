@@ -6,36 +6,34 @@ import { NewsletterSignup } from "@/components/newsletter-signup";
 
 export default function HomePage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <div className="theme-page mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       {/* Hero */}
-      <section className="mb-12 text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">
-          The Definitive Directory of
+      <section className="mb-8 flex flex-col gap-5 border-b border-[color:var(--border)] pb-8 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p className="theme-kicker">Component Systems</p>
+          <h1 className="mt-4 max-w-4xl text-3xl font-semibold tracking-tight sm:text-5xl">
+          The definitive directory of
           <br />
-          <span className="text-brand-600">UI Component Systems</span>
+          <span className="text-[color:var(--accent)]">UI component systems.</span>
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
+          <p className="theme-muted mt-4 max-w-2xl text-sm leading-6">
           Discover, compare, and choose from {systems.length}+ frontend component
           systems, design systems, and UI libraries. Community-driven and open
           source.
         </p>
-        <div className="mt-6 flex items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-          <span className="flex items-center gap-1">
-            <span className="inline-block h-2 w-2 rounded-full bg-green-500" />
-            {systems.length} libraries listed
-          </span>
-          <span>|</span>
-          <span>
-            {systems.filter((s) => s.frameworks.includes("react")).length} React
-          </span>
-          <span>|</span>
-          <span>
-            {systems.filter((s) => s.frameworks.includes("vue")).length} Vue
-          </span>
-          <span>|</span>
-          <span>
-            {systems.filter((s) => s.frameworks.includes("svelte")).length} Svelte
-          </span>
+        </div>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:min-w-[420px]">
+          {[
+            { value: systems.length, label: "Libraries" },
+            { value: systems.filter((s) => s.frameworks.includes("react")).length, label: "React" },
+            { value: systems.filter((s) => s.frameworks.includes("vue")).length, label: "Vue" },
+            { value: systems.filter((s) => s.frameworks.includes("svelte")).length, label: "Svelte" },
+          ].map((stat) => (
+            <div key={stat.label} className="theme-stat-card rounded-lg px-4 py-3">
+              <div className="text-2xl font-semibold">{stat.value}</div>
+              <div className="theme-muted mt-1 text-xs uppercase tracking-[0.14em]">{stat.label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -54,7 +52,7 @@ export default function HomePage() {
               {Array.from({ length: 9 }).map((_, i) => (
                 <div
                   key={i}
-                  className="h-48 animate-pulse rounded-xl bg-gray-100 dark:bg-gray-800"
+                  className="theme-card-flat h-48 animate-pulse rounded-lg"
                 />
               ))}
             </div>
@@ -70,7 +68,7 @@ export default function HomePage() {
       </section>
 
       {/* SEO Content */}
-      <section className="prose prose-gray dark:prose-invert mx-auto max-w-3xl">
+      <section className="theme-card-flat prose prose-sm max-w-none rounded-lg p-6 prose-headings:text-[color:var(--foreground)] prose-p:text-[color:var(--muted)] dark:prose-invert">
         <h2>What is a Component System?</h2>
         <p>
           A component system (also known as a component library, UI library, or

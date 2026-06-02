@@ -9,15 +9,16 @@ export const metadata: Metadata = {
 
 export default function AiPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
+    <div className="theme-page mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
       <section className="mb-8 text-center">
-        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-2xl text-white">
+        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-[color:var(--accent)] text-2xl font-black text-[color:var(--accent-foreground)]">
           AI
         </div>
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <p className="theme-kicker">Static Preview</p>
+        <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
           AI Library Finder
         </h1>
-        <p className="mx-auto mt-4 max-w-xl text-lg text-gray-600">
+        <p className="theme-muted mx-auto mt-4 max-w-xl text-sm leading-6">
           Describe your project requirements and get personalized component
           library recommendations powered by AI.
         </p>
@@ -26,7 +27,7 @@ export default function AiPage() {
       <AiChat />
 
       <section className="mt-12">
-        <h2 className="mb-4 text-lg font-semibold text-gray-900">
+        <h2 className="mb-4 text-lg font-semibold">
           Try asking about:
         </h2>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -40,7 +41,7 @@ export default function AiPage() {
           ].map((prompt) => (
             <div
               key={prompt}
-              className="rounded-lg border border-gray-200 p-3 text-sm text-gray-600"
+              className="theme-card-flat rounded-lg p-3 text-sm text-[color:var(--muted)]"
             >
               {prompt}
             </div>

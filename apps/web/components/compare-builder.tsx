@@ -48,22 +48,22 @@ export function CompareBuilder({
   }, [basket, query, systems]);
 
   return (
-    <section className="mb-12 rounded-lg border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+    <section className="theme-card mb-12 rounded-lg p-5">
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
         <div>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h2 className="text-xl font-semibold text-gray-950 dark:text-gray-100">
+              <h2 className="text-xl font-semibold">
                 Build a comparison
               </h2>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              <p className="theme-muted mt-1 text-sm">
                 Add two or more libraries, then compare capabilities side by side.
               </p>
             </div>
             {basket.selected.length >= 2 && (
               <Link
                 href={basket.href}
-                className="inline-flex h-10 items-center justify-center rounded-md bg-brand-600 px-4 text-sm font-semibold text-white hover:bg-brand-700"
+                className="theme-button-primary inline-flex h-10 items-center justify-center rounded-md px-4 text-sm font-semibold"
               >
                 Compare {basket.selected.length}
               </Link>
@@ -73,7 +73,7 @@ export function CompareBuilder({
           <div className="mt-5">
             <label
               htmlFor="compare-search"
-              className="text-sm font-medium text-gray-700 dark:text-gray-300"
+              className="theme-muted-strong text-sm font-medium"
             >
               Add libraries
             </label>
@@ -83,7 +83,7 @@ export function CompareBuilder({
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Search shadcn/ui, MUI, Mantine..."
-              className="mt-2 h-11 w-full rounded-md border border-gray-200 bg-white px-3 text-sm text-gray-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100"
+              className="theme-input mt-2 h-11 w-full rounded-md px-3 text-sm"
             />
           </div>
 
@@ -94,37 +94,37 @@ export function CompareBuilder({
                 type="button"
                 onClick={() => basket.add(system.slug)}
                 disabled={basket.isFull}
-              className="flex items-center justify-between rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-left transition hover:border-brand-300 hover:bg-brand-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:border-brand-700 dark:hover:bg-brand-950/30"
+              className="theme-card-flat theme-card-hover flex items-center justify-between rounded-md px-3 py-2 text-left disabled:cursor-not-allowed disabled:opacity-50"
             >
                 <span className="flex min-w-0 items-center gap-3">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-white text-sm font-bold text-gray-700 dark:bg-gray-900 dark:text-gray-200">
+                  <span className="theme-logo-tile flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-sm font-bold">
                     <SystemLogo name={system.name} logo={system.logo} />
                   </span>
                   <span className="min-w-0">
-                  <span className="block text-sm font-semibold text-gray-900 dark:text-gray-100">
+                  <span className="block text-sm font-semibold">
                     {system.name}
                   </span>
-                  <span className="block text-xs text-gray-500 dark:text-gray-400">
+                  <span className="theme-muted block text-xs">
                     {system.frameworks.join(", ")}
                   </span>
                   </span>
                 </span>
-                <span className="text-lg text-brand-600 dark:text-brand-400">+</span>
+                <span className="text-lg text-[color:var(--accent)]">+</span>
               </button>
             ))}
           </div>
         </div>
 
-        <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-950">
+        <div className="theme-card-flat rounded-lg p-4">
           <div className="flex items-center justify-between gap-3">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            <h3 className="theme-kicker">
               Current basket
             </h3>
             {basket.selected.length > 0 && (
               <button
                 type="button"
                 onClick={basket.clear}
-                className="text-xs font-semibold text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400"
+                className="theme-muted text-xs font-semibold hover:text-[color:var(--danger)]"
               >
                 Clear
               </button>
@@ -132,7 +132,7 @@ export function CompareBuilder({
           </div>
 
           {basket.selected.length === 0 ? (
-            <p className="mt-4 rounded-md border border-dashed border-gray-300 px-3 py-8 text-center text-sm text-gray-500 dark:border-gray-700 dark:text-gray-400">
+            <p className="theme-muted mt-4 rounded-md border border-dashed border-[color:var(--border)] px-3 py-8 text-center text-sm">
               No libraries selected yet.
             </p>
           ) : (
@@ -140,10 +140,10 @@ export function CompareBuilder({
               {basket.selected.map((system) => (
                 <div
                   key={system.slug}
-                  className="flex items-center justify-between gap-3 rounded-md border border-gray-200 bg-white px-3 py-2 dark:border-gray-800 dark:bg-gray-900"
+                  className="theme-card-flat flex items-center justify-between gap-3 rounded-md px-3 py-2"
                 >
-                  <span className="flex min-w-0 items-center gap-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-gray-100 text-xs font-bold text-gray-700 dark:bg-gray-800 dark:text-gray-200">
+                  <span className="flex min-w-0 items-center gap-2 text-sm font-medium">
+                    <span className="theme-logo-tile flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-xs font-bold">
                       <SystemLogo name={system.name} logo={system.logo} />
                     </span>
                     <span className="truncate">{system.name}</span>
@@ -151,7 +151,7 @@ export function CompareBuilder({
                   <button
                     type="button"
                     onClick={() => basket.remove(system.slug)}
-                    className="text-sm text-gray-400 hover:text-red-500"
+                    className="theme-muted text-sm hover:text-[color:var(--danger)]"
                     aria-label={`Remove ${system.name}`}
                   >
                     Remove
@@ -167,12 +167,12 @@ export function CompareBuilder({
                 key={preset.title}
                 href={compareHref(preset.slugs)}
                 onClick={() => basket.replace(preset.slugs)}
-                className="rounded-md border border-gray-200 bg-white px-3 py-2 hover:border-brand-300 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-brand-700"
+                className="theme-card-flat theme-card-hover rounded-md px-3 py-2"
               >
-                <span className="block text-sm font-semibold text-gray-900 dark:text-gray-100">
+                <span className="block text-sm font-semibold">
                   {preset.title}
                 </span>
-                <span className="block text-xs text-gray-500 dark:text-gray-400">
+                <span className="theme-muted block text-xs">
                   {preset.slugs.length} libraries
                 </span>
               </Link>
@@ -223,19 +223,19 @@ export function CompareSelectionPanel({
   };
 
   return (
-    <div className="mb-8 rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
+    <div className="theme-card-flat mb-8 rounded-lg p-4">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
         <div className="min-w-0 flex-1">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+          <h2 className="theme-kicker">
             Adjust comparison
           </h2>
           <div className="mt-3 flex flex-wrap gap-2">
             {selected.map((system) => (
               <span
                 key={system.slug}
-                className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-sm text-gray-800 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100"
+                className="theme-chip inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm"
               >
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white text-xs font-bold text-gray-700 dark:bg-gray-900 dark:text-gray-200">
+                <span className="theme-logo-tile flex h-6 w-6 shrink-0 items-center justify-center rounded-md text-xs font-bold">
                   <SystemLogo name={system.name} logo={system.logo} />
                 </span>
                 {system.name}
@@ -244,7 +244,7 @@ export function CompareSelectionPanel({
                   onClick={() =>
                     updateSlugs(slugs.filter((slug) => slug !== system.slug))
                   }
-                  className="text-gray-400 hover:text-red-500"
+                  className="theme-muted hover:text-[color:var(--danger)]"
                   aria-label={`Remove ${system.name}`}
                 >
                   x
@@ -260,10 +260,10 @@ export function CompareSelectionPanel({
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Add another library..."
-            className="h-10 w-full rounded-md border border-gray-200 bg-white px-3 text-sm text-gray-900 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100"
+            className="theme-input h-10 w-full rounded-md px-3 text-sm"
           />
           {query && matches.length > 0 && (
-            <div className="absolute left-0 right-0 top-full z-30 mt-2 grid max-h-80 gap-1 overflow-y-auto rounded-lg border border-gray-200 bg-white p-1 shadow-xl dark:border-gray-700 dark:bg-gray-950">
+            <div className="theme-card-strong absolute left-0 right-0 top-full z-30 mt-2 grid max-h-80 gap-1 overflow-y-auto rounded-lg p-1">
               {matches.map((system) => (
                 <button
                   key={system.slug}
@@ -272,9 +272,9 @@ export function CompareSelectionPanel({
                     updateSlugs([...slugs, system.slug]);
                     setQuery("");
                   }}
-                  className="flex items-center gap-3 rounded-md px-3 py-2 text-left text-sm text-gray-700 hover:bg-brand-50 dark:text-gray-200 dark:hover:bg-brand-950/30"
+                  className="flex items-center gap-3 rounded-md px-3 py-2 text-left text-sm hover:bg-[color:var(--surface-muted)] hover:text-[color:var(--accent)]"
                 >
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-gray-100 text-xs font-bold text-gray-700 dark:bg-gray-800 dark:text-gray-200">
+                  <span className="theme-logo-tile flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-xs font-bold">
                     <SystemLogo name={system.name} logo={system.logo} />
                   </span>
                   <span>{system.name}</span>
@@ -289,18 +289,18 @@ export function CompareSelectionPanel({
         {slugs.length >= 2 ? (
           <Link
             href={compareHref(slugs)}
-            className="inline-flex h-10 items-center rounded-md bg-brand-600 px-4 text-sm font-semibold text-white hover:bg-brand-700"
+            className="theme-button-primary inline-flex h-10 items-center rounded-md px-4 text-sm font-semibold"
           >
             Update comparison
           </Link>
         ) : (
-          <span className="inline-flex h-10 items-center rounded-md bg-gray-100 px-4 text-sm font-semibold text-gray-400 dark:bg-gray-800">
+          <span className="theme-chip inline-flex h-10 items-center rounded-md px-4 text-sm font-semibold opacity-70">
             Select at least two
           </span>
         )}
         <Link
           href="/compare"
-          className="inline-flex h-10 items-center rounded-md border border-gray-200 px-4 text-sm font-medium text-gray-600 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-950"
+          className="theme-button-secondary inline-flex h-10 items-center rounded-md px-4 text-sm font-medium"
         >
           Start over
         </Link>

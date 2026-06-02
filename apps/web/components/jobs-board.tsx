@@ -324,24 +324,24 @@ export function JobsBoard() {
   const hasFilters = query || mode !== "All" || roleType !== "All" || level !== "All" || location;
 
   return (
-    <div className="bg-[#090909] text-gray-100">
+    <div className="theme-page">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <section className="mb-8 flex flex-col gap-5 border-b border-white/10 pb-8 lg:flex-row lg:items-end lg:justify-between">
+        <section className="mb-8 flex flex-col gap-5 border-b border-[color:var(--border)] pb-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-lime-300">
+            <p className="theme-kicker">
               Featured Jobs
             </p>
-            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
               Frontend and design system jobs
             </h1>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-gray-400">
+            <p className="theme-muted mt-3 max-w-2xl text-sm leading-6">
               Browse focused roles for component systems, UI engineering, design tooling, and
               developer experience teams.
             </p>
           </div>
           <a
             href="mailto:hello@componentsystem.directory?subject=Job%20listing"
-            className="inline-flex h-10 items-center justify-center rounded-full border border-white/15 px-4 text-sm font-semibold text-white transition hover:border-lime-300 hover:text-lime-200"
+            className="theme-button-secondary inline-flex h-10 items-center justify-center rounded-full px-4 text-sm font-semibold"
           >
             Add job listing
             <span className="ml-2 text-lg leading-none">+</span>
@@ -350,7 +350,7 @@ export function JobsBoard() {
 
         <section className="mb-10">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
+            <h2 className="theme-kicker">
               Featured
             </h2>
             <div className="flex gap-2">
@@ -358,7 +358,7 @@ export function JobsBoard() {
                 type="button"
                 onClick={() => rotateFeaturedJobs("previous")}
                 disabled={isFeaturedSliding}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-gray-300 transition hover:border-white/25 hover:text-white active:scale-90 active:border-lime-300 active:text-lime-200"
+                className="theme-button-secondary flex h-9 w-9 items-center justify-center rounded-full active:scale-90"
                 aria-label="Previous featured jobs"
               >
                 <span aria-hidden="true">←</span>
@@ -367,7 +367,7 @@ export function JobsBoard() {
                 type="button"
                 onClick={() => rotateFeaturedJobs("next")}
                 disabled={isFeaturedSliding}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-gray-300 transition hover:border-white/25 hover:text-white active:scale-90 active:border-lime-300 active:text-lime-200"
+                className="theme-button-secondary flex h-9 w-9 items-center justify-center rounded-full active:scale-90"
                 aria-label="Next featured jobs"
               >
                 <span aria-hidden="true">→</span>
@@ -393,14 +393,14 @@ export function JobsBoard() {
 
         <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
           <div>
-            <div className="mb-5 grid gap-3 rounded-lg border border-white/10 bg-white/[0.03] p-4 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
-              <label className="block text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">
+            <div className="theme-card-flat mb-5 grid gap-3 rounded-lg p-4 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
+              <label className="theme-kicker block">
                 Search
                 <input
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
                   placeholder="Company, title, skills..."
-                  className="mt-2 h-10 w-full rounded-md border border-white/10 bg-black/40 px-3 text-sm normal-case tracking-normal text-white outline-none transition placeholder:text-gray-600 focus:border-lime-300/70 focus:ring-2 focus:ring-lime-300/10"
+                  className="theme-input mt-2 h-10 w-full rounded-md px-3 text-sm normal-case tracking-normal"
                 />
               </label>
               <FilterSelect label="Location" value={location} onChange={setLocation}>
@@ -435,16 +435,16 @@ export function JobsBoard() {
               </FilterSelect>
             </div>
 
-            <div className="mb-5 flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
-              <p className="text-sm text-gray-400">
-                <span className="font-semibold text-white">{filteredJobs.length}</span>{" "}
+            <div className="mb-5 flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--border)] pb-4">
+              <p className="theme-muted text-sm">
+                <span className="font-semibold text-[color:var(--foreground)]">{filteredJobs.length}</span>{" "}
                 {filteredJobs.length === 1 ? "role" : "roles"} available
               </p>
               <div className="flex items-center gap-3">
                 <select
                   value={level}
                   onChange={(event) => setLevel(event.target.value as JobLevel | "All")}
-                  className="h-9 rounded-full border border-white/10 bg-black px-3 text-sm text-gray-300 outline-none focus:border-lime-300/70"
+                  className="theme-input h-9 rounded-full px-3 text-sm"
                   aria-label="Filter by seniority"
                 >
                   {levelOptions.map((item) => (
@@ -457,7 +457,7 @@ export function JobsBoard() {
                   <button
                     type="button"
                     onClick={clearFilters}
-                    className="text-sm font-semibold text-lime-300 hover:text-lime-200"
+                    className="theme-link text-sm font-semibold"
                   >
                     Clear filters
                   </button>
@@ -472,12 +472,12 @@ export function JobsBoard() {
                 ))}
               </div>
             ) : (
-              <div className="rounded-lg border border-dashed border-white/15 px-6 py-14 text-center">
-                <p className="text-sm font-semibold text-white">No jobs match these filters.</p>
+              <div className="theme-card-flat rounded-lg border-dashed px-6 py-14 text-center">
+                <p className="text-sm font-semibold">No jobs match these filters.</p>
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="mt-3 rounded-full border border-white/15 px-4 py-2 text-sm text-gray-300 hover:border-lime-300 hover:text-lime-200"
+                  className="theme-button-secondary mt-3 rounded-full px-4 py-2 text-sm"
                 >
                   Reset filters
                 </button>
@@ -486,24 +486,24 @@ export function JobsBoard() {
           </div>
 
           <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-            <div className="overflow-hidden rounded-lg border border-white/10 bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.08)_0,rgba(255,255,255,0.08)_1px,transparent_1px,transparent_8px)] p-7">
-              <h2 className="max-w-xs text-3xl font-semibold tracking-tight text-white">
+            <div className="theme-card-flat theme-stripes overflow-hidden rounded-lg p-7">
+              <h2 className="max-w-xs text-3xl font-semibold tracking-tight">
                 Reach component-minded developers.
               </h2>
-              <p className="mt-4 text-sm leading-6 text-gray-400">
+              <p className="theme-muted mt-4 text-sm leading-6">
                 Post roles for frontend engineers, design system teams, and developer tooling
                 specialists.
               </p>
               <a
                 href="mailto:hello@componentsystem.directory?subject=Job%20listing"
-                className="mt-7 inline-flex rounded-full border border-white/25 px-4 py-2 text-sm font-semibold text-white transition hover:border-lime-300 hover:text-lime-200"
+                className="theme-button-secondary mt-7 inline-flex rounded-full px-4 py-2 text-sm font-semibold"
               >
                 Add job listing
               </a>
             </div>
 
-            <div className="rounded-lg border border-white/10 bg-white/[0.03] p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500">
+            <div className="theme-card-flat rounded-lg p-5">
+              <p className="theme-kicker">
                 Focus
               </p>
               <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
@@ -522,7 +522,7 @@ export function JobsBoard() {
 
 function FeaturedJobCard({ job }: { job: Job }) {
   return (
-    <article className="group flex min-h-40 shrink-0 basis-[var(--featured-card-width)] flex-col rounded-lg border border-white/10 bg-white/[0.035] p-4 transition hover:border-lime-300/60 hover:bg-white/[0.055]">
+    <article className="theme-card-flat theme-card-hover group flex min-h-40 shrink-0 basis-[var(--featured-card-width)] flex-col rounded-lg p-4">
       <div className="flex items-start gap-3">
         <span
           className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-sm font-black ${job.accent}`}
@@ -530,17 +530,17 @@ function FeaturedJobCard({ job }: { job: Job }) {
           {job.logo}
         </span>
         <div className="min-w-0">
-          <p className="truncate text-xs font-semibold text-gray-500">
+          <p className="theme-muted truncate text-xs font-semibold">
             {job.company} · {job.mode}
           </p>
-          <h3 className="mt-1 line-clamp-2 text-base font-semibold leading-5 text-white">
+          <h3 className="mt-1 line-clamp-2 text-base font-semibold leading-5">
             {job.title}
           </h3>
         </div>
       </div>
-      <p className="mt-4 line-clamp-2 text-sm leading-6 text-gray-400">{job.summary}</p>
+      <p className="theme-muted mt-4 line-clamp-2 text-sm leading-6">{job.summary}</p>
       <div className="mt-auto pt-4">
-        <span className="inline-flex rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-gray-300 group-hover:text-lime-200">
+        <span className="theme-chip inline-flex rounded-full px-3 py-1 text-xs font-semibold group-hover:text-[color:var(--accent)]">
           View
         </span>
       </div>
@@ -552,7 +552,7 @@ function JobRow({ job }: { job: Job }) {
   return (
     <article className="group grid gap-4 py-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
       <div className="min-w-0">
-        <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-gray-500">
+        <div className="theme-muted flex flex-wrap items-center gap-2 text-xs font-semibold">
           <span
             className={`flex h-5 w-5 items-center justify-center rounded text-[10px] font-black ${job.accent}`}
           >
@@ -570,17 +570,17 @@ function JobRow({ job }: { job: Job }) {
             </>
           ) : null}
         </div>
-        <h3 className="mt-2 text-base font-semibold text-white group-hover:text-lime-200">
+        <h3 className="mt-2 text-base font-semibold group-hover:text-[color:var(--accent)]">
           {job.title}
         </h3>
-        <p className="mt-2 line-clamp-2 max-w-3xl text-sm leading-6 text-gray-400">
+        <p className="theme-muted mt-2 line-clamp-2 max-w-3xl text-sm leading-6">
           {job.summary}
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           {[job.roleType, job.level, job.salary].map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs text-gray-400"
+              className="theme-chip rounded-full px-2.5 py-1 text-xs"
             >
               {tag}
             </span>
@@ -589,7 +589,7 @@ function JobRow({ job }: { job: Job }) {
       </div>
       <a
         href="mailto:hello@componentsystem.directory?subject=Job%20application"
-        className="inline-flex h-9 items-center justify-center rounded-full bg-white/5 px-4 text-sm font-semibold text-gray-300 transition hover:bg-lime-300 hover:text-gray-950"
+        className="theme-button-secondary inline-flex h-9 items-center justify-center rounded-full px-4 text-sm font-semibold hover:bg-[color:var(--accent)] hover:text-[color:var(--accent-foreground)]"
       >
         View
       </a>
@@ -609,12 +609,12 @@ function FilterSelect({
   value: string;
 }) {
   return (
-    <label className="block text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">
+    <label className="theme-kicker block">
       {label}
       <select
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="mt-2 h-10 w-full rounded-md border border-white/10 bg-black/40 px-3 text-sm normal-case tracking-normal text-white outline-none transition focus:border-lime-300/70 focus:ring-2 focus:ring-lime-300/10"
+        className="theme-input mt-2 h-10 w-full rounded-md px-3 text-sm normal-case tracking-normal"
       >
         {children}
       </select>
@@ -624,9 +624,9 @@ function FilterSelect({
 
 function Stat({ label, value }: { label: string; value: number }) {
   return (
-    <div className="rounded-md border border-white/10 bg-black/30 p-3">
-      <div className="text-xl font-semibold text-white">{value}</div>
-      <div className="mt-1 text-xs text-gray-500">{label}</div>
+    <div className="theme-card-flat rounded-md p-3">
+      <div className="text-xl font-semibold">{value}</div>
+      <div className="theme-muted mt-1 text-xs">{label}</div>
     </div>
   );
 }

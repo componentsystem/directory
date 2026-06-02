@@ -11,13 +11,13 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md dark:border-gray-800 dark:bg-gray-950/80">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="theme-shell sticky top-0 z-50 w-full border-b backdrop-blur-md">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white font-bold text-sm">
+          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-brand-400 text-sm font-black text-gray-950 shadow-[0_0_24px_rgba(190,242,100,0.22)]">
             CS
           </div>
-          <span className="hidden font-semibold text-gray-900 dark:text-gray-100 sm:inline-block">
+          <span className="hidden text-sm font-semibold sm:inline-block">
             componentsystem.directory
           </span>
         </Link>
@@ -27,7 +27,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+              className="rounded-full px-3 py-1.5 text-sm font-medium text-[color:var(--muted)] transition-colors hover:bg-[color:var(--surface-muted)] hover:text-[color:var(--accent)]"
             >
               {item.label}
             </Link>
@@ -40,13 +40,13 @@ export function Header() {
             href="https://github.com/componentsystem/directory"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+            className="hidden rounded-full px-3 py-1.5 text-sm font-medium text-[color:var(--muted)] transition-colors hover:bg-[color:var(--surface-muted)] hover:text-[color:var(--accent)] sm:inline-flex"
           >
             GitHub
           </a>
           <Link
             href="/newsletter"
-            className="rounded-md bg-brand-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-700"
+            className="theme-button-primary rounded-full px-4 py-2 text-sm font-semibold"
           >
             Subscribe
           </Link>

@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-export function NewsletterSignup({ variant = "brand" }: { variant?: "brand" | "dark" }) {
+export function NewsletterSignup({ variant = "dark" }: { variant?: "brand" | "dark" }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "success">("idle");
-  const isDark = variant === "dark";
+  const isCompact = variant === "dark" || variant === "brand";
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -15,16 +15,13 @@ export function NewsletterSignup({ variant = "brand" }: { variant?: "brand" | "d
 
   return (
     <section
-      className={
-        isDark
-          ? "rounded-lg border border-white/10 bg-white/[0.04] px-5 py-6 text-white shadow-[0_24px_80px_rgba(0,0,0,0.32)] sm:px-6"
-          : "rounded-2xl bg-gradient-to-br from-brand-600 to-brand-800 px-6 py-12 text-center text-white sm:px-12"
-      }
+      className="theme-card rounded-lg px-5 py-6 sm:px-6"
     >
-      <h2 className={isDark ? "text-xl font-semibold tracking-tight" : "text-2xl font-bold sm:text-3xl"}>
+      <p className="theme-kicker mb-3">Newsletter</p>
+      <h2 className={isCompact ? "text-xl font-semibold tracking-tight" : "text-2xl font-bold sm:text-3xl"}>
         Weekly Component Digest
       </h2>
-      <p className={isDark ? "mt-3 max-w-xl text-sm leading-6 text-gray-400" : "mx-auto mt-3 max-w-xl text-brand-100"}>
+      <p className="theme-muted mt-3 max-w-xl text-sm leading-6">
         Get the latest component library updates, new additions, featured jobs, and
         practical frontend resources delivered to your inbox every week.
       </p>
@@ -32,9 +29,7 @@ export function NewsletterSignup({ variant = "brand" }: { variant?: "brand" | "d
       {status === "success" ? (
         <div
           className={
-            isDark
-              ? "mt-6 rounded-md border border-lime-300/20 bg-lime-300/10 p-4 text-sm text-lime-100"
-              : "mt-6 rounded-lg bg-white/10 p-4 text-brand-100"
+            "mt-6 rounded-md border border-[color:var(--border-strong)] bg-[color:var(--accent-soft)] p-4 text-sm text-[color:var(--muted-strong)]"
           }
         >
           Newsletter signup is coming soon. Thanks for your interest.
@@ -42,7 +37,7 @@ export function NewsletterSignup({ variant = "brand" }: { variant?: "brand" | "d
       ) : (
         <form
           onSubmit={handleSubmit}
-          className={isDark ? "mt-6 flex flex-col gap-3 sm:flex-row" : "mx-auto mt-6 flex max-w-md gap-3"}
+          className="mt-6 flex flex-col gap-3 sm:flex-row"
         >
           <input
             type="email"
@@ -50,19 +45,11 @@ export function NewsletterSignup({ variant = "brand" }: { variant?: "brand" | "d
             placeholder="you@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={
-              isDark
-                ? "h-11 flex-1 rounded-md border border-white/10 bg-black/30 px-4 text-sm text-white placeholder:text-gray-500 outline-none transition focus:border-lime-300/60 focus:ring-2 focus:ring-lime-300/15"
-                : "flex-1 rounded-lg bg-white/10 px-4 py-3 text-sm text-white placeholder:text-brand-200 backdrop-blur-sm focus:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
-            }
+            className="theme-input h-11 flex-1 rounded-md px-4 text-sm"
           />
           <button
             type="submit"
-            className={
-              isDark
-                ? "h-11 whitespace-nowrap rounded-md bg-lime-300 px-5 text-sm font-semibold text-gray-950 transition hover:bg-lime-200 disabled:opacity-50"
-                : "whitespace-nowrap rounded-lg bg-white px-6 py-3 text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-50 disabled:opacity-50"
-            }
+            className="theme-button-primary h-11 whitespace-nowrap rounded-md px-5 text-sm font-semibold disabled:opacity-50"
           >
             Subscribe
           </button>

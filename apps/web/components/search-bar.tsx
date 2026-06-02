@@ -59,10 +59,10 @@ export function SearchBar() {
   );
 
   return (
-    <div className="space-y-4">
+    <div className="theme-card-flat rounded-lg p-4">
       <div className="relative">
         <svg
-          className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400 dark:text-gray-500"
+          className="theme-muted absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -82,16 +82,16 @@ export function SearchBar() {
             setQuery(e.target.value);
             updateParams("q", e.target.value);
           }}
-          className="w-full rounded-xl border border-gray-200 bg-white py-3 pl-12 pr-4 text-base shadow-sm transition-shadow placeholder:text-gray-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:placeholder:text-gray-500"
+          className="theme-input w-full rounded-md py-3 pl-12 pr-4 text-base"
         />
         {isPending && (
           <div className="absolute right-4 top-1/2 -translate-y-1/2">
-            <div className="h-5 w-5 animate-spin rounded-full border-2 border-brand-600 border-t-transparent" />
+            <div className="h-5 w-5 animate-spin rounded-full border-2 border-[color:var(--accent)] border-t-transparent" />
           </div>
         )}
       </div>
 
-      <div className="flex flex-wrap gap-4">
+      <div className="mt-4 flex flex-wrap gap-4">
         <FilterGroup
           label="Framework"
           options={frameworks}
@@ -128,7 +128,7 @@ function FilterGroup({
 }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="text-sm font-medium text-gray-500 dark:text-gray-400">{label}:</span>
+      <span className="theme-muted text-sm font-medium">{label}:</span>
       <div className="flex flex-wrap gap-1">
         {options.map((option) => (
           <button
@@ -138,8 +138,8 @@ function FilterGroup({
             }
             className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
               value === option.value
-                ? "bg-brand-600 text-white"
-                : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                ? "theme-chip-active"
+                : "theme-chip hover:border-[color:var(--border-strong)] hover:text-[color:var(--accent)]"
             }`}
           >
             {option.label}

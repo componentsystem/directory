@@ -99,8 +99,8 @@ export function CompareButton({
       }}
       className={`inline-flex h-9 items-center justify-center rounded-md border px-3 text-xs font-semibold transition-colors ${
         selected
-          ? "border-brand-500 bg-brand-600 text-white hover:bg-brand-700"
-          : "border-gray-200 bg-white text-gray-700 hover:border-brand-300 hover:text-brand-700 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-brand-600 dark:hover:text-brand-300"
+          ? "theme-chip-active"
+          : "theme-button-secondary disabled:cursor-not-allowed disabled:opacity-50"
       }`}
       aria-pressed={selected}
       title={disabled ? `Compare up to ${MAX_COMPARE_ITEMS} libraries` : undefined}
@@ -116,26 +116,26 @@ export function CompareTray({ systems }: { systems: CompareSystem[] }) {
   if (basket.selected.length === 0) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-gray-200 bg-white/95 px-4 pb-6 pt-4 shadow-[0_-12px_30px_rgba(15,23,42,0.12)] backdrop-blur dark:border-gray-800 dark:bg-gray-950/95 sm:pb-5">
+    <div className="theme-shell fixed inset-x-0 bottom-0 z-40 border-t px-4 pb-6 pt-4 shadow-[0_-18px_60px_rgba(0,0,0,0.22)] backdrop-blur sm:pb-5">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0">
-          <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+          <p className="theme-kicker">
             Compare basket
           </p>
           <div className="mt-3 flex flex-wrap gap-2.5">
             {basket.selected.map((system) => (
               <span
                 key={system.slug}
-                className="inline-flex min-h-9 items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-4 py-1.5 text-sm text-gray-700 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200"
+                className="theme-chip inline-flex min-h-9 items-center gap-2 rounded-full px-4 py-1.5 text-sm"
               >
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white text-xs font-bold text-gray-700 dark:bg-gray-800 dark:text-gray-200">
+                <span className="theme-logo-tile flex h-6 w-6 shrink-0 items-center justify-center rounded-md text-xs font-bold">
                   <SystemLogo name={system.name} logo={system.logo} />
                 </span>
                 {system.name}
                 <button
                   type="button"
                   onClick={() => basket.remove(system.slug)}
-                  className="rounded-full text-gray-400 hover:text-red-500"
+                  className="rounded-full text-[color:var(--muted)] hover:text-[color:var(--danger)]"
                   aria-label={`Remove ${system.name} from comparison`}
                 >
                   x
@@ -148,19 +148,19 @@ export function CompareTray({ systems }: { systems: CompareSystem[] }) {
           <button
             type="button"
             onClick={basket.clear}
-            className="h-10 rounded-md border border-gray-200 px-4 text-sm font-medium text-gray-600 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-900"
+            className="theme-button-secondary h-10 rounded-md px-4 text-sm font-medium"
           >
             Clear
           </button>
           {basket.selected.length >= 2 ? (
             <Link
               href={basket.href}
-              className="inline-flex h-10 items-center rounded-md bg-brand-600 px-4 text-sm font-semibold text-white hover:bg-brand-700"
+              className="theme-button-primary inline-flex h-10 items-center rounded-md px-4 text-sm font-semibold"
             >
               Compare {basket.selected.length}
             </Link>
           ) : (
-            <span className="inline-flex h-10 items-center rounded-md bg-gray-100 px-4 text-sm font-semibold text-gray-400 dark:bg-gray-800">
+            <span className="theme-chip inline-flex h-10 items-center rounded-md px-4 text-sm font-semibold opacity-70">
               Add one more
             </span>
           )}

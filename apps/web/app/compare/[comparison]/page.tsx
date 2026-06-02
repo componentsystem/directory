@@ -8,7 +8,7 @@ import { SystemLogo } from "@/components/system-logo";
 import { compareHref } from "@/lib/compare-url";
 
 const stickyFeatureClass =
-  "sticky left-0 z-10 border-r border-gray-200 bg-gray-50 shadow-[8px_0_18px_-18px_rgba(15,23,42,0.7)] dark:border-gray-800 dark:bg-gray-950";
+  "sticky left-0 z-10 border-r border-[color:var(--border)] bg-[color:var(--surface-strong)] shadow-[8px_0_18px_-18px_rgba(0,0,0,0.55)]";
 
 const popularComparisons = [
   "shadcn-ui;mantine;mui;chakra-ui",
@@ -72,27 +72,27 @@ export default async function ComparisonPage({
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
-        <Link href="/" className="hover:text-brand-600 dark:hover:text-brand-400">
+    <div className="theme-page mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <nav className="theme-muted mb-6 text-sm">
+        <Link href="/" className="hover:text-[color:var(--accent)]">
           Directory
         </Link>
         <span className="mx-2">/</span>
-        <Link href="/compare" className="hover:text-brand-600 dark:hover:text-brand-400">
+        <Link href="/compare" className="hover:text-[color:var(--accent)]">
           Compare
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-gray-900 dark:text-gray-100">
+        <span className="theme-muted-strong">
           {compared.length} libraries
         </span>
       </nav>
 
       <section className="mb-8">
-        <p className="text-sm font-semibold uppercase tracking-wide text-brand-600 dark:text-brand-400">
+        <p className="theme-kicker">
           Component library comparison
         </p>
         <ComparisonHeading systems={compared} />
-        <p className="mt-3 max-w-3xl text-lg text-gray-600 dark:text-gray-400">
+        <p className="theme-muted mt-3 max-w-3xl text-sm leading-6">
           Compare capabilities across selected UI systems. Add or remove
           libraries to narrow the decision without losing the current set.
         </p>
@@ -116,7 +116,7 @@ export default async function ComparisonPage({
 
 function ComparisonHeading({ systems }: { systems: ComponentSystem[] }) {
   return (
-    <h1 className="mt-2 flex max-w-5xl flex-wrap items-center gap-2 text-3xl font-bold tracking-tight text-gray-950 dark:text-gray-100 sm:text-4xl">
+    <h1 className="mt-3 flex max-w-5xl flex-wrap items-center gap-2 text-3xl font-semibold tracking-tight sm:text-4xl">
       {systems.map((system, index) => {
         const nextSlugs = systems
           .filter((item) => item.slug !== system.slug)
@@ -126,17 +126,17 @@ function ComparisonHeading({ systems }: { systems: ComponentSystem[] }) {
         return (
           <span key={system.slug} className="inline-flex items-center gap-2">
             {index > 0 && (
-              <span className="text-gray-400 dark:text-gray-600">vs</span>
+              <span className="theme-muted">vs</span>
             )}
-            <span className="inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-1.5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
-              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-gray-100 text-sm font-bold text-gray-700 dark:bg-gray-800 dark:text-gray-200">
+            <span className="theme-chip inline-flex items-center gap-2 rounded-lg px-3 py-1.5">
+              <span className="theme-logo-tile flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-sm font-bold">
                 <SystemLogo name={system.name} logo={system.logo} />
               </span>
               <span>{system.name}</span>
               <Link
                 href={href}
                 aria-label={`Remove ${system.name} from comparison`}
-                className="inline-flex h-6 w-6 items-center justify-center rounded-full text-base leading-none text-gray-400 transition-colors hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/40 dark:hover:text-red-300"
+                className="inline-flex h-6 w-6 items-center justify-center rounded-full text-base leading-none text-[color:var(--muted)] transition-colors hover:text-[color:var(--danger)]"
               >
                 x
               </Link>
@@ -154,15 +154,15 @@ function ComparisonMatrix({ systems }: { systems: ComponentSystem[] }) {
   };
 
   return (
-    <section className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
+    <section className="theme-card-flat overflow-hidden rounded-lg">
       <div className="overflow-x-auto">
         <div className="min-w-max">
           <div
-            className="grid border-b border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+            className="grid border-b border-[color:var(--border)] bg-[color:var(--surface-strong)]"
             style={columns}
           >
             <div
-              className={`${stickyFeatureClass} px-4 py-4 text-sm font-semibold text-gray-500 dark:text-gray-400`}
+              className={`${stickyFeatureClass} theme-muted px-4 py-4 text-sm font-semibold`}
             >
               Feature
             </div>
@@ -170,17 +170,17 @@ function ComparisonMatrix({ systems }: { systems: ComponentSystem[] }) {
               <div key={system.slug} className="px-4 py-4">
                 <Link
                   href={`/${system.slug}`}
-                  className="flex items-center gap-3 hover:text-brand-600 dark:hover:text-brand-400"
+                  className="flex items-center gap-3 hover:text-[color:var(--accent)]"
                 >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-gray-100 text-sm font-bold text-gray-700 dark:bg-gray-800 dark:text-gray-200">
+                  <span className="theme-logo-tile flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-sm font-bold">
                     <SystemLogo name={system.name} logo={system.logo} />
                   </span>
                   <span className="min-w-0">
-                    <span className="block font-semibold text-gray-950 dark:text-gray-100">
+                    <span className="block font-semibold">
                       {system.name}
                     </span>
                     {system.company && (
-                      <span className="block text-xs text-gray-500 dark:text-gray-400">
+                      <span className="theme-muted block text-xs">
                         {system.company}
                       </span>
                     )}
@@ -207,7 +207,7 @@ function ComparisonMatrix({ systems }: { systems: ComponentSystem[] }) {
           </CompareRow>
           <CompareRow label="Components" systems={systems} columns={columns}>
             {(system) => (
-              <span className="text-sm text-gray-700 dark:text-gray-300">
+              <span className="theme-muted-strong text-sm">
                 {system.components.length > 0
                   ? `${system.components.length} listed`
                   : "Not listed"}
@@ -216,14 +216,14 @@ function ComparisonMatrix({ systems }: { systems: ComponentSystem[] }) {
           </CompareRow>
           <CompareRow label="Version" systems={systems} columns={columns}>
             {(system) => (
-              <span className="text-sm text-gray-700 dark:text-gray-300">
+              <span className="theme-muted-strong text-sm">
                 {system.latestVersion}
               </span>
             )}
           </CompareRow>
           <CompareRow label="License" systems={systems} columns={columns}>
             {(system) => (
-              <span className="text-sm text-gray-700 dark:text-gray-300">
+              <span className="theme-muted-strong text-sm">
                 {system.license ?? "Not listed"}
               </span>
             )}
@@ -233,7 +233,7 @@ function ComparisonMatrix({ systems }: { systems: ComponentSystem[] }) {
               system.github ? (
                 <ExternalLink href={system.github}>Repository</ExternalLink>
               ) : (
-                <span className="text-sm text-gray-400">N/A</span>
+                <span className="theme-muted text-sm">N/A</span>
               )
             }
           </CompareRow>
@@ -256,11 +256,11 @@ function CompareRow({
 }) {
   return (
     <div
-      className="grid border-b border-gray-100 last:border-b-0 dark:border-gray-800"
+      className="grid border-b border-[color:var(--border)] last:border-b-0"
       style={columns}
     >
       <div
-        className={`${stickyFeatureClass} px-4 py-4 text-sm font-semibold text-gray-600 dark:text-gray-300`}
+        className={`${stickyFeatureClass} theme-muted-strong px-4 py-4 text-sm font-semibold`}
       >
         {label}
       </div>
@@ -281,7 +281,7 @@ function Tags({
   empty?: string;
 }) {
   if (items.length === 0) {
-    return <span className="text-sm text-gray-400">{empty}</span>;
+    return <span className="theme-muted text-sm">{empty}</span>;
   }
 
   return (
@@ -289,7 +289,7 @@ function Tags({
       {items.map((item) => (
         <span
           key={item}
-          className="rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-200"
+          className="theme-chip rounded-full px-2 py-0.5 text-xs font-medium"
         >
           {item}
         </span>
@@ -301,12 +301,12 @@ function Tags({
 function MaturityBadge({ maturity }: { maturity: string }) {
   const colors: Record<string, string> = {
     experimental:
-      "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/40 dark:text-yellow-300",
+      "border border-yellow-400/30 bg-yellow-300/15 text-yellow-700 dark:text-yellow-200",
     active:
-      "bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300",
-    stable: "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300",
-    deprecated: "bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300",
-    unmaintained: "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300",
+      "border border-[color:var(--border-strong)] bg-[color:var(--accent-soft)] text-[color:var(--muted-strong)]",
+    stable: "border border-[color:var(--border-strong)] bg-[color:var(--accent-soft)] text-[color:var(--muted-strong)]",
+    deprecated: "border border-red-400/30 bg-red-300/15 text-red-600 dark:text-red-200",
+    unmaintained: "theme-chip",
   };
 
   return (
@@ -332,7 +332,7 @@ function ExternalLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-sm font-medium text-brand-600 hover:text-brand-700 hover:underline dark:text-brand-400 dark:hover:text-brand-300"
+      className="theme-link text-sm font-medium hover:underline"
     >
       {children}
     </a>
@@ -354,23 +354,23 @@ function ComponentMatrix({ systems }: { systems: ComponentSystem[] }) {
     <section className="mt-10">
       <div className="mb-4 flex items-end justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-semibold text-gray-950 dark:text-gray-100">
+          <h2 className="text-2xl font-semibold">
             Component Availability
           </h2>
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+          <p className="theme-muted mt-1 text-sm">
             Union of listed components across selected libraries.
           </p>
         </div>
-        <span className="text-sm text-gray-500 dark:text-gray-400">
+        <span className="theme-muted text-sm">
           {allComponents.length} components
         </span>
       </div>
 
-      <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
+      <div className="theme-card-flat overflow-hidden rounded-lg">
         <div className="max-h-[620px] overflow-auto">
           <div className="min-w-max">
             <div
-              className="sticky top-0 grid border-b border-gray-200 bg-gray-50 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-400"
+              className="sticky top-0 grid border-b border-[color:var(--border)] bg-[color:var(--surface-strong)] text-xs font-semibold uppercase tracking-wide text-[color:var(--muted)]"
               style={columns}
             >
               <span className={`${stickyFeatureClass} z-20 px-4 py-3`}>
@@ -385,11 +385,11 @@ function ComponentMatrix({ systems }: { systems: ComponentSystem[] }) {
             {allComponents.map((component) => (
               <div
                 key={component}
-                className="grid border-b border-gray-100 text-sm last:border-b-0 dark:border-gray-800"
+                className="grid border-b border-[color:var(--border)] text-sm last:border-b-0"
                 style={columns}
               >
                 <span
-                  className={`${stickyFeatureClass} px-4 py-3 font-medium text-gray-800 dark:text-gray-200`}
+                  className={`${stickyFeatureClass} px-4 py-3 font-medium`}
                 >
                   {component}
                 </span>
@@ -402,8 +402,8 @@ function ComponentMatrix({ systems }: { systems: ComponentSystem[] }) {
                       <span
                         className={`inline-flex h-6 min-w-6 items-center justify-center rounded-full px-2 text-xs font-semibold ${
                           available
-                            ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300"
-                            : "bg-gray-100 text-gray-400 dark:bg-gray-800 dark:text-gray-500"
+                            ? "bg-[color:var(--accent)] text-[color:var(--accent-foreground)]"
+                            : "theme-chip text-[color:var(--muted)]"
                         }`}
                       >
                         {available ? "Yes" : "-"}

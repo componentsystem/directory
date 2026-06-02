@@ -89,10 +89,10 @@ export function SystemGrid({ systems }: { systems: ComponentSystem[] }) {
   return (
     <div>
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-gray-500">
+        <p className="theme-muted text-sm">
           {filtered.length} component {filtered.length === 1 ? "system" : "systems"}
         </p>
-        <div className="inline-flex w-fit items-center gap-1 rounded-lg border border-gray-200 bg-white p-1 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+        <div className="theme-card-flat inline-flex w-fit items-center gap-1 rounded-full p-1">
           {viewModes.map((mode) => (
             <button
               key={mode.value}
@@ -104,8 +104,8 @@ export function SystemGrid({ systems }: { systems: ComponentSystem[] }) {
               disabled={isPending}
               className={`inline-flex h-8 w-8 items-center justify-center rounded-md transition-colors disabled:opacity-60 ${
                 view === mode.value
-                  ? "bg-brand-600 text-white shadow-sm"
-                  : "text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+                  ? "theme-chip-active"
+                  : "theme-muted hover:bg-[color:var(--surface-muted)] hover:text-[color:var(--accent)]"
               }`}
             >
               <ViewIcon name={mode.icon} />
@@ -115,9 +115,9 @@ export function SystemGrid({ systems }: { systems: ComponentSystem[] }) {
       </div>
 
       {filtered.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-gray-300 py-16 text-center">
-          <p className="text-gray-500">No component systems match your filters.</p>
-          <p className="mt-1 text-sm text-gray-400">
+        <div className="theme-card-flat rounded-xl border-dashed py-16 text-center">
+          <p className="theme-muted-strong">No component systems match your filters.</p>
+          <p className="theme-muted mt-1 text-sm">
             Try adjusting your search or filters.
           </p>
         </div>

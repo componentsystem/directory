@@ -3,17 +3,25 @@
 import { useSyncExternalStore } from "react";
 
 const themeChangeEvent = "themechange";
+type ThemeName = "dark" | "light";
 
-function getDarkSnapshot() {
+const DEFAULT_THEME: ThemeName = "dark";
+
+function getStoredTheme(): ThemeName {
   if (typeof window === "undefined") {
-    return false;
+    return DEFAULT_THEME;
   }
 
   const stored = localStorage.getItem("theme");
-  return (
-    stored === "dark" ||
-    (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches)
-  );
+  return stored === "light" ? "light" : "dark";
+}
+
+function getDarkSnapshot() {
+  if (typeof window === "undefined") {
+    return DEFAULT_THEME === "dark";
+  }
+
+  return getStoredTheme() === "dark";
 }
 
 function subscribeToTheme(callback: () => void) {
@@ -52,7 +60,7 @@ export function ThemeToggle() {
     <button
       onClick={toggle}
       aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-      className="rounded-md p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100"
+      className="theme-button-secondary flex h-9 w-9 items-center justify-center rounded-full"
     >
       {dark ? (
         <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

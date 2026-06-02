@@ -56,12 +56,13 @@ const frameworkComparisons: { fw: Framework; label: string }[] = [
 
 export default function ComparePage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <section className="mb-12 text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-950 dark:text-gray-100">
+    <div className="theme-page mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <section className="mb-8 border-b border-[color:var(--border)] pb-8">
+        <p className="theme-kicker">Decision Matrix</p>
+        <h1 className="mt-4 max-w-4xl text-3xl font-semibold tracking-tight sm:text-5xl">
           Compare Component Libraries
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
+        <p className="theme-muted mt-4 max-w-2xl text-sm leading-6">
           Select libraries from the directory, keep them in your compare basket,
           and inspect features across two or more systems.
         </p>
@@ -70,7 +71,7 @@ export default function ComparePage() {
       <CompareBuilder systems={systems} presets={popularComparisons} />
 
       <section className="mb-12">
-        <h2 className="mb-6 text-2xl font-semibold text-gray-950 dark:text-gray-100">
+        <h2 className="mb-6 text-2xl font-semibold">
           Popular Comparisons
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -83,25 +84,25 @@ export default function ComparePage() {
               <Link
                 key={preset.title}
                 href={compareHref(preset.slugs)}
-                className="group rounded-lg border border-gray-200 bg-white p-5 transition-all hover:border-brand-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-brand-700"
+                className="theme-card-flat theme-card-hover group rounded-lg p-5"
               >
                 <div className="flex -space-x-2">
                   {selected.map((system) => (
                     <div
                       key={system!.slug}
-                      className="flex h-10 w-10 items-center justify-center rounded-md border border-white bg-gray-100 text-sm font-bold text-gray-700 group-hover:bg-brand-50 group-hover:text-brand-700 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-200 dark:group-hover:bg-brand-900/40 dark:group-hover:text-brand-300"
+                      className="theme-logo-tile flex h-10 w-10 items-center justify-center rounded-md text-sm font-bold group-hover:text-[color:var(--accent)]"
                     >
                       <SystemLogo name={system!.name} logo={system!.logo} />
                     </div>
                   ))}
                 </div>
-                <h3 className="mt-4 font-semibold text-gray-950 dark:text-gray-100">
+                <h3 className="mt-4 font-semibold group-hover:text-[color:var(--accent)]">
                   {preset.title}
                 </h3>
-                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                <p className="theme-muted mt-1 text-sm">
                   {preset.description}
                 </p>
-                <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-brand-600 dark:text-brand-400">
+                <p className="theme-link mt-3 text-xs font-semibold uppercase tracking-wide">
                   Compare {selected.length} libraries
                 </p>
               </Link>
@@ -111,7 +112,7 @@ export default function ComparePage() {
       </section>
 
       <section>
-        <h2 className="mb-6 text-2xl font-semibold text-gray-950 dark:text-gray-100">
+        <h2 className="mb-6 text-2xl font-semibold">
           Compare by Framework
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -123,10 +124,10 @@ export default function ComparePage() {
               <Link
                 key={fw}
                 href={`/?framework=${fw}`}
-                className="rounded-lg border border-gray-200 bg-white p-5 transition-all hover:border-brand-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-brand-700"
+                className="theme-card-flat theme-card-hover rounded-lg p-5"
               >
-                <h3 className="font-semibold text-gray-950 dark:text-gray-100">{label}</h3>
-                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                <h3 className="font-semibold">{label}</h3>
+                <p className="theme-muted mt-1 text-sm">
                   {count} libraries to compare
                 </p>
               </Link>

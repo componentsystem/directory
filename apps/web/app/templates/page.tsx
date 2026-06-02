@@ -14,25 +14,26 @@ const featuredTemplates = templates.filter((template) => template.featured).slic
 
 export default function TemplatesPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <section className="mb-10">
+    <div className="theme-page mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <section className="mb-10 border-b border-[color:var(--border)] pb-8">
         <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-950 dark:text-gray-100">
+            <p className="theme-kicker">Template Index</p>
+            <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">
               Website Templates
             </h1>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+            <p className="theme-muted mt-4 text-sm leading-6">
               Browse image-first templates for portfolios, real estate sites,
               SaaS landing pages, blogs, ecommerce stores, dashboards, and more.
             </p>
           </div>
-          <div className="rounded-lg border border-gray-200 bg-white px-5 py-4 dark:border-gray-800 dark:bg-gray-900">
-            <p className="text-3xl font-bold text-gray-950 dark:text-gray-100">{templates.length}</p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">templates indexed</p>
+          <div className="theme-stat-card rounded-lg px-5 py-4">
+            <p className="text-3xl font-semibold">{templates.length}</p>
+            <p className="theme-muted text-sm">templates indexed</p>
           </div>
-          <div className="rounded-lg border border-gray-200 bg-white px-5 py-4 dark:border-gray-800 dark:bg-gray-900">
-            <p className="text-3xl font-bold text-gray-950 dark:text-gray-100">{sourceCount}</p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">sources indexed</p>
+          <div className="theme-stat-card rounded-lg px-5 py-4">
+            <p className="text-3xl font-semibold">{sourceCount}</p>
+            <p className="theme-muted text-sm">sources indexed</p>
           </div>
         </div>
       </section>
@@ -40,10 +41,10 @@ export default function TemplatesPage() {
       <section className="mb-12">
         <div className="mb-4 flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-xl font-semibold text-gray-950 dark:text-gray-100">
+            <h2 className="text-xl font-semibold">
               Featured Templates
             </h2>
-            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            <p className="theme-muted mt-1 text-sm">
               Three strong starting points selected from the template index.
             </p>
           </div>
@@ -55,9 +56,9 @@ export default function TemplatesPage() {
               href={template.referralUrl || template.url}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="group overflow-hidden rounded-lg border border-gray-200 bg-white transition hover:border-brand-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-brand-700"
+              className="theme-card theme-card-hover group overflow-hidden rounded-lg"
             >
-              <div className="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[color:var(--surface-muted)]">
                 <Image
                   src={template.previewImage}
                   alt={`${template.name} template preview`}
@@ -71,21 +72,21 @@ export default function TemplatesPage() {
               <div className="p-5">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-950 dark:text-gray-100">
+                    <h3 className="text-lg font-semibold group-hover:text-[color:var(--accent)]">
                       {template.name}
                     </h3>
-                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    <p className="theme-muted mt-1 text-sm">
                       {template.sourceName}
                     </p>
                   </div>
-                  <span className="shrink-0 rounded-full border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100">
+                  <span className="theme-chip shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold">
                     {template.priceText}
                   </span>
                 </div>
-                <p className="mt-3 line-clamp-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                <p className="theme-muted mt-3 line-clamp-2 text-sm leading-6">
                   {template.description}
                 </p>
-                <p className="mt-4 text-sm font-semibold text-brand-600 dark:text-brand-400">
+                <p className="theme-link mt-4 text-sm font-semibold">
                   View template
                 </p>
               </div>

@@ -141,34 +141,34 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
   return (
     <div className="grid gap-8 lg:grid-cols-[260px_minmax(0,1fr)]">
       <aside className="lg:sticky lg:top-24 lg:self-start">
-        <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
+        <div className="theme-card-flat rounded-lg p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-950 dark:text-gray-100">
+            <h2 className="theme-kicker">
               Filters
             </h2>
             {hasFilters ? (
               <button
                 type="button"
                 onClick={clearFilters}
-                className="text-sm font-medium text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300"
+                className="theme-link text-sm font-medium"
               >
                 Clear
               </button>
             ) : null}
           </div>
 
-          <label className="mt-4 block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label className="theme-muted-strong mt-4 block text-sm font-medium">
             Search templates
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="SaaS, portfolio, real estate..."
-              className="mt-2 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-950 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100"
+              className="theme-input mt-2 w-full rounded-md px-3 py-2 text-sm"
             />
           </label>
 
           <div className="mt-5">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">Category</p>
+            <p className="theme-muted-strong text-sm font-medium">Category</p>
             <div className="mt-2 flex flex-wrap gap-2">
               {categoryOrder.map((item) => (
                 <button
@@ -177,8 +177,8 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
                   onClick={() => setCategory(category === item ? "" : item)}
                   className={`rounded-full border px-3 py-1.5 text-sm transition ${
                     category === item
-                      ? "border-brand-600 bg-brand-600 text-white"
-                      : "border-gray-300 bg-white text-gray-700 hover:border-brand-300 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-300 dark:hover:border-brand-700"
+                      ? "theme-chip-active"
+                      : "theme-chip hover:border-[color:var(--border-strong)] hover:text-[color:var(--accent)]"
                   }`}
                 >
                   {categoryLabels[item]}
@@ -187,12 +187,12 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
             </div>
           </div>
 
-          <label className="mt-5 block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label className="theme-muted-strong mt-5 block text-sm font-medium">
             Pricing
             <select
               value={priceType}
               onChange={(event) => setPriceType(event.target.value as TemplatePriceType | "")}
-              className="mt-2 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-950 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100"
+              className="theme-input mt-2 w-full rounded-md px-3 py-2 text-sm"
             >
               <option value="">Any price</option>
               {Object.entries(priceLabels).map(([value, label]) => (
@@ -203,12 +203,12 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
             </select>
           </label>
 
-          <label className="mt-5 block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label className="theme-muted-strong mt-5 block text-sm font-medium">
             Source
             <select
               value={sourceName}
               onChange={(event) => setSourceName(event.target.value)}
-              className="mt-2 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-950 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100"
+              className="theme-input mt-2 w-full rounded-md px-3 py-2 text-sm"
             >
               <option value="">Any source</option>
               {sources.map((source) => (
@@ -219,12 +219,12 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
             </select>
           </label>
 
-          <label className="mt-5 block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label className="theme-muted-strong mt-5 block text-sm font-medium">
             Tool
             <select
               value={tool}
               onChange={(event) => setTool(event.target.value)}
-              className="mt-2 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-950 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100"
+              className="theme-input mt-2 w-full rounded-md px-3 py-2 text-sm"
             >
               <option value="">Any tool</option>
               {tools.map((item) => (
@@ -240,10 +240,10 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
       <section>
         <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
           <div>
-            <h2 className="text-xl font-semibold text-gray-950 dark:text-gray-100">
+            <h2 className="text-xl font-semibold">
               Template Library
             </h2>
-            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            <p className="theme-muted mt-1 text-sm">
               {filtered.length === 0
                 ? `0 of ${templates.length} templates`
                 : `${firstResult}-${lastResult} of ${filtered.length} templates`}
@@ -252,12 +252,12 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
         </div>
 
         {filtered.length === 0 ? (
-          <div className="rounded-lg border border-dashed border-gray-300 py-16 text-center dark:border-gray-700">
-            <p className="text-gray-600 dark:text-gray-400">No templates match these filters.</p>
+          <div className="theme-card-flat rounded-lg border-dashed py-16 text-center">
+            <p className="theme-muted">No templates match these filters.</p>
             <button
               type="button"
               onClick={clearFilters}
-              className="mt-3 rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-700"
+              className="theme-button-primary mt-3 rounded-md px-4 py-2 text-sm font-semibold"
             >
               Clear filters
             </button>
@@ -271,9 +271,9 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
                   href={template.referralUrl || template.url}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="group overflow-hidden rounded-lg border border-gray-200 bg-white transition hover:border-brand-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-brand-700"
+                  className="theme-card-flat theme-card-hover group overflow-hidden rounded-lg"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-[color:var(--surface-muted)]">
                     <Image
                       src={template.previewImage}
                       alt={`${template.name} template preview`}
@@ -286,25 +286,25 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
                   <div className="p-4">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <h3 className="font-semibold text-gray-950 dark:text-gray-100">
+                        <h3 className="font-semibold group-hover:text-[color:var(--accent)]">
                           {template.name}
                         </h3>
-                        <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                        <p className="theme-muted mt-1 text-sm">
                           {template.sourceName}
                         </p>
                       </div>
-                      <span className="shrink-0 rounded-full border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100">
+                      <span className="theme-chip shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold">
                         {template.priceText ?? priceLabels[template.priceType]}
                       </span>
                     </div>
-                    <p className="mt-3 line-clamp-2 text-sm text-gray-600 dark:text-gray-400">
+                    <p className="theme-muted mt-3 line-clamp-2 text-sm">
                       {template.description}
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {template.categories.slice(0, 2).map((item) => (
                         <span
                           key={item}
-                          className="rounded-full border border-brand-200 bg-brand-50 px-2.5 py-1 text-xs font-semibold text-brand-700 dark:border-brand-700/60 dark:bg-brand-900/45 dark:text-brand-100"
+                          className="theme-chip rounded-full px-2.5 py-1 text-xs font-semibold"
                         >
                           {categoryLabels[item]}
                         </span>
@@ -312,7 +312,7 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
                       {template.tools.slice(0, 2).map((item) => (
                         <span
                           key={item}
-                          className="rounded-full border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                          className="theme-chip rounded-full px-2.5 py-1 text-xs font-medium"
                         >
                           {item}
                         </span>
@@ -324,8 +324,8 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
             </div>
 
             {pageCount > 1 ? (
-              <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-lg border border-gray-200 bg-white px-4 py-3 sm:flex-row dark:border-gray-800 dark:bg-gray-900">
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+              <div className="theme-card-flat mt-8 flex flex-col items-center justify-between gap-4 rounded-lg px-4 py-3 sm:flex-row">
+                <p className="theme-muted text-sm">
                   Page {page} of {pageCount}
                 </p>
                 <div className="flex items-center gap-2">
@@ -333,7 +333,7 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
                     type="button"
                     onClick={() => setPage((current) => Math.max(1, current - 1))}
                     disabled={page === 1}
-                    className="rounded-md border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 transition hover:border-brand-300 hover:text-gray-950 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-300 dark:hover:border-brand-700 dark:hover:text-gray-100"
+                    className="theme-button-secondary rounded-md px-3 py-2 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Previous
                   </button>
@@ -349,7 +349,7 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
                         return (
                           <span
                             key={pageNumber}
-                            className="px-1 text-sm text-gray-400 dark:text-gray-500"
+                            className="theme-muted px-1 text-sm"
                           >
                             ...
                           </span>
@@ -365,9 +365,9 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
                         onClick={() => setPage(pageNumber)}
                         aria-current={page === pageNumber ? "page" : undefined}
                         className={`h-10 min-w-10 rounded-md px-3 text-sm font-semibold transition ${
-                          page === pageNumber
-                            ? "bg-brand-600 text-white"
-                            : "border border-gray-300 text-gray-700 hover:border-brand-300 hover:text-gray-950 dark:border-gray-700 dark:text-gray-300 dark:hover:border-brand-700 dark:hover:text-gray-100"
+                            page === pageNumber
+                            ? "theme-chip-active"
+                            : "theme-button-secondary"
                         }`}
                       >
                         {pageNumber}
@@ -378,7 +378,7 @@ export function TemplateGallery({ templates }: TemplateGalleryProps) {
                     type="button"
                     onClick={() => setPage((current) => Math.min(pageCount, current + 1))}
                     disabled={page === pageCount}
-                    className="rounded-md border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 transition hover:border-brand-300 hover:text-gray-950 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-300 dark:hover:border-brand-700 dark:hover:text-gray-100"
+                    className="theme-button-secondary rounded-md px-3 py-2 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Next
                   </button>
