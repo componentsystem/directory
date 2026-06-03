@@ -5,10 +5,25 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { CompareTray } from "@/components/compare-basket";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://componentsystem-directory.pages.dev";
+const title = "componentsystem.directory — UI Component Systems Directory";
+const description =
+  "Discover, compare, and choose from 150+ frontend component systems, design systems, and UI libraries.";
+const ogImage = {
+  url: "/opengraph-componentsystems.png",
+  width: 1731,
+  height: 909,
+  alt: "componentsystem.directory preview showing a curated directory of UI component systems",
+  type: "image/png",
+};
+
 export const metadata: Metadata = {
-  title: "componentsystem.directory — The Definitive Directory of UI Component Systems",
-  description:
-    "Discover, compare, and choose from 150+ frontend component systems, design systems, and UI libraries. Community-driven, open-source, and always up to date.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "component library",
     "design system",
@@ -23,9 +38,19 @@ export const metadata: Metadata = {
     "tailwind components",
   ],
   openGraph: {
-    title: "componentsystem.directory",
-    description: "The definitive directory of frontend component systems",
+    title,
+    description,
+    url: "/",
+    siteName: "componentsystem.directory",
+    images: [ogImage],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [ogImage],
   },
 };
 
