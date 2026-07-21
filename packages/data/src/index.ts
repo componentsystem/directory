@@ -67,6 +67,7 @@ import _kuma_ui from "./systems/kuma-ui";
 import _lightning_design from "./systems/lightning-design";
 import _lit from "./systems/lit";
 import _magic_ui from "./systems/magic-ui";
+import _markstream from "./systems/markstream";
 import _mantine from "./systems/mantine";
 import _mdbootstrap from "./systems/mdbootstrap";
 import _melt_ui from "./systems/melt-ui";
@@ -205,6 +206,7 @@ const baseSystems: ComponentSystemSource[] = [
   _lightning_design,
   _lit,
   _magic_ui,
+  _markstream,
   _mantine,
   _mdbootstrap,
   _melt_ui,
